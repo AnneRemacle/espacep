@@ -1,0 +1,126 @@
+/* Espace P
+ *
+ * /sass/components/header.scss - basic styles for header
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+
+.header {
+	background: transparent url(../assets/images/bg-header.jpg) center no-repeat;
+	background-size: cover;
+	height: 35em;
+	position: relative;
+
+	&__up {
+		background: rgba(210, 225, 242, 0.7);
+		height: 4.375em;
+		padding: 0.7em 0;
+		margin-bottom: 1.5em;
+
+		&--text {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 1.25em;
+			margin-right: 3%;
+			margin-left: 24.14%;
+		}
+
+		&--button {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 1.5em;
+			background: white;
+			padding: 0.5em 1em; 
+			color: $textColor;
+			text-decoration: none
+		}
+
+		&--button:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__research {
+
+	}
+
+	&__form {
+		width: 18.75%;
+		position: relative;
+		margin-left: 70%;
+		&--label {
+			color: white;
+			text-transform: uppercase;
+			font-size: 0.875em;
+			display: block;
+			margin-bottom: 0.5em;
+		}
+		&--input {
+			height: 3em;
+			width: 100%;
+			display: inline-block;
+			padding: 0 1em;
+		}
+
+		&--button {
+			text-indent: -9999px;
+			display: inline-block;
+			font-family: 'FontAwesome';
+			border: none;
+			background:$bgButtons url(../assets/images/search.png) center no-repeat;
+
+			padding: 0.8em 1.3em;
+			position: absolute;
+			bottom:0;
+			right:0;
+		}
+	}
+
+	&__middle {
+		//width: 80%;
+		margin: 2.5em auto 3.5em;
+	}
+
+	&__logo {
+		background: transparent url(../assets/images/logo.png) top left no-repeat;
+		background-size: cover;
+		text-indent: -9999px;
+		width: 13.75%;
+		height: 15.25em;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 10%;
+	}
+
+	&__punchline {
+		display: inline-block;
+		vertical-align: middle;
+		color:white;
+		font-size: 4em;
+		width: 46%;
+		margin-left: 20%;
+		line-height: 1.4;
+		text-align: center;
+	}
+
+	&__nav {
+		margin-left: 11%;
+	}
+
+	&__link {
+		text-transform: uppercase;
+		display: inline-block;
+		color:white;
+		font-size: 1.3em;
+		text-decoration: none;
+		width: 22%;
+		text-align: center;
+	}
+
+	&__link:hover {
+		text-decoration: underline;
+	}
+
+}
+

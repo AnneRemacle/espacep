@@ -1,0 +1,52 @@
+/* Espace P
+ *
+ * /sass/components/about.scss - basic styles for about page
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+
+ .philo {
+ 	width: 70%;
+ 	margin: 5em auto;
+
+ 	&__title {
+ 		margin-bottom: 1em;
+ 	}
+ }
+
+.socials {
+	width: 70%;
+	margin: 5em auto;
+
+	&__title {
+		margin-bottom: 2em;
+	}
+
+	&__button {
+		display: block;
+		width: 25%;
+		text-align: center;
+		margin: 0 auto;
+		padding: 1em;
+	}
+}
+
+.partners-bg {
+	background: $lightBg;
+}
+
+.partners {
+	width: 70%;
+	margin: 0 auto;
+	padding: 5em 0;
+
+	&__title {
+		margin-bottom: 2em;
+	}
+
+	&__logo {
+		display: inline-block;
+		width: 15%;
+	}
+}

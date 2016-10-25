@@ -1,0 +1,62 @@
+/* Espace P
+ *
+ * /sass/components/footer.scss - basic styles for footer
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+
+
+
+.footer {
+	background: #255286;
+	padding: 5em 0 7em;
+	color: white;
+	margin-top: -.1em;
+	&__list {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 15%;
+		&--title {
+			text-transform: uppercase;
+			font-size: 1.2em;
+			margin-bottom: 1.2em;
+		}
+	}
+
+	&__item {
+		margin-bottom: 0.6em;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: white;
+	}
+
+	&__link:after {
+		content: '';
+		display: block;
+		margin: 0.4em auto 0;
+		height: 0.125em;
+		width: 0px;
+		background: transparent;
+		transition: width .3s ease, background-color .5s ease;
+	}
+
+	&__link:hover:after {
+		width: 100%;
+		background: white;
+	}
+
+	&__partner {
+		display: inline-block;
+	}
+
+	&__logo {
+
+	}
+
+	&__img {
+
+	}
+}

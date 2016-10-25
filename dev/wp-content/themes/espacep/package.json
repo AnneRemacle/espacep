@@ -1,0 +1,35 @@
+{
+  "name": "espacep",
+  "version": "1.0.0",
+  "description": "A wordpress theme for espace p",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnneRemacle/espacep.git"
+  },
+  "keywords": [
+    "wordpress",
+    "espacep"
+  ],
+  "author": "Anne Remacle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnneRemacle/espacep/issues"
+  },
+  "homepage": "https://github.com/AnneRemacle/espacep#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.3",
+    "gulp": "^3.9.1",
+    "gulp-dest-clean": "^0.5.0",
+    "gulp-htmlclean": "^2.7.6",
+    "gulp-imacss": "^1.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-newer": "^1.3.0",
+    "gulp-preprocess": "^2.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0"
+  }
+}

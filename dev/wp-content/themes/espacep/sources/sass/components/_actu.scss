@@ -1,0 +1,36 @@
+/* Espace P
+ *
+ * /sass/components/actu.scss - basic styles for actu section
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+
+ .actu {
+	width: 70%;
+ 	margin: 5em auto;
+
+ 	&__title {
+ 		font-size: 1.875em;
+ 		margin-bottom: .3em;
+ 	}
+ 	&__date {
+ 		font-size: .8em;
+ 		margin-bottom: 2em;
+ 	}
+
+ 	&__texte {
+ 		margin-bottom: 2em;
+
+ 	}
+ 	&__button {
+ 		background: $bgButtons;
+ 		text-decoration: none;
+ 		color: white;
+		padding: .5em 1em;
+		transition: all .3s ease;
+ 	}
+ 	&__button:hover {
+ 		background: $buttonsHover;
+ 	}
+ }

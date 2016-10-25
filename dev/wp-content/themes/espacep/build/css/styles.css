@@ -1,0 +1,894 @@
+@charset "UTF-8";
+/* Espace P
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+/* Espace P
+ *
+ * /sass/settings/colors.scss - Color variables
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+/* Espace P
+ *
+ * /sass/settings/fonts.scss - fonts definition
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+@font-face {
+  font-family: 'open_sansbold';
+  src: url("OpenSans-Bold-webfont.eot");
+  src: url("OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Bold-webfont.woff") format("woff"), url("OpenSans-Bold-webfont.ttf") format("truetype"), url("OpenSans-Bold-webfont.svg#open_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url("OpenSans-Regular-webfont.eot");
+  src: url("OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Regular-webfont.woff") format("woff"), url("OpenSans-Regular-webfont.ttf") format("truetype"), url("OpenSans-Regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanssemibold';
+  src: url("OpenSans-Semibold-webfont.eot");
+  src: url("OpenSans-Semibold-webfont.eot?#iefix") format("embedded-opentype"), url("OpenSans-Semibold-webfont.woff") format("woff"), url("OpenSans-Semibold-webfont.ttf") format("truetype"), url("OpenSans-Semibold-webfont.svg#open_sanssemibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Portfolio
+ *
+ * /sass/tools/_utils.scss - Small utilities
+ *
+ * coded by Anne
+ * started at 10/05/2016
+ */
+.hidden {
+  display: none;
+}
+
+.sro {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* Espace P
+ *
+ * /sass/generic/meyer-reset.scss - Meyer reset
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Espace P
+ *
+ * /sass/generic/box-sizing.scss - box sizing definition
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/* Espace P
+ *
+ * /sass/base/home.scss - basic styles
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+html {
+  font-family: "open_sansregular", "Segoe UI", Tahoma, sans-serif;
+  color: #1E0808;
+  line-height: 1.5;
+}
+
+/* Espace P
+ *
+ * /sass/components/header.scss - basic styles for header
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.header {
+  background: transparent url(../assets/images/bg-header.jpg) center no-repeat;
+  background-size: cover;
+  height: 35em;
+  position: relative;
+}
+
+.header__up {
+  background: rgba(210, 225, 242, 0.7);
+  height: 4.375em;
+  padding: 0.7em 0;
+  margin-bottom: 1.5em;
+}
+
+.header__up--text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.25em;
+  margin-right: 3%;
+  margin-left: 24.14%;
+}
+
+.header__up--button {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.5em;
+  background: white;
+  padding: 0.5em 1em;
+  color: #1E0808;
+  text-decoration: none;
+}
+
+.header__up--button:hover {
+  text-decoration: underline;
+}
+
+.header__form {
+  width: 18.75%;
+  position: relative;
+  margin-left: 70%;
+}
+
+.header__form--label {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.header__form--input {
+  height: 3em;
+  width: 100%;
+  display: inline-block;
+  padding: 0 1em;
+}
+
+.header__form--button {
+  text-indent: -9999px;
+  display: inline-block;
+  font-family: 'FontAwesome';
+  border: none;
+  background: #4A90E2 url(../assets/images/search.png) center no-repeat;
+  padding: 0.8em 1.3em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.header__middle {
+  margin: 2.5em auto 3.5em;
+}
+
+.header__logo {
+  background: transparent url(../assets/images/logo.png) top left no-repeat;
+  background-size: cover;
+  text-indent: -9999px;
+  width: 13.75%;
+  height: 15.25em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10%;
+}
+
+.header__punchline {
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+  font-size: 4em;
+  width: 46%;
+  margin-left: 20%;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.header__nav {
+  margin-left: 11%;
+}
+
+.header__link {
+  text-transform: uppercase;
+  display: inline-block;
+  color: white;
+  font-size: 1.3em;
+  text-decoration: none;
+  width: 22%;
+  text-align: center;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
+
+/* Espace P
+ *
+ * /sass/components/search.scss - basic styles for search results
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.search {
+  width: 70%;
+  margin: 5em auto;
+}
+
+.search__title {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+.article {
+  margin-bottom: 2em;
+}
+
+.article__title {
+  font-size: 1.3em;
+  margin-bottom: .6em;
+}
+
+.article__title--link {
+  color: #1E0808;
+}
+
+.article__excerpt {
+  margin-bottom: .5em;
+}
+
+.article__footer {
+  position: relative;
+}
+
+.article__url {
+  text-decoration: none;
+  color: #1E0808;
+}
+
+.article__url:after {
+  content: "";
+  font-family: 'FontAwesome';
+  display: inline-block;
+  margin-left: .2em;
+  color: transparent;
+  transition: all .3s ease;
+}
+
+.article__url:hover:after {
+  content: "";
+  font-family: 'FontAwesome';
+  display: inline-block;
+  margin-left: .5em;
+  color: #1E0808;
+}
+
+.article__date {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: .8em;
+}
+
+/* Espace P
+ *
+ * /sass/components/section.scss - basic styles for a section
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.section__title {
+  font-size: 1.875em;
+  margin-bottom: .3em;
+}
+
+.section__button {
+  background: #4A90E2;
+  text-decoration: none;
+  color: white;
+  padding: .5em 1em;
+  transition: all .3s ease;
+}
+
+.section__button:hover {
+  background: #76abe7;
+}
+
+.section__text {
+  margin-bottom: 2.5em;
+  line-height: 1.5;
+}
+
+/* Espace P
+ *
+ * /sass/components/actu.scss - basic styles for actu section
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.actu {
+  width: 70%;
+  margin: 5em auto;
+}
+
+.actu__title {
+  font-size: 1.875em;
+  margin-bottom: .3em;
+}
+
+.actu__date {
+  font-size: .8em;
+  margin-bottom: 2em;
+}
+
+.actu__texte {
+  margin-bottom: 2em;
+}
+
+.actu__button {
+  background: #4A90E2;
+  text-decoration: none;
+  color: white;
+  padding: .5em 1em;
+  transition: all .3s ease;
+}
+
+.actu__button:hover {
+  background: #76abe7;
+}
+
+/* Espace P
+ *
+ * /sass/components/portal.scss - basic styles for portal section
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.first, .second {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.portal__cadre {
+  text-decoration: none;
+  display: table-cell;
+  width: 50%;
+  font-size: 1.3em;
+  color: white;
+  height: 20em;
+  padding: 5em 5%;
+}
+
+.portal__cadre--title {
+  font-size: 2em;
+  margin-bottom: 0.8em;
+}
+
+.portal__cadre--description {
+  line-height: 1.5;
+  margin-bottom: 2em;
+}
+
+.portal__cadre--button {
+  display: block;
+  width: 30%;
+  color: #1E0808;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.5em;
+  text-align: center;
+  transition: all .3s ease;
+  margin-left: 60%;
+}
+
+.portal__cadre--button:hover {
+  background: white;
+}
+
+.portal__cadre:nth-of-type(1) {
+  background: transparent url(../assets/images/portal1.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.portal__cadre:nth-of-type(2) {
+  background: transparent url(../assets/images/portal2.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.second__cadre:nth-of-type(1) {
+  background: transparent url(../assets/images/portal3.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.second__cadre:nth-of-type(2) {
+  background: transparent url(../assets/images/portal4.jpg) center no-repeat;
+  background-size: cover;
+}
+
+/* Espace P
+ *
+ * /sass/components/last.scss - basic styles for last actus section
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.last {
+  width: 70%;
+  margin: 5em auto;
+}
+
+.last__title {
+  margin-bottom: 2em;
+}
+
+.last__part {
+  width: 30%;
+  display: inline-block;
+  background: #d9dcf4;
+  height: 20em;
+  vertical-align: top;
+  margin-left: 10%;
+}
+
+.facebook__text {
+  display: block;
+  padding: 5em 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.facebook__text::before {
+  content: "\201C";
+  font-family: "Baskerville", "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-size: 3em;
+}
+
+.facebook__date {
+  font-size: .8em;
+  margin-top: .7em;
+}
+
+.facebook__link {
+  display: block;
+  font-size: .9em;
+  text-decoration: none;
+  margin: 2em 0;
+  color: white;
+  background: #4A90E2;
+  padding: .8em .2em;
+  text-align: center;
+  transition: all .3s ease;
+}
+
+.facebook__link:hover {
+  background: #76abe7;
+}
+
+.event__img {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+}
+
+.event__title {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 1.3em;
+  text-decoration: none;
+  color: #1E0808;
+}
+
+.event__title:hover {
+  text-decoration: underline;
+}
+
+/* Espace P
+ *
+ * /sass/components/single-post.scss - basic styles for single post
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.post {
+  width: 70%;
+  margin: 5em auto;
+}
+
+.post__title {
+  font-size: 2em;
+}
+
+.post__date {
+  font-size: .7em;
+  margin-bottom: 2em;
+}
+
+/* Espace P
+ *
+ * /sass/components/about.scss - basic styles for about page
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.philo {
+  width: 70%;
+  margin: 5em auto;
+}
+
+.philo__title {
+  margin-bottom: 1em;
+}
+
+.socials {
+  width: 70%;
+  margin: 5em auto;
+}
+
+.socials__title {
+  margin-bottom: 2em;
+}
+
+.socials__button {
+  display: block;
+  width: 25%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.partners-bg {
+  background: #d9dcf4;
+}
+
+.partners {
+  width: 70%;
+  margin: 0 auto;
+  padding: 5em 0;
+}
+
+.partners__title {
+  margin-bottom: 2em;
+}
+
+.partners__logo {
+  display: inline-block;
+  width: 15%;
+}
+
+/* Espace P
+ *
+ * /sass/components/squares.scss - basic styles for square sections
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.left, .right {
+  display: table;
+  table-layout: fixed;
+}
+
+.left__figure {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+
+.left__img {
+  width: 100%;
+}
+
+.left__content {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  padding: 0 7% 0 4%;
+}
+
+.right__figure {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+
+.right__img {
+  width: 100%;
+}
+
+.right__content {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  padding: 0 4% 0 7%;
+}
+
+/* Espace P
+ *
+ * /sass/components/support.scss - basic styles for support page
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.archives {
+  margin-bottom: -.1em;
+}
+
+.support {
+  width: 70%;
+  margin: 5em auto;
+}
+
+.support__title {
+  margin-bottom: 1em;
+}
+
+/* Espace P
+ *
+ * /sass/components/contact.scss - basic styles for contact page
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.antennes {
+  width: 70%;
+  margin: 5em auto;
+}
+
+.antennes__title {
+  margin-bottom: 2em;
+}
+
+.antennes__nav {
+  margin-bottom: 4em;
+}
+
+.antennes__list {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+.antennes__item {
+  display: table-cell;
+  width: 16.666%;
+  background: #4A90E2;
+  cursor: pointer;
+}
+
+.antennes__tab {
+  display: table-cell;
+  width: 16.666%;
+  height: 4em;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #11125D;
+  text-transform: uppercase;
+  transition: all .3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.antennes__tab:hover {
+  background: #11125D;
+  color: white;
+}
+
+.antennes__tab--active {
+  background: #11125D;
+  color: white;
+}
+
+.antennes__tab--active:after {
+  content: "";
+  width: 0;
+  border: 15px solid transparent;
+  border-top: 15px solid #11125D;
+  position: absolute;
+  bottom: -30px;
+  left: 40%;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.coordonnees {
+  width: 80%;
+  margin: 2em auto;
+}
+
+.coordonnees__title {
+  font-family: "open_sansbold", "Segoe UI", Tahoma, sans-serif;
+  font-size: 1.2em;
+  margin-bottom: .6em;
+}
+
+.coordonnees__text {
+  margin-bottom: .6em;
+}
+
+.coordonnees__mail {
+  color: #1E0808;
+}
+
+.map {
+  width: 80%;
+  margin: 2em auto 0;
+}
+
+/* Espace P
+ *
+ * /sass/components/infos.scss - basic styles for information page
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.infos__small {
+  margin-top: .6em;
+  font-size: .7em;
+  display: block;
+}
+
+.infos__link {
+  display: block;
+  text-decoration: none;
+  margin-bottom: .6em;
+  color: #1E0808;
+}
+
+.infos__link:after {
+  content: "";
+  font-family: 'FontAwesome';
+  display: inline-block;
+  margin-left: .2em;
+  color: transparent;
+  transition: all .3s ease;
+}
+
+.infos__link:hover:after {
+  content: "";
+  font-family: 'FontAwesome';
+  display: inline-block;
+  margin-left: .5em;
+  color: #1E0808;
+}
+
+/* Espace P
+ *
+ * /sass/components/footer.scss - basic styles for footer
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+.footer {
+  background: #255286;
+  padding: 5em 0 7em;
+  color: white;
+  margin-top: -.1em;
+}
+
+.footer__list {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 15%;
+}
+
+.footer__list--title {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+.footer__item {
+  margin-bottom: 0.6em;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__link:after {
+  content: '';
+  display: block;
+  margin: 0.4em auto 0;
+  height: 0.125em;
+  width: 0px;
+  background: transparent;
+  transition: width .3s ease, background-color .5s ease;
+}
+
+.footer__link:hover:after {
+  width: 100%;
+  background: white;
+}
+
+.footer__partner {
+  display: inline-block;
+}

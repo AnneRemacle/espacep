@@ -1,0 +1,23 @@
+/* Espace P
+ *
+ * /sass/components/single-post.scss - basic styles for single post
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+
+ .post {
+ 	width: 70%;
+ 	margin: 5em auto;
+
+ 	&__title {
+		font-size: 2em;
+ 	}
+ 	&__date {
+ 		font-size: .7em;
+ 		margin-bottom: 2em;
+ 	}
+ 	&__content {
+
+ 	}
+ }

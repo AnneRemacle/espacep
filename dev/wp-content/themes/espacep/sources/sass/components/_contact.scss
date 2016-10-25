@@ -1,0 +1,98 @@
+/* Espace P
+ *
+ * /sass/components/contact.scss - basic styles for contact page
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+
+.antennes {
+	width: 70%;
+	margin: 5em auto;
+
+	&__title {
+		margin-bottom: 2em;
+	}
+
+	&__nav {
+		margin-bottom: 4em;
+	}
+
+	&__list {
+		width: 100%;
+		display: table;
+		table-layout: fixed;
+	}
+
+	&__item {
+		display: table-cell;
+		width: 16.666%;
+		background: $bgButtons;
+		cursor: pointer;
+	}
+	&__tab {
+		display: table-cell;
+		width: 16.666%;
+		height: 4em;
+		text-align: center;
+		vertical-align: middle;
+		text-decoration: none;
+		color: $darkColor;
+		text-transform: uppercase;
+		transition: all .3s ease;
+		position: relative;
+		cursor: pointer;
+	}
+	&__tab:hover {
+		background: $darkColor;
+		color: white;
+
+	}
+	&__tab--active{
+		background: $darkColor;
+		color: white;
+	}
+	&__tab--active:after {
+		content:"";
+		width: 0;
+		border: 15px solid transparent;
+		border-top: 15px solid $darkColor;
+		position: absolute;
+		bottom:-30px;
+		left:40%;
+	}
+}
+
+.tabcontent {
+	display: none;
+}
+
+.active {
+	display: block;
+}
+.coordonnees {
+	width: 80%;
+	margin: 2em auto;
+	&__title {
+		font-family: $bold;
+		font-size: 1.2em;
+		margin-bottom: .6em;
+	}
+
+	&__text {
+		margin-bottom: .6em;
+
+	}
+
+	&__mail {
+		color: $textColor;
+	}
+}
+
+.map {
+	width: 80%;
+	margin: 2em auto 0;
+	&__detail {
+
+	}
+}

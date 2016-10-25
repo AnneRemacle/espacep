@@ -1,0 +1,30 @@
+/* Espace P
+ *
+ * /sass/components/section.scss - basic styles for a section
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+
+ .section {
+ 	&__title {
+ 		font-size: 1.875em;
+ 		margin-bottom: .3em;
+ 	}
+
+ 	&__button {
+ 		background: $bgButtons;
+ 		text-decoration: none;
+ 		color: white;
+		padding: .5em 1em;
+		transition: all .3s ease;
+ 	}
+ 	&__button:hover {
+ 		background: $buttonsHover;
+ 	}
+
+ 	&__text {
+ 		margin-bottom: 2.5em;
+ 		line-height: 1.5;
+ 	}
+ }

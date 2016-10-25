@@ -1,0 +1,19 @@
+/* Espace P
+ *
+ * /sass/components/support.scss - basic styles for support page
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+
+.archives {
+	margin-bottom: -.1em;
+}
+
+.support {
+	width: 70%;
+	margin: 5em auto;
+	&__title {
+		margin-bottom: 1em;
+	}
+}

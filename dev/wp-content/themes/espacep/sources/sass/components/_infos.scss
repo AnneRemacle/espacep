@@ -1,0 +1,36 @@
+/* Espace P
+ *
+ * /sass/components/infos.scss - basic styles for information page
+ *
+ * coded by Anne
+ * started at 10/10/2016
+ */
+
+ .infos {
+ 	&__small {
+ 		margin-top: .6em;
+ 		font-size: .7em;
+ 		display: block;
+ 	}
+ 	&__link {
+ 		display: block;
+ 		text-decoration: none;
+ 		margin-bottom: .6em;
+ 		color: $textColor;
+ 	}
+ 	&__link:after {
+		content:"";
+		font-family: 'FontAwesome';
+		display: inline-block;
+		margin-left: .2em;
+		color: transparent;
+		transition: all .3s ease;
+	}
+	&__link:hover:after {
+		content:"";
+		font-family: 'FontAwesome';
+		display: inline-block;
+		margin-left: .5em;
+		color: $textColor;
+	}
+ }
