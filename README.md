@@ -60,6 +60,8 @@ Le logo peut apparaître
 
 quentin.deltour@gmail.com
 
+Photos: Frédéric Pauwels
+
 Date de remise: décembre     
 projet presque finalisé dans 4 semaines
 
