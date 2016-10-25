@@ -770,10 +770,6 @@ html {
   left: 40%;
 }
 
-.tabcontent {
-  display: none;
-}
-
 .active {
   display: block;
 }
@@ -800,6 +796,7 @@ html {
 .map {
   width: 80%;
   margin: 2em auto 0;
+  height: 30em;
 }
 
 /* Espace P
@@ -854,7 +851,6 @@ html {
 }
 
 .footer__list {
-  display: inline-block;
   vertical-align: top;
   margin-left: 15%;
 }

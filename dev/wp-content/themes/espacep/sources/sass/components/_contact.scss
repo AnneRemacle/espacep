@@ -37,6 +37,7 @@
 		text-align: center;
 		vertical-align: middle;
 		text-decoration: none;
+
 		color: $darkColor;
 		text-transform: uppercase;
 		transition: all .3s ease;
@@ -64,7 +65,11 @@
 }
 
 .tabcontent {
-	display: none;
+	
+}
+
+.tabcontent:nth-of-type(1) {
+
 }
 
 .active {
@@ -92,6 +97,7 @@
 .map {
 	width: 80%;
 	margin: 2em auto 0;
+	height: 30em;
 	&__detail {
 
 	}

@@ -1,1 +1,12 @@
 site/
+
+node_modules
+.sass-cache
+
+dev/*
+!dev/wp-content/
+dev/wp-content/*
+!dev/wp-content/themes/
+dev/wp-content/themes/*
+!dev/wp-content/themes/espacep/
+dev/wp-content/themes/espacep/.sass-cache

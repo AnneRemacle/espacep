@@ -64,6 +64,7 @@
                 
             </section>
         </footer>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDeuwdU6TD7s_exoHvquyikKKVTFQiGC0"></script>
         <!--<?php wp_footer(); ?> <!--ne sert à rien, elle ajoute la barre d'admin dans le header -->
     </body>
 </html>

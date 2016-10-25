@@ -21,7 +21,7 @@
         </title>
         <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/build/css/styles.css'; ?>?v=0.5">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/build/assets/fonts/font-awesome/css/font-awesome.min.css'; ?>?v=0.5">
-        <script src="<?php echo get_template_directory_uri() . '/build/script/script.js'; ?>"></script>
+        <script src="<?php echo get_template_directory_uri() . '/build/script/script.js';?>"></script>
     </head>
     <body>
         <header class="header">

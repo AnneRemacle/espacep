@@ -61,7 +61,7 @@
     // Defines navigation menus
     register_nav_menu( 'Header', __('Menu principal, affiché dans le header.', 'espacep') );
     register_nav_menu( 'espacep', __('Menu secondaire space p, affiché dans le footer.', 'espacep') );
-    register_nav_menu( 'antennes', __('Menu secondaire antennes, affiché dans le footer.', 'espacep') );
+    register_nav_menu( 'antennes', __('Menu secondaire antennes, affiché dans le footer et dans la page contact.', 'espacep') );
 
     // generate a custom excerpt, used on the homepage
 
@@ -151,3 +151,13 @@
         return $form;
     }
     add_filter( 'get_search_form', 'wpdocs_my_search_form' );
+
+
+    // ACF Google Maps
+
+    function my_acf_init() {
+    
+        acf_update_setting('google_api_key', ' AIzaSyBDeuwdU6TD7s_exoHvquyikKKVTFQiGC0 ');
+    }
+
+    add_action('acf/init', 'my_acf_init');
