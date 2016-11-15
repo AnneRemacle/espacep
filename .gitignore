@@ -10,3 +10,4 @@ dev/wp-content/*
 dev/wp-content/themes/*
 !dev/wp-content/themes/espacep/
 dev/wp-content/themes/espacep/.sass-cache
+dev/wp-content/themes/espacep/node_modules
