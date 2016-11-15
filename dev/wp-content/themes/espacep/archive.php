@@ -1,10 +1,14 @@
 <?php
 
+    /*
+        Template Name: Archive
+    */
+
     get_header();
 ?>
 
     <section class="archive">
-        <h2 class="archive__title"><?php echo _e('Tous mes articles', 'portfolio'); ?> </h2>
+        <h2 class="archive__title"><?php echo _e('Tous les articles publiés pas Espace P…', 'espacep'); ?> </h2>
         <div class="archive__container">
             <?php
                 if ( have_posts() ):

@@ -59,7 +59,7 @@
         ] );
 
     // Defines navigation menus
-    register_nav_menu( 'Header', __('Menu principal, affiché dans le header.', 'espacep') );
+    register_nav_menu( 'header', __('Menu principal, affiché dans le header.', 'espacep') );
     register_nav_menu( 'espacep', __('Menu secondaire space p, affiché dans le footer.', 'espacep') );
     register_nav_menu( 'antennes', __('Menu secondaire antennes, affiché dans le footer et dans la page contact.', 'espacep') );
 

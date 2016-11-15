@@ -14,7 +14,7 @@
 	color: white;
 	margin-top: -.1em;
 	&__list {
-		//display: inline-block;
+		display: inline-block;
 		vertical-align: top;
 		margin-left: 15%;
 		&--title {
@@ -31,21 +31,24 @@
 	&__link {
 		text-decoration: none;
 		color: white;
+		position: relative;
 	}
 
 	&__link:after {
-		content: '';
-		display: block;
-		margin: 0.4em auto 0;
-		height: 0.125em;
-		width: 0px;
-		background: transparent;
-		transition: width .3s ease, background-color .5s ease;
+		content:"";
+		font-family: 'FontAwesome';
+		display: inline-block;
+		margin-left: .2em;
+		color: transparent;
+		transition: all .3s ease;
+		position: absolute;
 	}
-
 	&__link:hover:after {
-		width: 100%;
-		background: white;
+		content:"";
+		font-family: 'FontAwesome';
+		display: inline-block;
+		margin-left: .5em;
+		color: white;
 	}
 
 	&__partner {

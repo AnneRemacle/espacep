@@ -45,7 +45,7 @@
 
             <nav class="header__nav">
                 <h2 class="sro" role="heading" aria-level="2">Navigation principale</h2>
-                <?php foreach (b_get_menu_items('main-nav') as $navItem): ?>
+                <?php foreach (b_get_menu_items('header') as $navItem): ?>
                     <a href="<?php echo $navItem -> url ?> " class="header__link">
                         <?php echo $navItem -> label ?>
                     </a>

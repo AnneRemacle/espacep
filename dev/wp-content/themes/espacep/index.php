@@ -64,7 +64,7 @@
 		<section class="last section">
 			<h2 class="section__title last__title" role="heading" aria-level="2">Dernièrement à Espace P…</h2>
 			<div class="last__part facebook">
-				<blockquote class="facebook__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </bockquote>
+				<p class="facebook__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
 				<p class="facebook__date">Le xx/xx/xx à xx:xx</p>
 				<a href="" class="facebook__link" rel="external">Rejoignez-nous sur Facebook</a>
 			</div>

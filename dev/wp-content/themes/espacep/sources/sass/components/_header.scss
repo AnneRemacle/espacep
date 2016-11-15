@@ -9,7 +9,7 @@
 .header {
 	background: transparent url(../assets/images/bg-header.jpg) center no-repeat;
 	background-size: cover;
-	height: 35em;
+	height: 38em;
 	position: relative;
 
 	&__up {
@@ -59,13 +59,13 @@
 		&--input {
 			height: 3em;
 			width: 100%;
-			display: inline-block;
+			display: flex;
 			padding: 0 1em;
 		}
 
 		&--button {
 			text-indent: -9999px;
-			display: inline-block;
+			display: flex;
 			font-family: 'FontAwesome';
 			border: none;
 			background:$bgButtons url(../assets/images/search.png) center no-repeat;
@@ -118,9 +118,21 @@
 		text-align: center;
 	}
 
-	&__link:hover {
-		text-decoration: underline;
+	&__link:after {
+		content: '';
+		display: block;
+		margin: 0.3em auto 0;
+		height: 0.125em;
+		width: 0px;
+		background: transparent;
+		transition: width .3s ease, background-color .5s ease;
 	}
+
+	&__link:hover:after {
+		width: 70%;
+		background: white;
+	}
+
 
 }
 
