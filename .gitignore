@@ -1,5 +1,8 @@
 site/
-
+.DS_Store
+*.sketch
+design/images
+design/inspiration
 node_modules
 .sass-cache
 
