@@ -5,7 +5,8 @@
         <script
               src="https://code.jquery.com/jquery-2.2.4.min.js"
               integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-              crossorigin="anonymous"></script>
+              crossorigin="anonymous">
+        </script>
         <meta charset="UTF-8">
         <title>
         <?php
@@ -34,8 +35,8 @@
                 <?php get_search_form(); ?>
             </div>
 
-            <div class="header__middle">
-                <a href="<?php echo get_home_url(); ?>" class="header__logo" title="Retour à la page d'accueil du site Espace P…">Accueil</a>
+            <div class="header__middle" itemscope itemtype="http://schema.org/Organization">
+                <a href="<?php echo get_home_url(); ?>" class="header__logo" title="Retour à la page d'accueil du site Espace P…" itemprop="logo">Accueil</a>
 
                 <h1 class="header__punchline" role="heading" aria-level="1">
                     <span class="sro">Espace P…</span>

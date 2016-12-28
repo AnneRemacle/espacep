@@ -16,7 +16,8 @@
 
 	<section class="left">
 		<figure class="left__figure">
-			<img src="<?php echo get_template_directory_uri() . '/build/assets/images/photo.jpg'; ?>" alt="" class="left__img" />
+		<?php $image = get_field('actions_image'); ?>
+			<img src="<?php echo $image['url']; ?>" alt="" class="left__img" />
 		</figure>
 		<div class="left__content">
 			<h2 class="section__title">
@@ -43,14 +44,16 @@
 		</div>
 
 		<figure class="right__figure">
-			<img src="<?php echo get_template_directory_uri() . '/build/assets/images/photo.jpg'; ?>" alt="" class="right__img" />
+		<?php $image = get_field('rapport_image'); ?>
+			<img src="<?php echo $image['url']; ?>" alt="" class="right__img" />
 		</figure>
 		
 	</section>
 
 	<section class="left">
 		<figure class="left__figure">
-			<img src="<?php echo get_template_directory_uri() . '/build/assets/images/photo.jpg'; ?>" alt="" class="left__img" />
+		<?php $image = get_field('manifeste_image'); ?>
+			<img src="<?php echo $image['url']; ?>" alt="" class="left__img" />
 		</figure>
 		<div class="left__content">
 			<h2 class="section__title">
@@ -66,26 +69,28 @@
 
 	<section class="socials">
 		<h2 class="section__title socials__title">Suivez-nous sur les réseaux sociaux</h2>
-		<a href="facebook.com" class="section__button socials__button">Voir notre page Faebook</span></a>
+		<a href="https://www.facebook.com/Espace-P-1166947833360506/" class="section__button socials__button">Voir notre page Faebook</span></a>
 	</section>
 
 	<div class="partners-bg">
 		<section class="partners">
 			<h2 class="section__title partners__title">Nos partenaires</h2>
 
-			<a href="http://www.google.com" class="partners__logo">
-				<img src="http://www.placekitten.com/100/100" alt="Logo de notre partenaire xxx" class="partners__img" />
+			<?php $posts = new WP_Query( ['post_type' => 'partenaires' ] ); ?>
+                    <?php if ( $posts -> have_posts() ):
+                        while ( $posts -> have_posts() ):
+                            $posts -> the_post(); ?>
+
+			<a href="<?php the_field('site'); ?>" rel="external" title="Vers la page de notre partenaire <?php the_title(); ?>" class="partners__logo">
+				<?php $image = get_field('logo'); ?>
+				<img src="<?php echo $image['url']; ?>" alt="Logo de notre partenaire <?php the_title(); ?>" class="partners__img" />
 			</a>
-			<a href="http://www.google.com" class="partners__logo">
-				<img src="http://www.placekitten.com/100/100" alt="Logo de notre partenaire xxx" class="partners__img" />
-			</a>
-			<a href="http://www.google.com" class="partners__logo">
-				<img src="http://www.placekitten.com/100/100" alt="Logo de notre partenaire xxx" class="partners__img" />
-			</a>
-			<a href="http://www.google.com" class="partners__logo">
-				<img src="http://www.placekitten.com/100/100" alt="Logo de notre partenaire xxx" class="partners__img" />
-			</a>
+
+			<?php endwhile; endif; ?>
+                    <?php wp_reset_query(); ?> 
+
 		</section>
+                    
 	</div>
 
 <?php

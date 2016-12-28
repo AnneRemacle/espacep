@@ -22,6 +22,9 @@
 			font-size: 1.2em;
 			margin-bottom: 1.2em;
 		}
+		&--partners {
+			width: 30%;
+		}
 	}
 
 	&__item {
@@ -53,6 +56,9 @@
 
 	&__partner {
 		display: inline-block;
+		width: 20%;
+		height: 4em;
+		margin-right: 2%;
 	}
 
 	&__logo {
@@ -60,6 +66,8 @@
 	}
 
 	&__img {
+		display: inline-block;
+		width: 100%;
 
 	}
 }

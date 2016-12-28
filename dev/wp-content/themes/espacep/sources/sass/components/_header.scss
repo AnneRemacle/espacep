@@ -84,7 +84,7 @@
 
 	&__logo {
 		background: transparent url(../assets/images/logo.png) top left no-repeat;
-		background-size: cover;
+		background-size: contain;
 		text-indent: -9999px;
 		width: 13.75%;
 		height: 15.25em;

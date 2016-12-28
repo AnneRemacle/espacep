@@ -25,28 +25,21 @@
                     <?php endforeach; ?>
                     <?php wp_reset_query(); ?>
                 </ul>
-                <ul class="footer__list">
+                <ul class="footer__list footer__list--partners">
                     <p class="footer__list--title">En collaboration avec…</p>
-                    <li class="footer__partner">
-                        <a class="footer__logo" href="http://www.google.be">
-                            <img src="http://placekitten.com/50/50" alt="Vers la page de notre partenaire xxx" rel="external" class="footer__img" />
-                        </a>
-                    </li>
-                    <li class="footer__partner">
-                        <a class="footer__logo" href="http://www.google.be">
-                            <img src="http://placekitten.com/50/50" alt="Vers la page de notre partenaire xxx" rel="external" class="footer__img" />
-                        </a>
-                    </li>
-                    <li class="footer__partner">
-                        <a class="footer__logo" href="http://www.google.be">
-                            <img src="http://placekitten.com/50/50" alt="Vers la page de notre partenaire xxx" rel="external" class="footer__img" />
-                        </a>
-                    </li>
-                    <li class="footer__partner">
-                        <a class="footer__logo" href="http://www.google.be">
-                            <img src="http://placekitten.com/50/50" alt="Vers la page de notre partenaire xxx" rel="external" class="footer__img" />
-                        </a>
-                    </li>
+                    <?php $posts = new WP_Query( ['post_type' => 'partenaires' ] ); ?>
+                    <?php if ( $posts -> have_posts() ):
+                        while ( $posts -> have_posts() ):
+                            $posts -> the_post(); ?>
+                        <li class="footer__partner">
+                            <a class="footer__logo" href="<?php the_field('site'); ?>" rel="external" title="Vers la page de notre partenaire <?php the_title(); ?>">
+
+                                <?php $image = get_field('logo'); ?>
+                                <img src="<?php echo $image['url']; ?>" alt="Logo de notre partenaire <?php the_title(); ?>"  class="footer__img" />
+                            </a>
+                        </li>
+                    <?php endwhile; endif; ?>
+                    <?php wp_reset_query(); ?>                    
                 </ul>
                 
             </section>

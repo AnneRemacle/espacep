@@ -4,7 +4,7 @@
 
     add_theme_support( 'post-thumbnails' );
 
-    register_taxonomy( 'event-type', 'event', [
+    register_taxonomy( 'event-type', 'événement', [
                             'label' => 'Types d‘événements',
                             'labels' => [
                                 'singular_name' => 'Un type d‘événement'
@@ -14,18 +14,18 @@
                             'hierarchical' => true
                         ] );
 
-    register_taxonomy_for_object_type( 'event-type', 'event' );
+    register_taxonomy_for_object_type( 'event-type', 'evénement' );
 
-    register_post_type( 'event', [
-            'label' => __('Event', 'espacep'),
+    register_post_type( 'événement', [
+            'label' => __('Événement', 'espacep'),
             'labels' => [
-                        'singular_name' => __( 'Event', 'espacep' ),
+                        'singular_name' => __( 'Evénement', 'espacep' ),
                         'add_new' => __( 'Ajouter un nouvel événement', 'espacep')
             ],
             'description' => __( 'La liste de tous les événements de Espace P…', 'espacep'),
             'public' => true,
             'menu_position' => 5,
-            'menu_icon' => 'dashicons-editor-video',
+            'menu_icon' => 'dashicons-calendar-alt',
             'supports' => [ 'title', 'editor', 'thumbnail' ],
             'has_archive' => true
         ] );
@@ -39,7 +39,7 @@
             'description' => __( 'La liste de toutes les antennes de Espace P…', 'espacep'),
             'public' => true,
             'menu_position' => 5,
-            'menu_icon' => 'dashicons-editor-video',
+            'menu_icon' => 'dashicons-admin-home',
             'supports' => [ 'title', 'editor', 'thumbnail' ],
             'has_archive' => true
         ] );
@@ -53,7 +53,21 @@
             'description' => __( 'La liste de tous les magazines de Espace P…', 'espacep'),
             'public' => true,
             'menu_position' => 5,
-            'menu_icon' => 'dashicons-editor-video',
+            'menu_icon' => 'dashicons-book',
+            'supports' => [ 'title', 'editor', 'thumbnail' ],
+            'has_archive' => true
+        ] );
+
+    register_post_type( 'partenaires', [
+            'label' => __('Partenaires', 'espacep'),
+            'labels' => [
+                        'singular_name' => __( 'Partenaires', 'espacep' ),
+                        'add_new' => __( 'Ajouter un nouveau partenaire', 'espacep')
+            ],
+            'description' => __( 'La liste de tous les partenaires de Espace P…', 'espacep'),
+            'public' => true,
+            'menu_position' => 5,
+            'menu_icon' => 'dashicons-groups',
             'supports' => [ 'title', 'editor', 'thumbnail' ],
             'has_archive' => true
         ] );

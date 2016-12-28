@@ -9,8 +9,13 @@
 			    <?php if ( $posts -> have_posts() ):
 			        while ( $posts -> have_posts() ):
 			            $posts -> the_post(); ?>
+			<p class="actu__date">
+				<?php  $dateParts = explode('-',get_the_date()); ?>
+				<span class="actu__date--day"><?php echo $dateParts[0]; ?></span> <br>
+				<?php echo $dateParts[1]; ?>		
+			</p>
 			<h2 class="actu__title" role="heading" aria-level="2"><?php the_title(); ?> </h2>
-			<p class="actu__date">Publié le <?php  the_date(); ?> à <?php the_time(); ?></p>
+			
 			<p class="actu__texte">
 				<?php the_custom_excerpt(); ?>…
 			</p>
@@ -63,12 +68,16 @@
 
 		<section class="last section">
 			<h2 class="section__title last__title" role="heading" aria-level="2">Dernièrement à Espace P…</h2>
+			<?php $posts = new WP_Query( [ 'orderby' => 'date', 'order' => 'ASC', 'number' => 1, 'category_name' => 'facebook' ] ); ?>
+		    <?php if ( $posts -> have_posts() ):
+		        while ( $posts -> have_posts() ):
+		            $posts -> the_post(); ?>
 			<div class="last__part facebook">
-				<p class="facebook__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-				<p class="facebook__date">Le xx/xx/xx à xx:xx</p>
-				<a href="" class="facebook__link" rel="external">Rejoignez-nous sur Facebook</a>
+				<?php the_content(); ?>
 			</div>
-				
+			<?php endwhile; endif; ?>
+			<?php wp_reset_query(); ?>
+
 			<?php $posts = new WP_Query( [ 'orderby' => 'date', 'order' => 'ASC', 'number' => 1, 'post_type' => 'event' ] ); ?>
 		    <?php if ( $posts -> have_posts() ):
 		        while ( $posts -> have_posts() ):
@@ -76,7 +85,13 @@
 			<div class="last__part event">
 				<?php $image = get_field('event_image'); ?>
 				<img src="<?php echo $image['url']; ?>" alt="photo de l'évenement" class="event__img" />
-				<a href="<?php the_permalink(); ?>" class="event__title">Exposition</a>
+				<div class="event__text">
+					<p  class="event__type"><?php the_field('type'); ?></p>
+					<a href="<?php the_permalink(); ?>" class="event__title"><?php the_title(); ?></a>
+					<p class="event__description"><?php the_custom_excerpt(); ?></p>
+					
+				</div>
+				
 			</div>
 			<?php endwhile; endif; ?>
 			<?php wp_reset_query(); ?>

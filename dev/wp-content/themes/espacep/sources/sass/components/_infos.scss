@@ -6,7 +6,7 @@
  * started at 10/10/2016
  */
 
- .infos {
+ .infos { 
  	&__small {
  		margin-top: .6em;
  		font-size: .7em;
@@ -14,7 +14,7 @@
  	}
  	&__link {
  		display: block;
- 		text-decoration: none;
+ 		text-decoration: underline;
  		margin-bottom: .6em;
  		color: $textColor;
  	}
