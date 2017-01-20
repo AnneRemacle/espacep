@@ -9,7 +9,7 @@
  .actu {
 	width: 60%;
  	margin: 7em auto 5em;
- 	position: relative; 
+ 	position: relative;
 
  	&__title {
  		font-size: 1.875em;
@@ -47,4 +47,26 @@
  	&__button:hover {
  		background: $buttonsHover;
  	}
+ }
+
+ @media screen and (max-width: 1270px) {
+     .actu {
+         width: 65%;
+     }
+ }
+ @media screen and (max-width: 1105px) {
+     .actu {
+         width: 68%;
+     }
+ }
+ @media screen and (max-width: 920px) {
+     .actu {
+         width: 70%;
+     }
+ }
+ @media screen and (max-width: 440px) {
+     .actu {
+         width: 75%;
+         font-size: .9em;
+     }
  }

@@ -840,6 +840,31 @@ html {
   background: #76abe7;
 }
 
+@media screen and (max-width: 1270px) {
+  .actu {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 1105px) {
+  .actu {
+    width: 68%;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .actu {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .actu {
+    width: 75%;
+    font-size: .9em;
+  }
+}
+
 /* Espace P
  *
  * /sass/components/portal.scss - basic styles for portal section
