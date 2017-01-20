@@ -11,7 +11,6 @@
  		font-size: 1.875em;
  		margin-bottom: .3em;
  	}
-
  	&__button {
  		background: $bgButtons;
  		text-decoration: none;
@@ -27,4 +26,54 @@
  		margin-bottom: 2.5em;
  		line-height: 1.5;
  	}
+    &__figure, &__content {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    &__figure {
+		margin-bottom: 0;
+        width: 50%;
+    }
+    &__img {
+        width: 100%;
+        margin-top: -0.2em;
+    }
+    &__content {
+        padding-left: 4%;
+		padding-right: 7%;
+    }
+    &__small {
+        margin-top: .6em;
+ 		font-size: .7em;
+        margin-bottom: 1.2em;
+    }
+    &__link {
+        display: block;
+ 		text-decoration: underline;
+ 		margin-bottom: .6em;
+ 		color: $textColor;
+    }
+    &__link:after {
+		content:"";
+		font-family: 'FontAwesome';
+		display: inline-block;
+		margin-left: .2em;
+		color: transparent;
+		transition: all .3s ease;
+	}
+	&__link:hover:after {
+		content:"";
+		font-family: 'FontAwesome';
+		display: inline-block;
+		margin-left: .5em;
+		color: $textColor;
+	}
+ }
+
+ .section:nth-child(odd) .section__figure {
+     float: right;
+ }
+ .section:nth-child(odd) .section__content {
+     float: left;
+     margin-top: 8em;
  }

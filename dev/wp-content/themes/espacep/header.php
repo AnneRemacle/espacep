@@ -12,12 +12,12 @@
         <?php
              if ( is_search() ) :
              echo 'Résultats de recherche pour "'.get_search_query().'" | ';
-             
+
              else :
              wp_title('|', true, 'right');
              endif;
 
-             bloginfo('name'); 
+             bloginfo('name');
         ?>
         </title>
         <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/build/css/styles.css'; ?>?v=0.5">
@@ -25,6 +25,14 @@
         <script src="<?php echo get_template_directory_uri() . '/build/script/script.js';?>"></script>
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <header class="header">
             <div class="header__up">
                 <p class="header__up--text">Are you a sex worker? We have some information for you</p>

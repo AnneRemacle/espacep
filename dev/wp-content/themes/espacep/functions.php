@@ -161,7 +161,7 @@
         <input type="submit" class="header__form--button" id="searchsubmit" value="'. esc_attr__( 'Rechercher' ) .'" />
         </div>
         </form>';
-     
+
         return $form;
     }
     add_filter( 'get_search_form', 'wpdocs_my_search_form' );
@@ -170,8 +170,13 @@
     // ACF Google Maps
 
     function my_acf_init() {
-    
+
         acf_update_setting('google_api_key', ' AIzaSyBDeuwdU6TD7s_exoHvquyikKKVTFQiGC0 ');
     }
 
     add_action('acf/init', 'my_acf_init');
+
+    function wpc_show_admin_bar() {
+	return false;
+}
+add_filter('show_admin_bar' , 'wpc_show_admin_bar');
