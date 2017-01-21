@@ -8,9 +8,9 @@
 ?>
 
 <section class="antennes">
-		<h2 class="section__title antennes__title">Choisissez votre antenne</h2>
+		<h2 class="antennes__title">Choisissez votre antenne</h2>
 
-		
+
 
 		<nav class="antennes__nav" id="nav">
 			<h3 class="sro">Navigation secondaire</h3>
@@ -20,15 +20,15 @@
 		    <?php if ( $posts -> have_posts() ):
 		        while ( $posts -> have_posts() ):
 		            $posts -> the_post(); ?>
-			
+
 				<li class="antennes__item">
 					<a class="antennes__tab <?php echo get_query_var('antenne')==get_field('slug')?'antennes__tab--active':''; ?>" href="<?php the_permalink(); ?>" itemprop="location">
 						<?php the_title(); ?>
 					</a>
 				</li>
-			
+
 			<?php endwhile; endif; ?>
-			<?php wp_reset_query(); ?>	
+			<?php wp_reset_query(); ?>
 			</ul>
 		</nav>
 		<?php $posts = new WP_Query( [ 'post_type' => 'antenne', 'name'=>get_query_var('antenne') ] ); ?>
@@ -65,7 +65,7 @@
 						Fax&nbsp;: <?php the_field('fax'); ?>
 					</p>
 				<?php endif; ?>
-				<a href="maitlo:<?php the_field('email'); ?>" class="coordonnees__text coordonnees__mail" itemprop="email"><?php the_field('email'); ?></a>	
+				<a href="maitlo:<?php the_field('email'); ?>" class="coordonnees__text coordonnees__mail" itemprop="email"><?php the_field('email'); ?></a>
 
 			</div>
 			<?php $location = get_field('carte'); ?>
@@ -75,12 +75,17 @@
 				</div>
 			</div>
 
+            <div class="contact">
+                <p class="contact__title">Écrire un message à l'antenne de <?php the_title(); ?></p>
+                <?php the_field('formulaire_antenne'); ?>
+            </div>
+
 		</div>
 
 		<?php endwhile; endif; ?>
 			<?php wp_reset_query(); ?>
-	
+
 	</section>
 
-<?php 
+<?php
 	get_footer();

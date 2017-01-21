@@ -12,6 +12,8 @@
 
 	&__title {
 		margin-bottom: 2em;
+		font-size: 1.875em;
+        line-height: 1.5;
 	}
 
 	&__nav {
@@ -22,6 +24,7 @@
 		width: 100%;
 		display: table;
 		table-layout: fixed;
+		margin-left: 0;
 	}
 
 	&__item {
@@ -65,7 +68,7 @@
 }
 
 .tabcontent {
-	
+
 }
 
 .tabcontent:nth-of-type(1) {
@@ -96,9 +99,170 @@
 
 .map {
 	width: 80%;
-	margin: 2em auto 0;
-	height: 30em;
+	margin: 2em auto;
+	height: 20em;
 	&__detail {
 
+	}
+}
+
+.contact {
+	width: 80%;
+	margin: 2em auto;
+	.wpcf7 {
+		width: 80%;
+		margin: 0 auto;
+		display: block;
+	}
+	&__title {
+		font-size: 2em;
+	}
+	&__label {
+	}
+	input {
+		height: 3em;
+		width: 80%;
+		margin: .5em 0 2em;
+		border: 1px solid rgba( black, 0.1);
+		padding: .5em;
+	}
+	input:focus {
+		outline: none;
+		border: 1px solid $bgButtons;
+	}
+	textarea {
+		width: 80%;
+		margin: .5em 0 2em;
+		border: 1px solid rgba( black, 0.1);
+		resize:none;
+	}
+	textarea:focus {
+		outline: none;
+		border: 1px solid $bgButtons;
+		padding: .5em;
+	}
+	.wpcf7-submit {
+		background: $bgButtons;
+		color: white;
+		width: 40%;
+		font-size: 1.1em;
+		border: none;
+		cursor: pointer;
+	}
+	.wpcf7-submit:hover {
+		background: $buttonsHover;
+	}
+}
+
+@media screen and (max-width:1150px) {
+	.contact {
+		width: 80%;
+		margin: 2em auto;
+		.wpcf7 {
+			width: 90%;
+		}
+		&__title {
+			font-size: 1.9em;
+		}
+
+	}
+}
+@media screen and (max-width:981px) {
+	.contact {
+
+		&__title {
+			font-size: 1.8em;
+		}
+		input {
+			width: 85%;
+		}
+		textarea {
+			width: 85%;
+		}
+	}
+}
+@media screen and (max-width:930px) {
+	.contact {
+		width: 85%;
+		&__title {
+			font-size: 1.8em;
+		}
+	}
+}
+
+@media screen and (max-width:860px) {
+	.antennes {
+		width: 80%;
+	}
+}
+@media screen and (max-width:766px) {
+	.antennes {
+		&__title {
+			margin-bottom: 2em;
+			font-size: 1.7em;
+	        line-height: 1.5;
+		}
+		&__item {
+			display: inline-block;
+			width: 33.33%;
+			text-align: center;
+			vertical-align: middle;
+			margin-bottom: 0;
+		}
+		&__tab {
+			display: inline-block;
+			width: 100%;
+			vertical-align: middle;
+			padding-top: 1.5em;
+		}
+		&__tab:hover {
+			background: $darkColor;
+		}
+		&__tab--active{
+			display: inline-block;
+			background: $darkColor;
+		}
+		&__tab--active:after {
+			border: none;
+		}
+	}
+	.contact {
+		width: 90%;
+		&__input {
+			width: 90%;
+		}
+		textarea {
+			width: 90%;
+		}
+	}
+}
+@media screen and (max-width:600px) {
+	.map {
+		height: 15em;
+	}
+}
+@media screen and (max-width:550px) {
+	.contact {
+		&__input {
+			width:100%;
+		}
+		textarea {
+			width: 100%;
+		}
+	}
+}
+@media screen and (max-width:435px) {
+	.antennes {
+		&__title {
+			font-size: 1.7em;
+		}
+	}
+	.map {
+		height: 10em;
+	}
+	.contact {
+		&__title {
+			font-size: 1.7em;
+		}
 	}
 }
