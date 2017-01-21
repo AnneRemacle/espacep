@@ -16,39 +16,29 @@
 		</p>
 	</section>
 
-	<section class="left">
-		<figure class="left__figure">
-			<img src="<?php echo get_template_directory_uri() . '/build/assets/images/photo.jpg'; ?>" alt="" class="left__img" />
+    <?php if( have_rows('section') ): ?>
+    <?php while ( have_rows('section') ) : the_row(); ?>
+	<section class="section clearfix">
+		<figure class="section__figure">
+            <?php $image = get_sub_field('image'); ?>
+            <img src="<?php echo $image['url']; ?>" alt="" class="section__img" />
 		</figure>
-		<div class="left__content">
-			<h2 class="sro">
-				Dernier numéro
+		<div class="section__content">
+			<h2 class="section__title">
+				<?php the_sub_field('titre'); ?>
 			</h2>
-			<p class="section__text">
-				<?php the_field('dernier_numero'); ?>
-			</p>
-			<a href="<?php the_permalink(); ?>" class="section__button">Lire le <span class="sro">dernier numéro du</span> magazine</a>
-		</div>
-		
-	</section>
+			<div class="section__text section__mag">
+				<?php the_sub_field('contenu'); ?>
+			</div>
+            <?php if( have_rows('bouton') ): ?>
+            <?php while ( have_rows('bouton') ) : the_row(); ?>
 
-	<section class="right archives">
-		<div class="right__content">
-			<h2 class="sro">
-				Magazines précédents
-			</h2>
-			<p class="section__text">
-				<?php the_field('archives_magazines'); ?>
-				
-			</p>
-			<a href="<?php the_permalink(); ?>" class="section__button">Voir les archives<span class="sro">des magazines</span></a>
+                <a href="<?php the_sub_field('url'); ?>" class="section__button"><?php the_sub_field('texte'); ?></a>
+            <?php endwhile; endif; ?>
 		</div>
 
-		<figure class="right__figure">
-			<img src="<?php echo get_template_directory_uri() . '/build/assets/images/photo.jpg'; ?>" alt="" class="right__img" />
-		</figure>
-		
 	</section>
+    <?php endwhile; endif; ?>
 
-<?php 
+<?php
 	get_footer();

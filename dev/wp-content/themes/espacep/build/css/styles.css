@@ -784,6 +784,10 @@ html {
   color: #1E0808;
 }
 
+.section__mag {
+  margin-bottom: 3em;
+}
+
 .section:nth-child(odd) .section__figure {
   float: right;
 }
