@@ -122,7 +122,7 @@
 	input {
 		height: 3em;
 		width: 80%;
-		margin: .5em 0 2em;
+		margin: .5em 0 1em;
 		border: 1px solid rgba( black, 0.1);
 		padding: .5em;
 	}
@@ -151,6 +151,22 @@
 	}
 	.wpcf7-submit:hover {
 		background: $buttonsHover;
+	}
+	.screen-reader-response {
+		color: red;
+		display: block;
+		margin-bottom: 2em;
+	}
+	.screen-reader-response ul {
+		display: none;
+	}
+	.wpcf7-not-valid-tip {
+		color: red;
+		display: block;
+		margin-bottom: 1em;
+	}
+	.wpcf7-validation-errors {
+		color: red;
 	}
 }
 

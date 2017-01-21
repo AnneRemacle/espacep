@@ -10,7 +10,9 @@
 <section class="antennes">
 		<h2 class="antennes__title">Choisissez votre antenne</h2>
 
-
+        <div class="antennes__intro">
+            <?php the_content();?>
+        </div>
 
 		<nav class="antennes__nav" id="nav">
 			<h3 class="sro">Navigation secondaire</h3>

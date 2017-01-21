@@ -1904,7 +1904,7 @@ html {
 .contact input {
   height: 3em;
   width: 80%;
-  margin: .5em 0 2em;
+  margin: .5em 0 1em;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: .5em;
 }
@@ -1938,6 +1938,26 @@ html {
 
 .contact .wpcf7-submit:hover {
   background: #76abe7;
+}
+
+.contact .screen-reader-response {
+  color: red;
+  display: block;
+  margin-bottom: 2em;
+}
+
+.contact .screen-reader-response ul {
+  display: none;
+}
+
+.contact .wpcf7-not-valid-tip {
+  color: red;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.contact .wpcf7-validation-errors {
+  color: red;
 }
 
 @media screen and (max-width: 1150px) {
