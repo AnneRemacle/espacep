@@ -8,12 +8,15 @@
 ?>
 
 	<section class="support">
-		<h2 class="section__title support__title">
+		<h2 class="support__title">
 			<?php the_field('titre');	 ?>
 		</h2>
 		<p class="section__text">
 			<?php the_content(); ?>
 		</p>
+        <div class="support__form">
+            <?php the_field( 'formulaire_magazine' ); ?>
+        </div>
 	</section>
 
     <?php if( have_rows('section') ): ?>

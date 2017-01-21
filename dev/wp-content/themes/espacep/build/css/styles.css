@@ -1663,6 +1663,128 @@ html {
 
 .support__title {
   margin-bottom: 1em;
+  font-size: 1.875em;
+  margin-bottom: .3em;
+  line-height: 1.5;
+}
+
+.support__form {
+  width: 60%;
+  margin: 2em 0;
+}
+
+.support__form--label {
+  display: block;
+  margin-bottom: 2em;
+}
+
+.support__form input, .support__form textarea {
+  width: 100%;
+  display: block;
+  height: 3em;
+  margin-top: .6em;
+  padding: .5em;
+  border: none;
+  border-bottom: 1px solid #1E0808;
+}
+
+.support__form textarea {
+  resize: none;
+  height: 5em;
+}
+
+.support__form input:focus, .support__form textarea:focus {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #4A90E2;
+}
+
+.support__form .wpcf7-submit {
+  border: none;
+  height: auto;
+  background: #4A90E2;
+  width: 30%;
+  color: white;
+  font-size: 1.2em;
+  padding: .5em;
+  cursor: pointer;
+}
+
+.support__form .wpcf7-submit:hover {
+  background: #76abe7;
+}
+
+.support__form .screen-reader-response {
+  color: red;
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+}
+
+.support__form .screen-reader-response ul {
+  display: none;
+}
+
+.support__form .wpcf7-not-valid-tip {
+  display: block;
+  color: red;
+  margin-top: .5em;
+}
+
+.support__form .wpcf7-validation-errors {
+  color: red;
+  margin-top: 2em;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1200px) {
+  .support {
+    width: 70%;
+  }
+  .support__form {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .support {
+    width: 70%;
+  }
+  .support__form {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .support {
+    width: 75%;
+  }
+  .support__form {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .support {
+    width: 75%;
+  }
+  .support__form {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .support__form {
+    width: 80%;
+  }
+  .support .wpcf7-submit {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .support__form {
+    width: 90%;
+  }
 }
 
 /* Espace P

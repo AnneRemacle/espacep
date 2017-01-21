@@ -15,5 +15,116 @@
 	margin: 5em auto;
 	&__title {
 		margin-bottom: 1em;
+		font-size: 1.875em;
+ 		margin-bottom: .3em;
+        line-height: 1.5;
+	}
+
+	&__form {
+		width: 60%;
+		margin: 2em 0;
+		&--label {
+			display: block;
+			margin-bottom: 2em;
+		}
+		input, textarea {
+			width: 100%;
+			display: block;
+			height: 3em;
+			margin-top: .6em;
+			padding: .5em;
+			border: none;
+			border-bottom: 1px solid $textColor;
+		}
+		textarea {
+			resize: none;
+			height: 5em;
+		}
+		input:focus, textarea:focus {
+			outline: none;
+			border: none;
+			border-bottom: 1px solid $bgButtons;
+		}
+		.wpcf7-submit {
+			border: none;
+			height: auto;
+			background: $bgButtons;
+			width: 30%;
+			color: white;
+			font-size: 1.2em;
+			padding: .5em;
+			cursor: pointer;
+		}
+		.wpcf7-submit:hover {
+			background: $buttonsHover;
+		}
+		.screen-reader-response {
+			color:red;
+			margin-bottom: 1.5em;
+			line-height: 1.5;
+		}
+		.screen-reader-response ul {
+			display: none;
+		}
+		.wpcf7-not-valid-tip {
+			display: block;
+			color: red;
+			margin-top: .5em;
+		}
+		.wpcf7-validation-errors {
+			color: red;
+			margin-top: 2em;
+			line-height: 1.5;
+		}
+	}
+}
+
+@media screen and (max-width:1200px) {
+	.support {
+		width: 70%;
+		&__form {
+			width: 60%;
+		}
+	}
+}
+@media screen and (max-width:1200px) {
+	.support {
+		width: 70%;
+		&__form {
+			width: 65%;
+		}
+	}
+}
+@media screen and (max-width:900px) {
+	.support {
+		width: 75%;
+		&__form {
+			width: 70%;
+		}
+	}
+}
+@media screen and (max-width:800px) {
+	.support {
+		width: 75%;
+		&__form {
+			width: 75%;
+		}
+	}
+}
+@media screen and (max-width:700px) {
+	.support {
+		&__form {
+			width: 80%;
+		}
+		.wpcf7-submit  {
+			width: 40%;
+		}
+	}
+}
+@media screen and (max-width:700px) {
+	.support {
+		&__form {
+			width: 90%;
+		}
 	}
 }
