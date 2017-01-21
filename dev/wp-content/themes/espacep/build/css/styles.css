@@ -1825,3 +1825,76 @@ li {
   display: inline-block;
   width: 100%;
 }
+
+@media screen and (max-width: 1191px) {
+  .footer__list {
+    margin-left: 10%;
+    width: 15%;
+  }
+  .footer__list--partners {
+    width: 35%;
+  }
+  .footer__partner {
+    width: 22%;
+  }
+  .footer__img {
+    width: auto;
+    height: 4em;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .footer__list {
+    margin-left: 17%;
+    width: 25%;
+    margin-bottom: 3em;
+  }
+  .footer__list--partners {
+    width: 80%;
+  }
+  .footer__partner {
+    width: 15%;
+  }
+  .footer__img {
+    width: auto;
+    height: 4em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer__partner {
+    width: 20%;
+    margin-bottom: 2em;
+  }
+  .footer__img {
+    width: auto;
+    height: 4em;
+  }
+}
+
+@media screen and (max-width: 572px) {
+  .footer__list {
+    margin-left: 15%;
+    width: 28%;
+  }
+  .footer__list--title {
+    font-size: 1.1em;
+  }
+  .footer__list--partners {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .footer__partner {
+    width: 24%;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .footer__list {
+    display: block;
+    width: 80%;
+    margin-left: 20%;
+  }
+}
