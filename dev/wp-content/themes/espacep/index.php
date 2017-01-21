@@ -59,7 +59,7 @@
 				<?php the_field('statut'); ?>
 			</div>
 
-			<?php $posts = new WP_Query( [ 'orderby' => 'date', 'order' => 'ASC', 'number' => 1, 'post_type' => 'event' ] ); ?>
+			<?php $posts = new WP_Query( [ 'orderby' => 'date', 'order' => 'ASC', 'number' => 1, 'post_type' => 'evenement' ] ); ?>
 		    <?php if ( $posts -> have_posts() ):
 		        while ( $posts -> have_posts() ):
 		            $posts -> the_post(); ?>
@@ -69,8 +69,8 @@
 				<div class="event__text">
 					<p  class="event__type"><?php the_field('type'); ?></p>
 					<a href="<?php the_permalink(); ?>" class="event__title"><?php the_title(); ?></a>
-					<p class="event__description"><?php the_custom_excerpt(); ?></p>
-
+					<p class="event__description"><?php the_custom_excerpt(); ?>…</p>
+                    <a href="<?php the_permalink(); ?> " class="event__button">Voir l'événement</a>
 				</div>
 
 			</div>
