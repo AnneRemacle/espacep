@@ -4,7 +4,7 @@
 
     add_theme_support( 'post-thumbnails' );
 
-    register_taxonomy( 'event-type', 'événement', [
+    register_taxonomy( 'event-type', 'evenement', [
                             'label' => 'Types d‘événements',
                             'labels' => [
                                 'singular_name' => 'Un type d‘événement'
@@ -16,7 +16,7 @@
 
     register_taxonomy_for_object_type( 'event-type', 'evénement' );
 
-    register_post_type( 'événement', [
+    register_post_type( 'evenement', [
             'label' => __('Événement', 'espacep'),
             'labels' => [
                         'singular_name' => __( 'Evénement', 'espacep' ),
