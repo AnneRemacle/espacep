@@ -707,9 +707,14 @@ html {
  * coded by Anne
  * started at 10/10/2016
  */
+.section {
+  position: relative;
+}
+
 .section__title {
   font-size: 1.875em;
   margin-bottom: .3em;
+  line-height: 1.5;
 }
 
 .section__button {
@@ -786,6 +791,118 @@ html {
 .section:nth-child(odd) .section__content {
   float: left;
   margin-top: 8em;
+}
+
+@media screen and (max-width: 1345px) {
+  .section__figure {
+    width: 50.05%;
+  }
+  .section__content {
+    width: 49.95%;
+  }
+}
+
+@media screen and (max-width: 1216px) {
+  .section:nth-child(odd) .section__content {
+    margin-top: 4em;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .section:nth-child(odd) .section__content {
+    margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .section {
+    font-size: .9em;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .section {
+    font-size: .85em;
+  }
+  .section:nth-child(odd) .section__content {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .section {
+    width: 100%;
+  }
+  .section__figure, .section__content {
+    display: block;
+  }
+  .section__figure {
+    width: 100%;
+    height: 15em;
+    overflow: hidden;
+  }
+  .section__img {
+    margin-top: -10%;
+  }
+  .section__content {
+    width: 70%;
+    margin: 1em auto 5em;
+  }
+  .section__title {
+    position: absolute;
+    top: 1.5em;
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+  }
+  .section:nth-child(odd) .section__figure {
+    float: none;
+  }
+  .section:nth-child(odd) .section__content {
+    float: none;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .section__content {
+    padding: 0;
+    margin-left: 10%;
+  }
+  .section__title {
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section__title {
+    font-size: 2.3em;
+    top: 1.7em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section__title {
+    font-size: 2.1em;
+    top: 1.9em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section__title {
+    width: 70%;
+    font-size: 2em;
+    top: 1.7em;
+  }
+  .section__content {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 406px) {
+  .section__title {
+    width: 75%;
+    font-size: 1.8em;
+  }
 }
 
 /* Espace P
@@ -1436,7 +1553,8 @@ html {
 }
 
 .post__content {
-  width: 70%;
+  width: 80%;
+  margin: 2em auto 0;
   line-height: 1.5;
 }
 
