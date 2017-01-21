@@ -11,7 +11,6 @@
 	margin: 5em auto;
 
 	&__title {
-
 		margin-bottom: 2em;
 	}
 
@@ -77,7 +76,7 @@
 	}
 
 	&__type {
-		font-size: 1.6em;
+		font-size: 1.1em;
 		color: $textColor;
 		margin-bottom: 1em;
 
@@ -91,6 +90,18 @@
 	}
 	&__title:hover {
 		text-decoration: underline;
+	}
+	&__description {
+		margin-bottom: 2em;
+	}
+	&__button {
+		text-decoration: none;
+		background: $bgButtons;
+		color: white;
+		padding: .5em 1em;
+	}
+	&__button:hover {
+		background: $buttonsHover;
 	}
 }
 
@@ -162,4 +173,169 @@
 
 .fa-play::before {
 	color: transparent;
+}
+
+@media screen and (max-width: 1300px) {
+	.last {
+		width: 65%;
+	}
+	.event {
+		&__img {
+			width: 35%;
+		}
+		&__text {
+			width: 50%;
+		}
+	}
+}
+@media screen and (max-width: 1200px) {
+	.last {
+		width: 70%;
+	}
+	.cff-author-img {
+		width: 12%;
+		top: .2em;
+	}
+	.cff-author-text {
+		width: 70%;
+		margin-left: 18%;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.last {
+		width: 75%;
+	}
+	.event {
+		&__img {
+			width: 30%;
+		}
+		&__text {
+			width: 55%;
+		}
+	}
+}
+@media screen and (max-width: 950px) {
+	.event {
+		&__text {
+			width: 55%;
+		}
+		&__title {
+			font-size: 1.3em;
+			margin-bottom: .8em;
+		}
+		&__description {
+			font-size: .9em;
+		}
+	}
+}
+@media screen and (max-width: 850px) {
+	.event {
+		&__title {
+			font-size: 1.2em;
+			margin-bottom: .7em;
+		}
+		&__button {
+			font-size: .9em;
+		}
+	}
+}
+@media screen and (max-width: 800px) {
+	.last {
+		width: 80%;
+	}
+	.cff-author-img {
+		width: 13%;
+	}
+	.cff-author-text {
+		margin-left: 19%;
+	}
+}
+@media screen and (max-width: 750px) {
+	.event {
+		&__title {
+			font-size: 1.1em;
+			margin-bottom: .6em;
+		}
+		&__description {
+			margin-bottom: 1.5em;
+		}
+		&__button {
+			font-size: .8em;
+		}
+	}
+}
+@media screen and (max-width: 700px) {
+	.event {
+		&__img {
+			width: 25%;
+		}
+		&__text {
+			width: 60%;
+		}
+		&__type {
+			font-size: .9em;
+		}
+		&__title {
+			font-size: 1.1em;
+			margin-bottom: .6em;
+		}
+		&__description {
+			margin-bottom: 1.5em;
+			font-size: .8em;
+		}
+		&__button {
+			font-size: .8em;
+		}
+	}
+}
+@media screen and (max-width: 650px) {
+	.event {
+		&__title {
+			font-size: 1em;
+			margin-bottom: .5em;
+		}
+		&__description {
+			font-size: .7em;
+		}
+	}
+}
+@media screen and (max-width: 600px) {
+	.last {
+		width: 90%;
+	}
+	.cff-author-img {
+		width: 14%;
+	}
+	.cff-author-text {
+		margin-left: 20%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.last {
+		width: 95%;
+		font-size: .9em;
+	}
+	.cff-author-img {
+		width: 15%;
+	}
+	.event {
+		min-height: 12em;
+	}
+}
+@media screen and (max-width: 430px) {
+	.last {
+		&__title {
+			font-size: 1.7em;
+		}
+	}
+	.cff-share-link {
+		margin-bottom: .6em;
+		margin-top: 1em;
+	}
+	.cff-share-tooltip {
+		display: block;
+	}
+	.cff-author-img {
+		width: 16%;
+	}
 }

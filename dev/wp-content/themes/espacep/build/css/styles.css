@@ -1154,7 +1154,7 @@ html {
 }
 
 .event__type {
-  font-size: 1.6em;
+  font-size: 1.1em;
   color: #1E0808;
   margin-bottom: 1em;
 }
@@ -1168,6 +1168,21 @@ html {
 
 .event__title:hover {
   text-decoration: underline;
+}
+
+.event__description {
+  margin-bottom: 2em;
+}
+
+.event__button {
+  text-decoration: none;
+  background: #4A90E2;
+  color: white;
+  padding: .5em 1em;
+}
+
+.event__button:hover {
+  background: #76abe7;
 }
 
 #cff {
@@ -1237,6 +1252,166 @@ html {
 
 .fa-play::before {
   color: transparent;
+}
+
+@media screen and (max-width: 1300px) {
+  .last {
+    width: 65%;
+  }
+  .event__img {
+    width: 35%;
+  }
+  .event__text {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .last {
+    width: 70%;
+  }
+  .cff-author-img {
+    width: 12%;
+    top: .2em;
+  }
+  .cff-author-text {
+    width: 70%;
+    margin-left: 18%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .last {
+    width: 75%;
+  }
+  .event__img {
+    width: 30%;
+  }
+  .event__text {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .event__text {
+    width: 55%;
+  }
+  .event__title {
+    font-size: 1.3em;
+    margin-bottom: .8em;
+  }
+  .event__description {
+    font-size: .9em;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .event__title {
+    font-size: 1.2em;
+    margin-bottom: .7em;
+  }
+  .event__button {
+    font-size: .9em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .last {
+    width: 80%;
+  }
+  .cff-author-img {
+    width: 13%;
+  }
+  .cff-author-text {
+    margin-left: 19%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .event__title {
+    font-size: 1.1em;
+    margin-bottom: .6em;
+  }
+  .event__description {
+    margin-bottom: 1.5em;
+  }
+  .event__button {
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .event__img {
+    width: 25%;
+  }
+  .event__text {
+    width: 60%;
+  }
+  .event__type {
+    font-size: .9em;
+  }
+  .event__title {
+    font-size: 1.1em;
+    margin-bottom: .6em;
+  }
+  .event__description {
+    margin-bottom: 1.5em;
+    font-size: .8em;
+  }
+  .event__button {
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .event__title {
+    font-size: 1em;
+    margin-bottom: .5em;
+  }
+  .event__description {
+    font-size: .7em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .last {
+    width: 90%;
+  }
+  .cff-author-img {
+    width: 14%;
+  }
+  .cff-author-text {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .last {
+    width: 95%;
+    font-size: .9em;
+  }
+  .cff-author-img {
+    width: 15%;
+  }
+  .event {
+    min-height: 12em;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .last__title {
+    font-size: 1.7em;
+  }
+  .cff-share-link {
+    margin-bottom: .6em;
+    margin-top: 1em;
+  }
+  .cff-share-tooltip {
+    display: block;
+  }
+  .cff-author-img {
+    width: 16%;
+  }
 }
 
 /* Espace P
