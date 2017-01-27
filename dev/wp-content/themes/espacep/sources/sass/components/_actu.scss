@@ -6,21 +6,29 @@
  * started at 10/10/2016
  */
 
+.articles {
+    width: 90%;
+    margin: 7em auto 5em;
+}
+
  .actu {
-	width: 60%;
- 	margin: 7em auto 5em;
+	display: inline-block;
+    width: 33%;
+    padding: 0 3%;
  	position: relative;
+    vertical-align: top;
 
  	&__title {
  		font-size: 1.875em;
  		margin-bottom: .3em;
+        line-height: 1.5;
  	}
  	&__date {
  		text-transform: uppercase;
  		text-align: center;
  		position: absolute;
- 		top: -4.5em;
- 		left: -2em;
+ 		top: -3em;
+ 		left: 0;
  		font-size: 1em;
 		border: 2px solid $bgButtons;
 		border-radius: 5px;
@@ -50,23 +58,23 @@
  }
 
  @media screen and (max-width: 1270px) {
-     .actu {
-         width: 65%;
-     }
+
  }
  @media screen and (max-width: 1105px) {
      .actu {
-         width: 68%;
+         width: 80%;
+         margin-bottom: 8em;
+         margin-left: 10%;
      }
  }
  @media screen and (max-width: 920px) {
-     .actu {
-         width: 70%;
-     }
+    .actu {
+        width: 90%;
+    }
  }
  @media screen and (max-width: 440px) {
      .actu {
-         width: 75%;
+
          font-size: .9em;
      }
  }

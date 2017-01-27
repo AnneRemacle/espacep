@@ -4,27 +4,6 @@
     */
     get_header();
 ?>
-		<article class="actu section">
-			<?php $posts = new WP_Query( [ 'orderby' => 'date', 'number' => 1, 'order' => 'ASC', 'category_name' => 'article' ] ); ?>
-			    <?php if ( $posts -> have_posts() ):
-			        while ( $posts -> have_posts() ):
-			            $posts -> the_post(); ?>
-			<p class="actu__date">
-				<?php  $dateParts = explode('-',get_the_date()); ?>
-				<span class="actu__date--day"><?php echo $dateParts[0]; ?></span> <br>
-				<?php echo $dateParts[1]; ?>
-			</p>
-			<h2 class="actu__title" role="heading" aria-level="2"><?php the_title(); ?> </h2>
-
-			<p class="actu__texte">
-				<?php the_custom_excerpt(); ?>…
-			</p>
-
-			<a href="<?php the_permalink(); ?>" class="actu__button">Lire l'article <span class="sro"><?php the_title(); ?> en entier</span></a>
-			<?php endwhile; endif; ?>
-			<?php wp_reset_query(); ?>
-		</article>
-
 		<section class="portal">
 			<h2 class="sro">Choisissez votre profil</h2>
             <?php if( have_rows('profils') ):
@@ -53,8 +32,32 @@
             <?php endif; ?>
 		</section>
 
+        <div class="articles">
+            <?php $posts = new WP_Query( [ 'orderby' => 'date', 'posts_per_page' => 3, 'order' => 'ASC' ] ); ?>
+                <?php if ( $posts -> have_posts() ):
+                    while ( $posts -> have_posts() ):
+                        $posts -> the_post(); ?>
+                <article class="actu section">
+        			<p class="actu__date">
+        				<?php  $dateParts = explode('-',get_the_date()); ?>
+        				<span class="actu__date--day"><?php echo $dateParts[0]; ?></span> <br>
+        				<?php echo $dateParts[1]; ?>
+        			</p>
+        			<h2 class="actu__title" role="heading" aria-level="2"><?php the_title(); ?> </h2>
+
+        			<p class="actu__texte">
+        				<?php the_custom_excerpt(); ?>…
+        			</p>
+
+        			<a href="<?php the_permalink(); ?>" class="actu__button">Lire l'article <span class="sro"><?php the_title(); ?> en entier</span></a>
+        		</article>
+            <?php endwhile; endif; ?>
+            <?php wp_reset_query(); ?>
+        </div>
+
 		<section class="last section">
 			<h2 class="section__title last__title" role="heading" aria-level="2"><?php the_field('last'); ?></h2>
+            
 			<div class="last__part facebook">
 				<?php the_field('statut'); ?>
 			</div>

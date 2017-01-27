@@ -7,25 +7,21 @@
  */
 
 .last {
-	width: 60%;
+	width: 80%;
 	margin: 5em auto;
+
 
 	&__title {
 		margin-bottom: 2em;
 	}
 
 	&__part {
-		width: 80%;
-		background: $lightBg;
-		-webkit-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.6);
-		-moz-box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.6);
-		box-shadow: 2px 4px 5px 0px rgba(0,0,0,0.6);
-		margin: 2em auto 2em;
+		display: block;
 	}
-
 }
 
 .facebook {
+	margin-bottom: 2em;
 	&__text {
 		display: block;
 		padding: 2em 0;
@@ -62,6 +58,8 @@
 }
 
 .event {
+	background: #f5f5f5;
+	padding: 3em 0;
 	&__img {
 		display: inline-block;
 		width: 40%;
@@ -105,8 +103,13 @@
 	}
 }
 
+.cff-wrapper {
+	padding: 4em auto;
+	background: #F5F5F5;
+}
+
 #cff {
-	margin: 2em auto;
+	margin: 0 auto;
 }
 
 .cff-author > a {
@@ -114,7 +117,10 @@
 }
 
 .cff-item {
-	padding-top: 1em;
+	padding-top: 3em;
+	width: 70%;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .cff-author {
@@ -151,6 +157,10 @@
 	display: none;
 }
 
+.cff-post-links {
+	padding-bottom: 3em;
+}
+
 .cff-share-link {
 	margin-bottom: 1.5em;
 	display: inline-block;
@@ -159,26 +169,27 @@
 
 }
 
-.cff-share-tooltip {
-	display: inline-block;
-	width: 60%;
-
-}
-
-.cff-share-tooltip > a {
-	margin-right: 5%;
-	color: $bgButtons;
-	font-size: 1.5em;
+.cff-share-container {
+	display: none;
 }
 
 .fa-play::before {
 	color: transparent;
 }
 
+
+.cff-likebox {
+	display: inline-block;
+	width: 30%;
+	vertical-align: middle;
+}
+
+.fb_iframe_widget {
+	width: 100%;
+}
+
 @media screen and (max-width: 1300px) {
-	.last {
-		width: 65%;
-	}
+
 	.event {
 		&__img {
 			width: 35%;
@@ -189,9 +200,7 @@
 	}
 }
 @media screen and (max-width: 1200px) {
-	.last {
-		width: 70%;
-	}
+
 	.cff-author-img {
 		width: 12%;
 		top: .2em;
@@ -202,9 +211,7 @@
 	}
 }
 @media screen and (max-width: 1000px) {
-	.last {
-		width: 75%;
-	}
+
 	.event {
 		&__img {
 			width: 30%;
@@ -227,6 +234,19 @@
 			font-size: .9em;
 		}
 	}
+
+	.cff-likebox {
+		display: block;
+		width: 50%;
+		vertical-align: middle;
+		padding-bottom: 3em;
+	}
+	.cff-item {
+		width: 100%;
+		display: block;
+
+	}
+
 }
 @media screen and (max-width: 850px) {
 	.event {
@@ -240,9 +260,7 @@
 	}
 }
 @media screen and (max-width: 800px) {
-	.last {
-		width: 80%;
-	}
+
 	.cff-author-img {
 		width: 13%;
 	}
@@ -332,9 +350,7 @@
 		margin-bottom: .6em;
 		margin-top: 1em;
 	}
-	.cff-share-tooltip {
-		display: block;
-	}
+
 	.cff-author-img {
 		width: 16%;
 	}
