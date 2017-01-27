@@ -22,6 +22,7 @@
 			display: inline-block;
 			vertical-align: middle;
 			font-size: 1.25em;
+			padding-top: .5em;
 			margin-right: 3%;
 			margin-left: 24.14%;
 		}
@@ -29,7 +30,7 @@
 		&--button {
 			display: inline-block;
 			vertical-align: middle;
-			font-size: 1.5em;
+			font-size: 1.25em;
 			background: white;
 			padding: 0.5em 1em;
 			color: $textColor;
@@ -39,6 +40,24 @@
 		&--button:hover {
 			text-decoration: underline;
 		}
+
+		&--close {
+			color: white;
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 5%;
+			font-size: 2em;
+			-webkit-transition: .2s ease;
+			-ms-transition: .2s ease;
+            transition: .2s ease;
+			padding: 0;
+			line-height: 0;
+		}
+		&--close:hover {
+			-webkit-transform: rotate(90deg);
+        	-ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+		} 
 	}
 
 	&__research {

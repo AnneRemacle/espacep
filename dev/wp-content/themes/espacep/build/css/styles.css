@@ -187,6 +187,7 @@ html {
   display: inline-block;
   vertical-align: middle;
   font-size: 1.25em;
+  padding-top: .5em;
   margin-right: 3%;
   margin-left: 24.14%;
 }
@@ -194,7 +195,7 @@ html {
 .header__up--button {
   display: inline-block;
   vertical-align: middle;
-  font-size: 1.5em;
+  font-size: 1.25em;
   background: white;
   padding: 0.5em 1em;
   color: #1E0808;
@@ -203,6 +204,25 @@ html {
 
 .header__up--button:hover {
   text-decoration: underline;
+}
+
+.header__up--close {
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5%;
+  font-size: 2em;
+  -webkit-transition: .2s ease;
+  -ms-transition: .2s ease;
+  transition: .2s ease;
+  padding: 0;
+  line-height: 0;
+}
+
+.header__up--close:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .header__form {

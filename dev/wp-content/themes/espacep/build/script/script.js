@@ -157,6 +157,11 @@ $(document).ready(function(){
 
     });
 
+    $( '.header__up--close' ).click( function(){
+        $( '.header__up' ).css( 'visibility', 'hidden' );
+        $( '.header__up--close' ).css( 'visibility', 'hidden' );
+    } );
+
 });
 
 })(jQuery);

@@ -38,6 +38,7 @@
             <div class="header__up">
                 <p class="header__up--text">Are you a sex worker? We have some information for you</p>
                 <a href="espacep.app/informations" title="Go to the information for sex workers" class="header__up--button">This way</a>
+                <a href="#" class="header__up--close" title="Fermer le bandeau"><i class="fa fa-times-circle-o"></i></a>
             </div>
 
             <div class="header__research">
