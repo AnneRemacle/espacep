@@ -11,18 +11,26 @@
 }
 
 .support {
-	width: 60%;
+	width: 80%;
 	margin: 5em auto;
 	&__title {
-		margin-bottom: 1em;
 		font-size: 1.875em;
- 		margin-bottom: .3em;
+ 		margin-bottom: 2em;
         line-height: 1.5;
 	}
 
+	&__text {
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 4%;
+	}
+
 	&__form {
-		width: 60%;
-		margin: 2em 0;
+		width: 45%;
+
+		display: inline-block;
+		vertical-align: top;
 		&--label {
 			display: block;
 			margin-bottom: 2em;
@@ -44,6 +52,15 @@
 			outline: none;
 			border: none;
 			border-bottom: 1px solid $bgButtons;
+		}
+		.wpcf7 {
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			width: 100%;
+		}
+		.wpcf7-form {
+			width: 100%;
 		}
 		.wpcf7-submit {
 			border: none;

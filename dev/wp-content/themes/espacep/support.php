@@ -11,9 +11,9 @@
 		<h2 class="support__title">
 			<?php the_field('titre');	 ?>
 		</h2>
-		<p class="section__text">
+		<div class="section__text support__text">
 			<?php the_content(); ?>
-		</p>
+		</div>
         <div class="support__form">
             <?php the_field( 'formulaire_magazine' ); ?>
         </div>

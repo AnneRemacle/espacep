@@ -1708,20 +1708,27 @@ html {
 }
 
 .support {
-  width: 60%;
+  width: 80%;
   margin: 5em auto;
 }
 
 .support__title {
-  margin-bottom: 1em;
   font-size: 1.875em;
-  margin-bottom: .3em;
+  margin-bottom: 2em;
   line-height: 1.5;
 }
 
+.support__text {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 4%;
+}
+
 .support__form {
-  width: 60%;
-  margin: 2em 0;
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .support__form--label {
@@ -1748,6 +1755,17 @@ html {
   outline: none;
   border: none;
   border-bottom: 1px solid #4A90E2;
+}
+
+.support__form .wpcf7 {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+}
+
+.support__form .wpcf7-form {
+  width: 100%;
 }
 
 .support__form .wpcf7-submit {
