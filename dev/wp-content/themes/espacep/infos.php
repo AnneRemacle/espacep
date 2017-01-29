@@ -15,14 +15,14 @@
             <img src="<?php echo $image['url']; ?>" alt="" class="section__img" />
         </figure>
         <div class="section__content infos__title">
-            <h2 class="section__title"><?php the_sub_field('titre'); ?></h2>
+            <h2 class="section__title infos__title"><?php the_sub_field('titre'); ?></h2>
             <p class="section__small"><?php the_sub_field('anglais'); ?></p>
             <div class="section__text"><?php the_sub_field('description'); ?></div>
 
             <?php if( have_rows('liens') ): ?>
             <?php while ( have_rows('liens') ) : the_row(); ?>
 
-                <a href="<?php the_sub_field('url'); ?>" class="section__link"><?php the_sub_field('titre'); ?></a>
+                <a href="<?php the_sub_field('url'); ?>" class="section__link infos__link"><?php the_sub_field('titre'); ?></a>
             <?php endwhile; endif; ?>
         </div>
     </section>

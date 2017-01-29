@@ -38,14 +38,14 @@
     }
     &__img {
         width: 100%;
-        margin-top: -0.2em;
+        margin-top: -0.1em;
     }
     &__content {
         padding-left: 4%;
 		padding-right: 7%;
     }
     &__small {
-        margin-top: .6em;
+        margin-top: -1em;
  		font-size: .7em;
         margin-bottom: 1.2em;
     }
@@ -53,7 +53,7 @@
         display: block;
  		text-decoration: underline;
  		margin-bottom: .6em;
- 		color: $textColor;
+ 		color: $bgButtons;
     }
     &__link:after {
 		content:"";
@@ -63,6 +63,15 @@
 		color: transparent;
 		transition: all .3s ease;
 	}
+    &__link:before {
+        content:"";
+        font-family: 'Fontawesome';
+        font-size: .6em;
+        margin-right: 1%;
+        vertical-align: middle;
+        display: inline-block;
+        color: $bgButtons;
+    }
 	&__link:hover:after {
 		content:"";
 		font-family: 'FontAwesome';
@@ -73,6 +82,10 @@
     &__mag {
         margin-bottom: 3em;
     }
+ }
+
+.section:nth-child(1) .section__figure .section__img {
+     margin-top: 0;
  }
 
  .section:nth-child(odd) .section__figure {

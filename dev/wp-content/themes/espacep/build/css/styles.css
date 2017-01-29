@@ -766,7 +766,7 @@ html {
 
 .section__img {
   width: 100%;
-  margin-top: -0.2em;
+  margin-top: -0.1em;
 }
 
 .section__content {
@@ -775,7 +775,7 @@ html {
 }
 
 .section__small {
-  margin-top: .6em;
+  margin-top: -1em;
   font-size: .7em;
   margin-bottom: 1.2em;
 }
@@ -784,7 +784,7 @@ html {
   display: block;
   text-decoration: underline;
   margin-bottom: .6em;
-  color: #1E0808;
+  color: #4A90E2;
 }
 
 .section__link:after {
@@ -794,6 +794,16 @@ html {
   margin-left: .2em;
   color: transparent;
   transition: all .3s ease;
+}
+
+.section__link:before {
+  content: "";
+  font-family: 'Fontawesome';
+  font-size: .6em;
+  margin-right: 1%;
+  vertical-align: middle;
+  display: inline-block;
+  color: #4A90E2;
 }
 
 .section__link:hover:after {
@@ -806,6 +816,10 @@ html {
 
 .section__mag {
   margin-bottom: 3em;
+}
+
+.section:nth-child(1) .section__figure .section__img {
+  margin-top: 0;
 }
 
 .section:nth-child(odd) .section__figure {
