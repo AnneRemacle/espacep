@@ -28,32 +28,32 @@
             </div>
         </section>
     <?php endwhile; endif; ?>
+    <div class="socials-bg">
+    	<section class="socials">
+    		<h2 class="section__title socials__title">Suivez-nous sur les réseaux sociaux</h2>
+    		<a href="https://www.facebook.com/Espace-P-1166947833360506/" class="section__button socials__button">Voir notre page Faebook</span></a>
+    	</section>
+    </div>
 
-	<section class="socials">
-		<h2 class="section__title socials__title">Suivez-nous sur les réseaux sociaux</h2>
-		<a href="https://www.facebook.com/Espace-P-1166947833360506/" class="section__button socials__button">Voir notre page Faebook</span></a>
+	<section class="partners">
+		<h2 class="section__title partners__title">Nos partenaires</h2>
+
+		<?php $posts = new WP_Query( ['post_type' => 'partenaires' ] ); ?>
+                <?php if ( $posts -> have_posts() ):
+                    while ( $posts -> have_posts() ):
+                        $posts -> the_post(); ?>
+
+		<a href="<?php the_field('site'); ?>" rel="external" title="Vers la page de notre partenaire <?php the_title(); ?>" class="partners__logo">
+			<?php $image = get_field('logo'); ?>
+			<img src="<?php echo $image['url']; ?>" alt="Logo de notre partenaire <?php the_title(); ?>" class="partners__img" />
+		</a>
+
+		<?php endwhile; endif; ?>
+                <?php wp_reset_query(); ?>
+
 	</section>
 
-	<div class="partners-bg">
-		<section class="partners">
-			<h2 class="section__title partners__title">Nos partenaires</h2>
 
-			<?php $posts = new WP_Query( ['post_type' => 'partenaires' ] ); ?>
-                    <?php if ( $posts -> have_posts() ):
-                        while ( $posts -> have_posts() ):
-                            $posts -> the_post(); ?>
-
-			<a href="<?php the_field('site'); ?>" rel="external" title="Vers la page de notre partenaire <?php the_title(); ?>" class="partners__logo">
-				<?php $image = get_field('logo'); ?>
-				<img src="<?php echo $image['url']; ?>" alt="Logo de notre partenaire <?php the_title(); ?>" class="partners__img" />
-			</a>
-
-			<?php endwhile; endif; ?>
-                    <?php wp_reset_query(); ?>
-
-		</section>
-
-	</div>
 
 <?php
     get_footer();
