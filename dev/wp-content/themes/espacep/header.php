@@ -5,44 +5,52 @@
  * Displays all of the head element and everything up until the "site-content" div.
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<!--[if lt IE 9]>
-	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
-	<![endif]-->
-	<?php wp_head(); ?>
-</head>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Espace P…</title>
 
-<body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
-
-	<div id="sidebar" class="sidebar">
-		<header id="masthead" class="site-header" role="banner">
-			<div class="site-branding">
-				<?php
-					twentyfifteen_the_custom_logo();
-
-					if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php endif;
-
-					$description = get_bloginfo( 'description', 'display' );
-					if ( $description || is_customize_preview() ) : ?>
-						<p class="site-description"><?php echo $description; ?></p>
-					<?php endif;
-				?>
-				<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'twentyfifteen' ); ?></button>
-			</div><!-- .site-branding -->
-		</header><!-- .site-header -->
-
-		<?php get_sidebar(); ?>
-	</div><!-- .sidebar -->
-
-	<div id="content" class="site-content">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/build/css/styles.css'; ?>?v=0.5">
+		<script src="https://use.fontawesome.com/1712970157.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__disclaimer">
+				<p class="header__disclaimer--text">Are you a sexworker? We have some information for you</p>
+				<a href="" class="header__disclaimer--link button">Click here</a>
+				<a href="" class="header__disclaimer--close"></a>
+			</div>
+			<div class="header__main">
+				<a href="<?php echo get_home_url(); ?>" class="header__logo">
+					<img src="<?php echo get_template_directory_uri() . '/build/assets/images/logo-blue.png';?>" alt="Logo d'Espace P…" class="header__logo--img">
+				</a>
+				<h1 class="sro">Espace P…</h1>
+				<p class="header__main--text">Vers une société prostitution admise</p>
+			</div>
+			<nav class="header__menu">
+				<h2 class="sro">Navigation principale</h2>
+				<a href="" class="header__menu--link">manifeste</a>
+				<a href="" class="header__menu--link">informations</a>
+				<a href="" class="header__menu--link">soutenez-nous</a>
+				<a href="" class="header__menu--link">contact</a>
+			</nav>
+			<?php if(is_front_page()): ?>
+				<section class="profiles">
+					<h2 class="sro">Choisissez votre profil</h2>
+					<a href="" class="profiles__single">
+						Je suis <span class="profiles__single--big">travailleur du sexe</span>
+					</a href="">
+					<a href="" class="profiles__single">
+						Je suis <span class="profiles__single--big">étudiant</span>
+					</a href="">
+					<a href="" class="profiles__single">
+						Je suis <span class="profiles__single--big">sympathisant</span>
+					</a href="">
+					<a href="" class="profiles__single">
+						Je suis <span class="profiles__single--big">client</span>
+					</a href="">
+				</section>
+			<?php endif; ?>
+		</header>
+	</body>
