@@ -5,6 +5,7 @@ design/images
 design/inspiration
 node_modules
 .sass-cache
+**/.DS_Store
 
 dev/*
 !dev/wp-content/
