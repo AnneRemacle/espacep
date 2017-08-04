@@ -1,66 +1,48 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <script src="https://use.fontawesome.com/81b9ac47bc.js"></script>
-        <script
-              src="https://code.jquery.com/jquery-2.2.4.min.js"
-              integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-              crossorigin="anonymous">
-        </script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-        <?php
-             if ( is_search() ) :
-             echo 'Résultats de recherche pour "'.get_search_query().'" | ';
+<?php
+/**
+ * The template for displaying the header
+ *
+ * Displays all of the head element and everything up until the "site-content" div.
+ */
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?> class="no-js">
+<head>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<!--[if lt IE 9]>
+	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
+	<![endif]-->
+	<?php wp_head(); ?>
+</head>
 
-             else :
-             wp_title('|', true, 'right');
-             endif;
+<body <?php body_class(); ?>>
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
 
-             bloginfo('name');
-        ?>
-        </title>
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/build/css/styles.css'; ?>?v=0.5">
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/build/assets/fonts/font-awesome/css/font-awesome.min.css'; ?>?v=0.5">
-        <script src="<?php echo get_template_directory_uri() . '/build/script/script.js';?>"></script>
-    </head>
-    <body>
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.8";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-        <header class="header">
-            <div class="header__up">
-                <p class="header__up--text">Are you a sex worker? We have some information for you</p>
-                <a href="espacep.app/informations" title="Go to the information for sex workers" class="header__up--button">This way</a>
-                <a href="#" class="header__up--close" title="Fermer le bandeau"><i class="fa fa-times-circle-o"></i></a>
-            </div>
+	<div id="sidebar" class="sidebar">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-branding">
+				<?php
+					twentyfifteen_the_custom_logo();
 
-            <div class="header__research">
-                <?php get_search_form(); ?>
-            </div>
+					if ( is_front_page() && is_home() ) : ?>
+						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php else : ?>
+						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php endif;
 
-            <div class="header__middle" itemscope itemtype="http://schema.org/Organization">
-                <a href="<?php echo get_home_url(); ?>" class="header__logo" title="Retour à la page d'accueil du site Espace P…" itemprop="logo">Accueil</a>
+					$description = get_bloginfo( 'description', 'display' );
+					if ( $description || is_customize_preview() ) : ?>
+						<p class="site-description"><?php echo $description; ?></p>
+					<?php endif;
+				?>
+				<button class="secondary-toggle"><?php _e( 'Menu and widgets', 'twentyfifteen' ); ?></button>
+			</div><!-- .site-branding -->
+		</header><!-- .site-header -->
 
-                <h1 class="header__punchline" role="heading" aria-level="1">
-                    <span class="sro">Espace P…</span>
-                    Vers une société prostitution admise
-                </h1>
-            </div>
+		<?php get_sidebar(); ?>
+	</div><!-- .sidebar -->
 
-            <nav class="header__nav">
-                <h2 class="sro" role="heading" aria-level="2">Navigation principale</h2>
-                <?php foreach (b_get_menu_items('header') as $navItem): ?>
-                    <a href="<?php echo $navItem -> url ?> " class="header__link">
-                        <?php echo $navItem -> label ?>
-                    </a>
-                <?php endforeach; ?>
-                <?php wp_reset_query(); ?>
-            </nav>
-        </header>
+	<div id="content" class="site-content">

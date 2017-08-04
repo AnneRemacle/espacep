@@ -1,63 +1,49 @@
 <?php
-/*
-Template Name: Search Page
-*/
+/**
+ * The template for displaying search results pages.
+ */
 
 get_header(); ?>
 
-	<section class="search section">
-		<h2 class="section__title search__title">
-		 <?php 
-		   $count = $wp_query->found_posts;
-		   $several = ($count<=1) ? '' : 's'; //pluriel
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-		   if ($count>0) : $output =  $count.' résultat'.$several.' pour la recherche';
-		   else : $output = 'Aucun résultat pour la recherche';
-		   endif;
-		   
-		   $output .= ' "<span class="terms_search">'. get_search_query() .'</span>"';
-		   
-		   echo $output;
-		 ?>
-		</h2>
+		<?php if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<article class="article" id="post-<?php the_ID(); ?>">
-			   <h3 class="article__title">
-			      <a class="article__title--link" href="<?php the_permalink(); ?>" title="Lire l'article &quot;<?php the_title(); ?>&quot;">
-			         <?php the_title(); ?>
-			      </a>
-			   </h3>
-			   <p class="article__excerpt">
-			            <?php the_custom_excerpt(); ?>…
-			   </p>
-			   <footer class="article__footer">
-			      <a class="article__url" href="<?php the_permalink(); ?>">
-			      	Lire l'article <span class="sro"><?php the_title(); ?></span> en entier
-			         <!-- <?php
-			             $permalink = get_permalink();
-			             
-			             // si le permalien fait plus de 60 caractères de long on le coupe
-			             if( strlen($permalink) > 60 ) : echo mb_substr( $permalink, 0, 60, "UTF-8" ) . '&hellip;'; 
+			<header class="page-header">
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyfifteen' ), get_search_query() ); ?></h1>
+			</header><!-- .page-header -->
 
-			             // sinon on l'affiche simplement
-			             else : echo $permalink;
-			             endif; ?> -->
-			      </a>
-			      <time class="article__date" datetime="<?php the_time('Y-m-d'); ?>">
-			         Posté le <?php the_time('l d F'); ?>
-			      </time>
-			   </footer>
-			</article>
-		<?php 
-		endwhile; ?>
-		<?php else: ?>
-		<p class="search__none">
-			Désolé, mais votre recherche a été infructueuse. Vous devriez réessayer avec d'autres termes.
-		</p>
-		<?php endif; ?>
-	</section>
+			<?php
+			// Start the loop.
+			while ( have_posts() ) : the_post(); ?>
 
+				<?php
+				/*
+				 * Run the loop for the search to output the results.
+				 * If you want to overload this in a child theme then include a file
+				 * called content-search.php and that will be used instead.
+				 */
+				get_template_part( 'content', 'search' );
 
+			// End the loop.
+			endwhile;
+
+			// Previous/next page navigation.
+			the_posts_pagination( array(
+				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
+				'next_text'          => __( 'Next page', 'twentyfifteen' ),
+				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
+			) );
+
+		// If no content, include the "No posts found" template.
+		else :
+			get_template_part( 'content', 'none' );
+
+		endif;
+		?>
+
+		</main><!-- .site-main -->
+	</section><!-- .content-area -->
 
 <?php get_footer(); ?>

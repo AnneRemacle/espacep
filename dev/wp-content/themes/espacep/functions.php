@@ -4,25 +4,25 @@
 
     add_theme_support( 'post-thumbnails' );
 
-    register_taxonomy( 'event-type', 'evenement', [
-                            'label' => 'Types d‘événements',
+    register_taxonomy( 'actu-type', 'actualite', [
+                            'label' => 'Types d‘actualités',
                             'labels' => [
-                                'singular_name' => 'Un type d‘événement'
+                                'singular_name' => 'Un type d‘actualité'
                             ],
                             'public' => true ,
-                            'description' => __( 'La description de l‘evenement', 'espacep' ),
+                            'description' => __( 'La description de l‘actualité', 'csi' ),
                             'hierarchical' => true
                         ] );
 
-    register_taxonomy_for_object_type( 'event-type', 'evénement' );
+    register_taxonomy_for_object_type( 'actu-type', 'actualité' );
 
-    register_post_type( 'evenement', [
-            'label' => __('Événement', 'espacep'),
+    register_post_type( 'actualite', [
+            'label' => __('Actualité', 'csi'),
             'labels' => [
-                        'singular_name' => __( 'Evénement', 'espacep' ),
-                        'add_new' => __( 'Ajouter un nouvel événement', 'espacep')
+                        'singular_name' => __( 'Actualité', 'csi' ),
+                        'add_new' => __( 'Ajouter une nouvelle actualité', 'csi')
             ],
-            'description' => __( 'La liste de tous les événements de Espace P…', 'espacep'),
+            'description' => __( 'La liste de toutes les actualités de CSI', 'csi'),
             'public' => true,
             'menu_position' => 5,
             'menu_icon' => 'dashicons-calendar-alt',
@@ -30,57 +30,47 @@
             'has_archive' => true
         ] );
 
-    register_post_type( 'antenne', [
-            'label' => __('Antenne', 'espacep'),
-            'labels' => [
-                        'singular_name' => __( 'Antenne', 'espacep' ),
-                        'add_new' => __( 'Ajouter une nouvelle antenne', 'espacep')
-            ],
-            'description' => __( 'La liste de toutes les antennes de Espace P…', 'espacep'),
-            'public' => true,
-            'menu_position' => 5,
-            'menu_icon' => 'dashicons-admin-home',
-            'supports' => [ 'title', 'editor', 'thumbnail' ],
-            'has_archive' => true
-        ] );
+        register_post_type( 'activite', [
+                'label' => __('Activité', 'csi'),
+                'labels' => [
+                            'singular_name' => __( 'activite', 'csi' ),
+                            'add_new' => __( 'Ajouter une nouvelle activité', 'csi')
+                ],
+                'description' => __( 'La liste de toutes les activités de CSI', 'csi'),
+                'public' => true,
+                'menu_position' => 5,
+                'menu_icon' => 'dashicons-admin-customizer',
+                'supports' => [ 'title', 'editor', 'thumbnail' ],
+                'has_archive' => true
+            ] );
 
-    register_post_type( 'magazine', [
-            'label' => __('Magazine', 'espacep'),
-            'labels' => [
-                        'singular_name' => __( 'Magazine', 'espacep' ),
-                        'add_new' => __( 'Ajouter un nouveau magazine', 'espacep')
-            ],
-            'description' => __( 'La liste de tous les magazines de Espace P…', 'espacep'),
-            'public' => true,
-            'menu_position' => 5,
-            'menu_icon' => 'dashicons-book',
-            'supports' => [ 'title', 'editor', 'thumbnail' ],
-            'has_archive' => true
-        ] );
+        if( function_exists('acf_add_options_page') ) {
+        	acf_add_options_page();
+        }
 
-    register_post_type( 'partenaires', [
-            'label' => __('Partenaires', 'espacep'),
-            'labels' => [
-                        'singular_name' => __( 'Partenaires', 'espacep' ),
-                        'add_new' => __( 'Ajouter un nouveau partenaire', 'espacep')
-            ],
-            'description' => __( 'La liste de tous les partenaires de Espace P…', 'espacep'),
-            'public' => true,
-            'menu_position' => 5,
-            'menu_icon' => 'dashicons-groups',
-            'supports' => [ 'title', 'editor', 'thumbnail' ],
-            'has_archive' => true
-        ] );
+        register_sidebar();
+
 
     // Defines navigation menus
-    register_nav_menu( 'header', __('Menu principal, affiché dans le header.', 'espacep') );
-    register_nav_menu( 'espacep', __('Menu secondaire space p, affiché dans le footer.', 'espacep') );
-    register_nav_menu( 'antennes', __('Menu secondaire antennes, affiché dans le footer et dans la page contact.', 'espacep') );
+    // register_nav_menu( 'header', __('Menu principal, affiché dans le header.', 'csi') );
+    // register_nav_menu( 'footer', __('Menu secondaire csi, affiché dans le footer.', 'csi') );
 
-    // generate a custom excerpt, used on the homepage
+    register_nav_menus( array(
+    'header' => __('Menu principal, affiché dans le header.', 'csi'),
+    'footer' => __('Menu secondaire csi, affiché dans le footer.', 'csi')
+) );
+
+    // generate a custom excerpt
 
     function get_the_custom_excerpt( $length = 150 ) {
         $excerpt = get_the_content();
+        $excerpt = strip_shortcodes( $excerpt );
+        $excerpt = strip_tags( $excerpt );
+        return substr( $excerpt, 0, $length );
+    }
+
+    function get_the_activity_excerpt( $length = 150 ) {
+        $excerpt = get_field('description');
         $excerpt = strip_shortcodes( $excerpt );
         $excerpt = strip_tags( $excerpt );
         return substr( $excerpt, 0, $length );
@@ -90,6 +80,10 @@
 
     function the_custom_excerpt( $length = 150 ) {
         echo get_the_custom_excerpt( $length );
+    }
+
+    function the_activity_excerpt( $length = 150 ) {
+        echo get_the_activity_excerpt( $length );
     }
 
     // Generate a link label containing the post_title
@@ -175,8 +169,3 @@
     }
 
     add_action('acf/init', 'my_acf_init');
-
-    function wpc_show_admin_bar() {
-	return false;
-}
-add_filter('show_admin_bar' , 'wpc_show_admin_bar');

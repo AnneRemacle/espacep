@@ -1,6 +1,10 @@
+site/
+.DS_Store
+*.sketch
+design/images
+design/inspiration
 node_modules
 .sass-cache
-.DS_Store
 
 dev/*
 !dev/wp-content/
@@ -9,3 +13,4 @@ dev/wp-content/*
 dev/wp-content/themes/*
 !dev/wp-content/themes/espacep/
 dev/wp-content/themes/espacep/.sass-cache
+dev/wp-content/themes/espacep/node_modules

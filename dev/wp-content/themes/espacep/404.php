@@ -1,17 +1,27 @@
 <?php
+/**
+ * The template for displaying 404 pages (not found)
+ *
+ */
 
-    get_header();
-?>
+get_header(); ?>
 
-    <section class="error">
-        <h2 class="error__title">Oups!</h2>
-        <p class="error__description">
-            La page demandée n'a pas été trouvée… Peut-être que l'URL fournie est erronée.
-        </p>
-        <p class="error__back">
-            Vous pouvez retourner à <a href="<?php echo home_url('/'); ?>" rel="home"> page d'accueil</a>.
-        </p>
-    </section>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-<?php
-    get_footer();
+			<section class="error-404 not-found">
+				<header class="page-header">
+					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyfifteen' ); ?></h1>
+				</header><!-- .page-header -->
+
+				<div class="page-content">
+					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfifteen' ); ?></p>
+
+					<?php get_search_form(); ?>
+				</div><!-- .page-content -->
+			</section><!-- .error-404 -->
+
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+<?php get_footer(); ?>
