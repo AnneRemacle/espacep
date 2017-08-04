@@ -53,4 +53,5 @@
 				</section>
 			<?php endif; ?>
 		</header>
-	</body>
+
+		<section class="content">
