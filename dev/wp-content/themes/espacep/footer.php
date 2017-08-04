@@ -6,23 +6,34 @@
  */
 ?>
 
-	</div><!-- .site-content -->
+</section>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php
-				/**
-				 * Fires before the Twenty Fifteen footer text for footer customization.
-				 *
-				 * @since Twenty Fifteen 1.0
-				 */
-				do_action( 'twentyfifteen_credits' );
-			?>
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyfifteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfifteen' ), 'WordPress' ); ?></a>
-		</div><!-- .site-info -->
-	</footer><!-- .site-footer -->
-
-</div><!-- .site -->
+<footer class="footer">
+	<div class="footer__section">
+		<p class="footer__section--title">Nos antennes</p>
+		<a href="" class="footer__section--link">Liège</a>
+		<a href="" class="footer__section--link">Liège</a>
+		<a href="" class="footer__section--link">Liège</a>
+		<a href="" class="footer__section--link">Liège</a>
+		<a href="" class="footer__section--link">Liège</a>
+		<a href="" class="footer__section--link">Liège</a>
+	</div>
+	<div class="footer__section">
+		<p class="footer__section--title">Espace P…</p>
+		<a href="" class="footer__section--link">Guide du client</a>
+		<a href="" class="footer__section--link">Guide du client</a>
+		<a href="" class="footer__section--link">Guide du client</a>
+		<a href="" class="footer__section--link">Guide du client</a>
+		<a href="" class="footer__section--link">Guide du client</a>
+	</div>
+	<div class="footer__section">
+		<p class="footer__section--title">Votre profil</p>
+		<a href="" class="footer__section--link">Je suis …</a>
+		<a href="" class="footer__section--link">Je suis …</a>
+		<a href="" class="footer__section--link">Je suis …</a>
+		<a href="" class="footer__section--link">Je suis …</a>
+	</div>
+</footer>
 
 <?php wp_footer(); ?>
 
