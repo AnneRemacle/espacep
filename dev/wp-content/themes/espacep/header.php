@@ -42,23 +42,24 @@
 				<a href="" class="header__menu--link">soutenez-nous</a>
 				<a href="" class="header__menu--link">contact</a>
 			</nav>
-			<?php if(is_front_page()): ?>
-				<section class="profiles">
-					<h2 class="sro">Choisissez votre profil</h2>
-					<a href="" class="profiles__single">
-						Je suis <span class="profiles__single--big">travailleur du sexe</span>
-					</a href="">
-					<a href="" class="profiles__single">
-						Je suis <span class="profiles__single--big">étudiant</span>
-					</a href="">
-					<a href="" class="profiles__single">
-						Je suis <span class="profiles__single--big">sympathisant</span>
-					</a href="">
-					<a href="" class="profiles__single">
-						Je suis <span class="profiles__single--big">client</span>
-					</a href="">
-				</section>
-			<?php endif; ?>
 		</header>
+
+		<?php if(is_front_page()): ?>
+			<section class="profiles">
+				<h2 class="sro">Choisissez votre profil</h2>
+				<a href="" class="profiles__single">
+					Je suis <span class="profiles__single--big">travailleur du sexe</span>
+				</a href="">
+				<a href="" class="profiles__single">
+					Je suis <span class="profiles__single--big">étudiant</span>
+				</a href="">
+				<a href="" class="profiles__single">
+					Je suis <span class="profiles__single--big">sympathisant</span>
+				</a href="">
+				<a href="" class="profiles__single">
+					Je suis <span class="profiles__single--big">client</span>
+				</a href="">
+			</section>
+		<?php endif; ?>
 
 		<section class="content">
