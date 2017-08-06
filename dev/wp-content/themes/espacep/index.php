@@ -4,7 +4,7 @@
  */
 get_header();?>
 
-<div class="section news">
+<div class="section news grey-pattern">
 	<?php $posts = new WP_Query( [ 'orderby' => 'date', 'posts_per_page' => 1, 'order' => 'ASC' ] ); ?>
 		<?php if ( $posts -> have_posts() ):
 			while ( $posts -> have_posts() ):
@@ -16,7 +16,19 @@ get_header();?>
 				<?php the_post_thumbnail(medium, ['class' => 'article__figure--image', 'alt' => 'Image de l‘article']);?>
 			</figure>
 			<div class="news__infos">
-				<p class="news__infos--category colored">Santé</p>
+				<?php	$cats = array();
+					foreach (get_the_category($post_id) as $c) {
+					$cat = get_category($c);
+					array_push($cats, $cat->name);
+					}
+
+					if (sizeOf($cats) > 0) {
+					$post_categories = implode(', ', $cats);
+					} else {
+					$post_categories = 'Not Assigned';
+					}
+				?>
+				<p class="news__infos--category colored"><?php echo $post_categories ?></p>
 				<h2 class="article__title" role="heading" aria-level="2"><?php the_title(); ?> </h2>
 				<p class="news__infos--summary"><?php the_custom_excerpt(); ?>…</p>
 				<a href="<?php the_permalink(); ?>" class="news__infos--link colored">Lire l'article <span class="sro"><?php the_title(); ?> en entier</span></a>
@@ -44,7 +56,7 @@ get_header();?>
 		while ( have_rows('frames') ) : the_row();?>
 		<section class="frames__section">
 			<h2 class="section__title"><?php the_sub_field('title'); ?></h2>
-			<p class="frames__section--text"><?php the_sub_field('text'); ?></p>
+			<?php the_sub_field('text'); ?>
 			<a href="" class="frames__section--link button"><?php the_sub_field('link_text'); ?></a>
 		</section>
 		<?php endwhile; ?>
