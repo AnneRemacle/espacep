@@ -13,13 +13,14 @@
 
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/build/css/styles.css'; ?>?v=0.5">
 		<script src="https://use.fontawesome.com/1712970157.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
 	<body>
 		<header class="header">
 			<div class="header__disclaimer">
 				<p class="header__disclaimer--text">Are you a sexworker? We have some information for you</p>
 				<a href="" class="header__disclaimer--link button">Click here</a>
-				<a href="" class="header__disclaimer--close"></a>
+				<a href="#" class="header__disclaimer--close" title="Fermer le bandeau"><i class="fa fa-times-circle-o"></i></a>
 			</div>
 			<div class="header__main">
 				<a href="<?php echo get_home_url(); ?>" class="header__logo">
