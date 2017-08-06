@@ -11,12 +11,12 @@
 <footer class="footer">
 	<div class="footer__section">
 		<p class="footer__section--title">Nos antennes</p>
-		<a href="" class="footer__section--link">Liège</a>
-		<a href="" class="footer__section--link">Liège</a>
-		<a href="" class="footer__section--link">Liège</a>
-		<a href="" class="footer__section--link">Liège</a>
-		<a href="" class="footer__section--link">Liège</a>
-		<a href="" class="footer__section--link">Liège</a>
+		<?php foreach (b_get_menu_items('antennes') as $navItem): ?>
+			<a href="<?php echo $navItem -> url ?> " class="footer__section--link">
+				<?php echo $navItem -> label ?>
+			</a>
+		<?php endforeach; ?>
+		<?php wp_reset_query(); ?>
 	</div>
 	<div class="footer__section">
 		<p class="footer__section--title">Espace P…</p>
@@ -35,6 +35,7 @@
 	</div>
 </footer>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-5jWhnbtrrVaFPSoanQGNsLJXDlyevuc"></script>
 <?php wp_footer(); ?>
 
 </body>
