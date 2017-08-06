@@ -1,0 +1,22 @@
+/* Espace P
+ *
+ * /sass/components/sections.scss - styles for sections
+ *
+ * coded by Anne
+ * started at 05/08/2017
+ */
+
+.section {
+    padding: 0 14%;
+
+    &__title {
+        font-size: 2em;
+        font-weight: bolder;
+        margin-bottom: 1.3em;
+        line-height: 1.5;
+    }
+}
+
+.section.last {
+    margin: 5em 0;
+}

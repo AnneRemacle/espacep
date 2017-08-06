@@ -1,0 +1,26 @@
+/* Espace P
+ *
+ * /sass/components/patterns.scss - styles for sections which have patterns
+ *
+ * coded by Anne
+ * started at 05/08/2017
+ */
+
+.grey-pattern {
+    &:before, &:after {
+        content:"";
+        width: 18%;
+        height: 10em;
+        position: absolute;
+        background: url('../assets/images/pattern.svg') top left no-repeat;
+        z-index: 0;
+    }
+    &:before {
+        top: 2.5em;
+        left: 0;
+    }
+    &:after {
+        bottom: 2.5em;
+        right: 0;
+    }
+}

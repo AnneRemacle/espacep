@@ -25,3 +25,22 @@
  .clearfix:after {
      clear: both;
  }
+
+ .button {
+    background: $lightColor;
+    color: #fff;
+    padding: 0.5em 1.2em;
+    border-radius: 50px;
+    -webkit-transition: background .3s;
+    transition: background .3s;
+    text-decoration: none;
+
+    &:hover {
+        background: $darkColor;
+
+    }
+ }
+
+.colored {
+    color: $lightColor;
+}

@@ -1,0 +1,27 @@
+/* Espace P
+ *
+ * /sass/components/support.scss - styles for section support
+ *
+ * coded by Anne
+ * started at 05/08/2017
+ */
+
+ .imaged {
+     width: 100%;
+     padding: 11.25em 25% 0;
+     height: 34em;
+     background: url('../assets/images/audrey.jpg') center no-repeat;
+     color: #fff;
+     text-align: center;
+
+     &__title {
+         font-size: 2.3em;
+         font-weight: lighter;
+         margin-bottom: 2em;
+     }
+
+     &__link {
+         font-size: 2em;
+         text-decoration: none;
+     }
+ }

@@ -1,0 +1,32 @@
+/* Espace P
+ *
+ * /sass/components/footer.scss - styles for footer
+ *
+ * coded by Anne
+ * started at 06/08/2017
+ */
+
+.footer {
+    background: #fff;
+    padding: 5em 14%;
+    display: table;
+    width: 100%;
+    &__section {
+        display: table-cell;
+        width: 33%;
+        padding: 0 5%;
+        &--title {
+            text-transform: uppercase;
+            color: $lightColor;
+            font-size: 1.3em;
+            margin-bottom: 1em;
+        }
+        &--link {
+            text-decoration: none;
+            color: $textColor;
+            display: block;
+            font-size: 1.15em;
+            margin-bottom: .6em;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+/* Espace P
+ *
+ * /sass/components/frames.scss - styles for frames
+ *
+ * coded by Anne
+ * started at 06/08/2017
+ */
+
+.frames {
+    margin: 5em 0;
+
+    &__section {
+        width: 43%;
+        background: #fff;
+        display: inline-block;
+        vertical-align: top;
+        height: 28.6em;
+        padding: 4.5em 7% 0;
+        text-align: center;
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 3em;
+        }
+
+        &--link {
+            font-size: 1.2em;
+            padding: .5em 2em;
+        }
+    }
+    &__section:nth-child(even) {
+        margin-left: 13%;
+    }
+}

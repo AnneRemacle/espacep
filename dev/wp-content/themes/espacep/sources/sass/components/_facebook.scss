@@ -1,0 +1,105 @@
+/* Espace P
+ *
+ * /sass/components/facebook.scss - styles for custom facebook feed
+ *
+ * coded by Anne
+ * started at 06/08/2017
+ */
+
+#cff {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+}
+ .cff {
+     position: relative;
+     &-author {
+         position: relative;
+         margin-bottom: 4em;
+
+         a {
+             text-decoration: none;
+             color: $darkColor;
+         }
+         &-img {
+             position: absolute;
+             width: 12%;
+             top: 0em;
+             left: 0;
+
+             img {
+               width: 100%;
+               height: 100%;
+             }
+         }
+         &-text {
+             width: 60%;
+             margin-left: 16%;
+
+             .cff-date {
+                 font-size: .8em;
+             }
+         }
+         &-date {
+             color: $lightColor;
+             font-size: 1.2em;
+             margin-bottom: .7em;
+         }
+     }
+     &-item {
+         display: inline-block;
+         vertical-align: middle;
+     }
+     &-post {
+         &-text {
+            margin-bottom: 2em;
+         }
+     }
+     &-text {
+         color: $textColor;
+         a {
+             color: $darkColor;
+         }
+     }
+     &-viewpost {
+         &-facebook {
+             text-transform: uppercase;
+             text-decoration: none;
+             transition: all .3s;
+             color: $lightColor;
+
+             &:after {
+                 content:"";
+                 font-family: "Fontawesome";
+                 display: inline-block;
+                 transition: all .3s;
+             }
+         }
+         &-facebook:hover {
+             color: $darkColor;
+
+             &:after {
+                 color: $darkColor;
+                 transform: translateX(10px);
+             }
+         }
+     }
+ }
+
+ .cff-dot {
+   display: none;
+ }
+
+ .cff-post-links {
+   padding-bottom: 3em;
+ }
+
+ .cff-likebox {
+   display: inline-block;
+   width: 30%;
+   vertical-align: middle;
+ }
+
+ .fb_iframe_widget {
+   width: 100%;
+ }

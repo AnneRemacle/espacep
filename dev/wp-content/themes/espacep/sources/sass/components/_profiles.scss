@@ -1,0 +1,40 @@
+/* Espace P
+ *
+ * /sass/components/profiles.scss - styles for profiles
+ *
+ * coded by Anne
+ * started at 05/08/2017
+ */
+
+.profiles {
+    width: 100%;
+    height: 35em;
+    background: url('../assets/images/hero.jpg') center no-repeat;
+    background-size: cover;
+    padding: 20em 15% 0;
+    display: block;
+    &__single {
+        display: inline-block;
+        width: 20%;
+        height: 12em;
+        background: #fff;
+        border-bottom: 10px solid #979797;
+        vertical-align: middle;
+        padding: 3.9em 1% 0 1%;
+        text-align: center;
+        text-decoration: none;
+        color: $darkColor;
+        margin-left: 3.5%;
+        transition: all .3s;
+        &--big {
+            display: block;
+            font-size: 1.4em;
+            text-align: center;
+            padding: 0;
+        }
+    }
+    &__single:hover {
+        transform: translateY(-15px);
+        border-bottom-color: $lightColor;
+    }
+}

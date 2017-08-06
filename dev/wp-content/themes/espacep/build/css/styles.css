@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Espace P
  *
  * /sass/styles.scss - Main stylesheet
@@ -46,6 +47,24 @@
 
 .clearfix:after {
   clear: both;
+}
+
+.button {
+  background: #9672F7;
+  color: #fff;
+  padding: 0.5em 1.2em;
+  border-radius: 50px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #301277;
+}
+
+.colored {
+  color: #9672F7;
 }
 
 /* Espace P
@@ -131,3 +150,495 @@ html {
  * coded by Anne
  * started at 04/08/2017
  */
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #F1F1F1;
+}
+
+/* Espace P
+ *
+ * /sass/components/header.scss - styles for header
+ *
+ * coded by Anne
+ * started at 05/08/2017
+ */
+.header {
+  height: 57.93em;
+  background: #fff;
+  position: relative;
+}
+
+.header__disclaimer {
+  background: rgba(150, 114, 247, 0.2);
+  height: 4.375em;
+  padding: 0.7em 0;
+}
+
+.header__disclaimer--text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.25em;
+  padding-top: .3em;
+  margin-right: 3%;
+  margin-left: 24.14%;
+}
+
+.header__disclaimer--link {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.25em;
+  margin-top: .3em;
+  text-decoration: none;
+}
+
+.header__disclaimer--close {
+  color: white;
+  float: right;
+  margin-right: 10%;
+  line-height: 1.7em;
+  font-size: 2em;
+  -webkit-transition: .2s ease;
+  -ms-transition: .2s ease;
+  transition: .2s ease;
+  padding: 0;
+}
+
+.header__disclaimer--close:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.header__main {
+  height: 14.3em;
+}
+
+.header__main--text {
+  color: #301277;
+  font-size: 2.81em;
+  font-weight: bolder;
+  float: right;
+  margin-right: 13.8%;
+  padding-top: 2em;
+}
+
+.header__logo {
+  width: 9.9%;
+  height: 14.3em;
+  display: inline-block;
+  padding-top: 1em;
+  vertical-align: middle;
+  margin-left: 13.8%;
+  margin-right: 3%;
+}
+
+.header__logo--img {
+  width: 100%;
+}
+
+.header__menu {
+  height: 4.3em;
+  border-top: 1px solid #301277;
+  padding: 0 13.88%;
+  display: table;
+  width: 100%;
+}
+
+.header__menu--link {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #222;
+  display: table-cell;
+  width: 25%;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 5px solid transparent;
+  transition: border-bottom-color .3s;
+}
+
+.header__menu--link:hover {
+  border-bottom: 5px solid #301277;
+}
+
+/* Espace P
+ *
+ * /sass/components/profiles.scss - styles for profiles
+ *
+ * coded by Anne
+ * started at 05/08/2017
+ */
+.profiles {
+  width: 100%;
+  height: 35em;
+  background: url("../assets/images/hero.jpg") center no-repeat;
+  background-size: cover;
+  padding: 20em 15% 0;
+  display: block;
+}
+
+.profiles__single {
+  display: inline-block;
+  width: 20%;
+  height: 12em;
+  background: #fff;
+  border-bottom: 10px solid #979797;
+  vertical-align: middle;
+  padding: 3.9em 1% 0 1%;
+  text-align: center;
+  text-decoration: none;
+  color: #301277;
+  margin-left: 3.5%;
+  transition: all .3s;
+}
+
+.profiles__single--big {
+  display: block;
+  font-size: 1.4em;
+  text-align: center;
+  padding: 0;
+}
+
+.profiles__single:hover {
+  transform: translateY(-15px);
+  border-bottom-color: #9672F7;
+}
+
+/* Espace P
+ *
+ * /sass/components/sections.scss - styles for sections
+ *
+ * coded by Anne
+ * started at 05/08/2017
+ */
+.section {
+  padding: 0 14%;
+}
+
+.section__title {
+  font-size: 2em;
+  font-weight: bolder;
+  margin-bottom: 1.3em;
+  line-height: 1.5;
+}
+
+.section.last {
+  margin: 5em 0;
+}
+
+/* Espace P
+ *
+ * /sass/components/news.scss - styles for section news
+ *
+ * coded by Anne
+ * started at 05/08/2017
+ */
+.news {
+  padding-top: 7.81em;
+  padding-bottom: 7.81em;
+  position: relative;
+  background: #fff;
+}
+
+.news__infos {
+  display: inline-block;
+  width: 42%;
+  vertical-align: top;
+  margin-left: 3.5%;
+}
+
+.news__infos--category {
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+.news__infos--summary {
+  font-size: 1.125em;
+  font-weight: lighter;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+.news__infos--link {
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.news__infos--link:after {
+  content: "";
+  font-family: "Fontawesome";
+  display: inline-block;
+  transition: all .3s;
+}
+
+.news__infos--link:hover {
+  color: #301277;
+}
+
+.news__infos--link:hover:after {
+  color: #301277;
+  transform: translateX(10px);
+}
+
+.article {
+  position: relative;
+  z-index: 2;
+}
+
+.article__figure {
+  display: inline-block;
+  width: 54%;
+  height: 21em;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.article__figure--image {
+  width: 100%;
+  height: auto;
+}
+
+.article__title {
+  font-size: 2em;
+  font-weight: bolder;
+  line-height: 1.5;
+  margin-bottom: .5em;
+}
+
+/* Espace P
+ *
+ * /sass/components/patterns.scss - styles for sections which have patterns
+ *
+ * coded by Anne
+ * started at 05/08/2017
+ */
+.grey-pattern:before, .grey-pattern:after {
+  content: "";
+  width: 18%;
+  height: 10em;
+  position: absolute;
+  background: url("../assets/images/pattern.svg") top left no-repeat;
+  z-index: 0;
+}
+
+.grey-pattern:before {
+  top: 2.5em;
+  left: 0;
+}
+
+.grey-pattern:after {
+  bottom: 2.5em;
+  right: 0;
+}
+
+/* Espace P
+ *
+ * /sass/components/support.scss - styles for section support
+ *
+ * coded by Anne
+ * started at 05/08/2017
+ */
+.imaged {
+  width: 100%;
+  padding: 11.25em 25% 0;
+  height: 34em;
+  background: url("../assets/images/audrey.jpg") center no-repeat;
+  color: #fff;
+  text-align: center;
+}
+
+.imaged__title {
+  font-size: 2.3em;
+  font-weight: lighter;
+  margin-bottom: 2em;
+}
+
+.imaged__link {
+  font-size: 2em;
+  text-decoration: none;
+}
+
+/* Espace P
+ *
+ * /sass/components/facebook.scss - styles for custom facebook feed
+ *
+ * coded by Anne
+ * started at 06/08/2017
+ */
+#cff {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.cff {
+  position: relative;
+}
+
+.cff-author {
+  position: relative;
+  margin-bottom: 4em;
+}
+
+.cff-author a {
+  text-decoration: none;
+  color: #301277;
+}
+
+.cff-author-img {
+  position: absolute;
+  width: 12%;
+  top: 0em;
+  left: 0;
+}
+
+.cff-author-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.cff-author-text {
+  width: 60%;
+  margin-left: 16%;
+}
+
+.cff-author-text .cff-date {
+  font-size: .8em;
+}
+
+.cff-author-date {
+  color: #9672F7;
+  font-size: 1.2em;
+  margin-bottom: .7em;
+}
+
+.cff-item {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cff-post-text {
+  margin-bottom: 2em;
+}
+
+.cff-text {
+  color: #222;
+}
+
+.cff-text a {
+  color: #301277;
+}
+
+.cff-viewpost-facebook {
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .3s;
+  color: #9672F7;
+}
+
+.cff-viewpost-facebook:after {
+  content: "";
+  font-family: "Fontawesome";
+  display: inline-block;
+  transition: all .3s;
+}
+
+.cff-viewpost-facebook:hover {
+  color: #301277;
+}
+
+.cff-viewpost-facebook:hover:after {
+  color: #301277;
+  transform: translateX(10px);
+}
+
+.cff-dot {
+  display: none;
+}
+
+.cff-post-links {
+  padding-bottom: 3em;
+}
+
+.cff-likebox {
+  display: inline-block;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.fb_iframe_widget {
+  width: 100%;
+}
+
+/* Espace P
+ *
+ * /sass/components/frames.scss - styles for frames
+ *
+ * coded by Anne
+ * started at 06/08/2017
+ */
+.frames {
+  margin: 5em 0;
+}
+
+.frames__section {
+  width: 43%;
+  background: #fff;
+  display: inline-block;
+  vertical-align: top;
+  height: 28.6em;
+  padding: 4.5em 7% 0;
+  text-align: center;
+}
+
+.frames__section p {
+  line-height: 1.5;
+  margin-bottom: 3em;
+}
+
+.frames__section--link {
+  font-size: 1.2em;
+  padding: .5em 2em;
+}
+
+.frames__section:nth-child(even) {
+  margin-left: 13%;
+}
+
+/* Espace P
+ *
+ * /sass/components/footer.scss - styles for footer
+ *
+ * coded by Anne
+ * started at 06/08/2017
+ */
+.footer {
+  background: #fff;
+  padding: 5em 14%;
+  display: table;
+  width: 100%;
+}
+
+.footer__section {
+  display: table-cell;
+  width: 33%;
+  padding: 0 5%;
+}
+
+.footer__section--title {
+  text-transform: uppercase;
+  color: #9672F7;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
+
+.footer__section--link {
+  text-decoration: none;
+  color: #222;
+  display: block;
+  font-size: 1.15em;
+  margin-bottom: .6em;
+}

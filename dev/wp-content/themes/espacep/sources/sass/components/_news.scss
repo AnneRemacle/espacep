@@ -1,0 +1,78 @@
+/* Espace P
+ *
+ * /sass/components/news.scss - styles for section news
+ *
+ * coded by Anne
+ * started at 05/08/2017
+ */
+
+ .news {
+     padding-top: 7.81em;
+     padding-bottom: 7.81em;
+     position: relative;
+     background: #fff;
+
+    &__infos {
+        display: inline-block;
+        width: 42%;
+        vertical-align: top;
+        margin-left: 3.5%;
+
+        &--category {
+            text-transform: uppercase;
+            font-size: 1.5em;
+        }
+        &--summary {
+            font-size: 1.125em;
+            font-weight: lighter;
+            line-height: 1.5;
+            margin-bottom: 1em;;
+        }
+        &--link {
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all .3s;
+
+            &:after {
+                content:"";
+                font-family: "Fontawesome";
+                display: inline-block;
+                transition: all .3s;
+            }
+        }
+        &--link:hover {
+            color: $darkColor;
+
+            &:after {
+                color: $darkColor;
+                transform: translateX(10px);
+            }
+        }
+    }
+
+ }
+
+ .article {
+     position: relative;
+     z-index: 2;
+
+     &__figure {
+         display: inline-block;
+         width: 54%;
+         height: 21em;
+         overflow: hidden;
+         vertical-align: top;
+
+         &--image {
+             width: 100%;
+             height: auto;
+         }
+     }
+
+     &__title {
+         font-size: 2em;
+         font-weight: bolder;
+         line-height: 1.5;
+         margin-bottom: .5em;
+     }
+ }
