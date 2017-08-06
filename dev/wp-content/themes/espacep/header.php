@@ -14,6 +14,12 @@
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/build/css/styles.css'; ?>?v=0.5">
 		<script src="https://use.fontawesome.com/1712970157.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<script
+              src="https://code.jquery.com/jquery-2.2.4.min.js"
+              integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+              crossorigin="anonymous">
+        </script>
+		<script src="<?php echo get_template_directory_uri() . '/build/script/script.js';?>"></script>
 	</head>
 	<body>
 		<header class="header">
