@@ -1,0 +1,100 @@
+/* Espace P
+ *
+ * /sass/components/antenne.scss - styles for antennes page
+ *
+ * coded by Anne
+ * started at 06/08/2017
+ */
+
+ .antennes {
+     margin: 5em 0;
+     position: relative;
+
+     * {
+         position: relative;
+         z-index:2;
+     }
+
+     &__intro {
+         line-height: 1.5;
+         margin-bottom: 2em;
+         p {
+             line-height: 1.5;
+         }
+     }
+     &__nav {
+         margin-bottom: 4em;;
+     }
+     &__list {
+       width: 100%;
+       display: table;
+       table-layout: fixed;
+       margin-left: 0;
+     }
+     &__item {
+       display: table-cell;
+       width: 16.666%;
+       background: $lightColor;
+       cursor: pointer;
+     }
+     &__tab {
+       display: table-cell;
+       width: 16.666%;
+       height: 4em;
+       text-align: center;
+       vertical-align: middle;
+       text-decoration: none;
+       color: #fff;
+       text-transform: uppercase;
+       transition: all .3s ease;
+       position: relative;
+       cursor: pointer;
+
+       &:hover {
+         background: $darkColor;
+         color: white;
+       }
+       &--active {
+         background: #11125D;
+         color: white;
+        }
+        &--active:after {
+          content: "";
+          width: 0;
+          border: 15px solid transparent;
+          border-top: 15px solid #11125D;
+          position: absolute;
+          bottom: -30px;
+          left: 40%;
+      }
+     }
+ }
+
+ .active {
+   display: block;
+ }
+
+ .coordonnees {
+     margin-bottom: 2em;
+     &__left, &__right {
+         display: inline-block;
+         width: 45%;
+         vertical-align: top;
+     }
+     &__left {
+         margin-right: 9%;
+     }
+     &__text {
+         margin-bottom: 1.5em;
+         &--title {
+             font-size: 1.25em;
+             display: block;
+             margin-bottom: .5em;
+         }
+     }
+ }
+
+ .map {
+    width: 100%;
+   height: 20em;
+ }

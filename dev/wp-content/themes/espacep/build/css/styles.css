@@ -415,7 +415,7 @@ html {
  * coded by Anne
  * started at 05/08/2017
  */
-.grey-pattern:before, .grey-pattern:after {
+.grey-pattern:before, .grey-pattern:after, .white-pattern:before, .white-pattern:after {
   content: "";
   width: 18%;
   height: 10em;
@@ -424,13 +424,27 @@ html {
   z-index: 0;
 }
 
-.grey-pattern:before {
+.grey-pattern:before, .white-pattern:before {
   top: 2.5em;
   left: 0;
 }
 
+.grey-pattern:before, .grey-pattern:after {
+  background: url("../assets/images/pattern.svg") top left no-repeat;
+}
+
 .grey-pattern:after {
   bottom: 2.5em;
+  right: 0;
+}
+
+.white-pattern:before, .white-pattern:after {
+  background: url("../assets/images/pattern-white.svg") top left no-repeat;
+  z-index: 1;
+}
+
+.white-pattern:after {
+  top: 30em;
   right: 0;
 }
 
@@ -641,4 +655,205 @@ html {
   display: block;
   font-size: 1.15em;
   margin-bottom: .6em;
+}
+
+/* Espace P
+ *
+ * /sass/components/antenne.scss - styles for antennes page
+ *
+ * coded by Anne
+ * started at 06/08/2017
+ */
+.antennes {
+  margin: 5em 0;
+  position: relative;
+}
+
+.antennes * {
+  position: relative;
+  z-index: 2;
+}
+
+.antennes__intro {
+  line-height: 1.5;
+  margin-bottom: 2em;
+}
+
+.antennes__intro p {
+  line-height: 1.5;
+}
+
+.antennes__nav {
+  margin-bottom: 4em;
+}
+
+.antennes__list {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin-left: 0;
+}
+
+.antennes__item {
+  display: table-cell;
+  width: 16.666%;
+  background: #9672F7;
+  cursor: pointer;
+}
+
+.antennes__tab {
+  display: table-cell;
+  width: 16.666%;
+  height: 4em;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all .3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.antennes__tab:hover {
+  background: #301277;
+  color: white;
+}
+
+.antennes__tab--active {
+  background: #11125D;
+  color: white;
+}
+
+.antennes__tab--active:after {
+  content: "";
+  width: 0;
+  border: 15px solid transparent;
+  border-top: 15px solid #11125D;
+  position: absolute;
+  bottom: -30px;
+  left: 40%;
+}
+
+.active {
+  display: block;
+}
+
+.coordonnees {
+  margin-bottom: 2em;
+}
+
+.coordonnees__left, .coordonnees__right {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+}
+
+.coordonnees__left {
+  margin-right: 9%;
+}
+
+.coordonnees__text {
+  margin-bottom: 1.5em;
+}
+
+.coordonnees__text--title {
+  font-size: 1.25em;
+  display: block;
+  margin-bottom: .5em;
+}
+
+.map {
+  width: 100%;
+  height: 20em;
+}
+
+/* Espace P
+ *
+ * /sass/components/contact.scss - styles for contact section
+ *
+ * coded by Anne
+ * started at 07/08/2017
+ */
+.contact {
+  background: #fff;
+  padding: 4em 15%;
+}
+
+.contact__intro {
+  line-height: 1.5;
+  margin-bottom: 2em;
+}
+
+/* Espace P
+ *
+ * /sass/components/form.scss - styles for forms
+ *
+ * coded by Anne
+ * started at 07/08/2017
+ */
+.form {
+  width: 100%;
+}
+
+.form__label {
+  width: 100%;
+  font-size: 1.2em;
+  position: relative;
+}
+
+.form__input {
+  width: 100%;
+  margin-bottom: 2.6em;
+  margin-top: 1em;
+  border: none;
+  background: #F1F1F1;
+  border-radius: 10px;
+  font-size: 1em;
+  padding: .5em;
+  font-family: "Montserrat";
+}
+
+.form__input:focus {
+  outline: none;
+  border: 2px solid #9672F7;
+}
+
+.form__input.wpcf7-text {
+  height: 2.7em;
+}
+
+.form__input.wpcf7-textarea {
+  resize: none;
+}
+
+.form__button {
+  border: none;
+  width: 30%;
+  font-size: 1.2em;
+}
+
+.screen-reader-response {
+  color: red;
+  font-size: .9em;
+  margin-bottom: 1.5em;
+}
+
+.screen-reader-response ul {
+  display: none;
+}
+
+.wpcf7-not-valid-tip, .wpcf7-validation-errors {
+  color: red;
+  font-size: .9em;
+}
+
+.wpcf7-not-valid-tip {
+  position: absolute;
+  right: 0;
+  top: -2.9em;
+}
+
+.wpcf7-validation-errors {
+  margin-top: 2em;
 }

@@ -180,3 +180,16 @@
 	return false;
 }
 add_filter('show_admin_bar' , 'wpc_show_admin_bar');
+
+// page d'options
+
+if( function_exists('acf_add_options_page') ) {
+	// Page principale
+	acf_add_options_page(array(
+		'page_title'    => 'Options',
+		'menu_title'    => 'Options',
+		'menu_slug'     => 'options-generales',
+		'capability'    => 'edit_posts',
+		'redirect'      => true
+	));
+}

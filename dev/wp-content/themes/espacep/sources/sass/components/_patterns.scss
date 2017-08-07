@@ -6,7 +6,7 @@
  * started at 05/08/2017
  */
 
-.grey-pattern {
+.grey-pattern, .white-pattern {
     &:before, &:after {
         content:"";
         width: 18%;
@@ -19,8 +19,24 @@
         top: 2.5em;
         left: 0;
     }
+}
+
+.grey-pattern {
+    &:before, &:after {
+        background: url('../assets/images/pattern.svg') top left no-repeat;
+    }
     &:after {
         bottom: 2.5em;
+        right: 0;
+    }
+}
+.white-pattern {
+    &:before, &:after {
+        background: url('../assets/images/pattern-white.svg') top left no-repeat;
+        z-index: 1;
+    }
+    &:after {
+        top: 30em;
         right: 0;
     }
 }

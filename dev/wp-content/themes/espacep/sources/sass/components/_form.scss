@@ -1,0 +1,68 @@
+/* Espace P
+ *
+ * /sass/components/form.scss - styles for forms
+ *
+ * coded by Anne
+ * started at 07/08/2017
+ */
+
+.form {
+    width: 100%;
+
+    &__label {
+        width: 100%;
+        font-size: 1.2em;
+        position: relative;
+    }
+    &__input {
+        width: 100%;
+        margin-bottom: 2.6em;
+        margin-top: 1em;
+        border: none;
+        background: #F1F1F1;
+        border-radius: 10px;
+        font-size: 1em;
+        padding: .5em;
+        font-family: "Montserrat";
+    }
+    &__input:focus {
+        outline: none;
+        border: 2px solid $lightColor;
+    }
+    &__input.wpcf7-text {
+        height: 2.7em;
+    }
+    &__input.wpcf7-textarea {
+        resize: none;
+    }
+    &__button {
+        border: none;
+        width: 30%;
+        font-size: 1.2em;
+    }
+
+}
+
+.screen-reader-response {
+    color: red;
+    font-size: .9em;
+    margin-bottom: 1.5em;
+
+    ul {
+        display: none;
+    }
+}
+.wpcf7-not-valid-tip, .wpcf7-validation-errors {
+    color: red;
+    font-size: .9em;
+}
+
+.wpcf7-not-valid-tip {
+    position: absolute;
+    right: 0;
+    top: -2.9em;
+}
+
+.wpcf7-validation-errors {
+    margin-top: 2em;
+}

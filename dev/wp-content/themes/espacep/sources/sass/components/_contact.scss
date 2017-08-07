@@ -1,0 +1,17 @@
+/* Espace P
+ *
+ * /sass/components/contact.scss - styles for contact section
+ *
+ * coded by Anne
+ * started at 07/08/2017
+ */
+
+ .contact {
+     background: #fff;
+     padding: 4em 15%;
+
+     &__intro {
+        line-height: 1.5;
+        margin-bottom: 2em;
+     }
+ }
