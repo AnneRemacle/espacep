@@ -12,11 +12,32 @@
     &__title {
         font-size: 2em;
         font-weight: bolder;
-        margin-bottom: 1.3em;
+        margin-bottom: .9em;
         line-height: 1.5;
+    }
+    &__text {
+        line-height: 1.5;
+        margin-bottom: 2.5em;
+    }
+    &__subtitle {
+        font-size: 1.3em;
+        font-weight: bolder;
+        margin-bottom: .6em;
+        line-height: 1.5;
+        margin-top: 1em;
     }
 }
 
 .section.last {
     margin: 5em 0;
+}
+
+.section.magazine {
+    position: relative;
+    padding: 5em 14%;
+
+    * {
+        position: relative;
+        z-index:2;
+    }
 }
