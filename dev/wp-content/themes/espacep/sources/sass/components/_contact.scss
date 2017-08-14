@@ -15,3 +15,30 @@
         margin-bottom: 2em;
      }
  }
+
+ .contact.sign {
+     width: 72%;
+     margin: 0 auto;
+     padding: 4em 10%;
+
+     .form {
+         p{
+             display: inline-block;
+             width: 45%;
+         }
+        p:nth-child(6), p:nth-child(7) {
+            width: 100%;
+            display: block;
+        }
+
+        &__area {
+            resize: none;
+            width: 100%;
+        }
+        p:nth-child(even) {
+            margin-right: 9%;
+        }
+
+     }
+
+ }

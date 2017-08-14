@@ -193,3 +193,47 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'      => true
 	));
 }
+
+function disable_comment_url($fields) {
+    $fields =  array(
+
+      'author' =>
+        '<div class="form__group small"><label for="author" class="form__label">' . __( 'Votre nom ou votre pseudo', 'espacep' ) . '</label> ' .
+        '<input id="author" required name="author" type="text" class="form__input form__input--text" value="' . esc_attr( $commenter['comment_author'] ) .
+        '" size="30"' . $aria_req . ' /></div>',
+
+      'email' =>
+      '<div class="form__group small"><label for="email" class="form__label">' . __( 'Votre adresse email', 'espacep' ) . '</label> ' .
+      '<input id="email" required name="email" type="text" class="form__input form__input--text" value="' . esc_attr( $commenter['comment_email'] ) .
+      '" size="30"' . $aria_req . ' /></div>',
+
+      'job' =>
+      '<div class="form__group small"><label for="job" class="form__label">' . __( 'Votre profession', 'espacep' ) . '</label> ' .
+      '<input id="job" required name="job" type="text" class="form__input form__input--text" value="' . esc_attr( $commenter['comment_job'] ) .
+      '" size="30"' . $aria_req . ' /></div>',
+
+      'town' =>
+      '<div class="form__group small"><label for="town" class="form__label">' . __( 'Votre ville d’origine', 'espacep' ) . '</label> ' .
+      '<input id="town" required name="town" type="text" class="form__input form__input--text" value="' . esc_attr( $commenter['comment_town'] ) .
+      '" size="30"' . $aria_req . ' /></div>',
+
+    );
+    unset($fields['url']);
+    return $fields;
+}
+add_filter('comment_form_default_fields','disable_comment_url');
+
+// Deplace form textarea after inputs
+function move_comment_field_to_bottom( $fields ) {
+    $comment_field = $fields['comment'];
+    unset( $fields['comment'] );
+    $fields['comment'] = $comment_field;
+    return $fields;
+}
+add_filter( 'comment_form_fields', 'move_comment_field_to_bottom' );
+
+add_action('comment_post', 'saveCommentMetas');
+function saveCommentMetas($comment_id) {
+    add_comment_meta($comment_id, 'job', $_POST['job'], true);
+    add_comment_meta($comment_id, 'town', $_POST['town'], true);
+}

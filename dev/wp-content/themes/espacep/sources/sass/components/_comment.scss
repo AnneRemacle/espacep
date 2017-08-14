@@ -1,0 +1,23 @@
+/* Espace P
+ *
+ * /sass/components/comment.scss - styles for comments
+ *
+ * coded by Anne
+ * started at 14/08/2017
+ */
+
+ .comment {
+     position: relative;
+     margin-bottom: 3em;
+     &__author {
+        font-size: 1.2em;
+        color: $lightColor;
+     }
+     &__date, &__town {
+        font-size: .8em;
+        color: $textColor;
+     }
+     &__text {
+
+     }
+ }
