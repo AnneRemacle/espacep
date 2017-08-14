@@ -37,10 +37,12 @@
 			</div>
 			<nav class="header__menu">
 				<h2 class="sro">Navigation principale</h2>
-				<a href="" class="header__menu--link">manifeste</a>
-				<a href="" class="header__menu--link">informations</a>
-				<a href="" class="header__menu--link">soutenez-nous</a>
-				<a href="" class="header__menu--link">contact</a>
+				<?php foreach (b_get_menu_items('header') as $navItem): ?>
+                    <a href="<?php echo $navItem -> url ?> " class="header__menu--link">
+                        <?php echo $navItem -> label ?>
+                    </a>
+                <?php endforeach; ?>
+                <?php wp_reset_query(); ?>
 			</nav>
 		</header>
 
