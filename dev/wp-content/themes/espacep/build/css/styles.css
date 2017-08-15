@@ -67,6 +67,32 @@
   color: #9672F7;
 }
 
+.scroll__button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2em;
+  right: 5%;
+  background: #9672F7;
+  transition: background-color .3s ease;
+}
+
+.scroll__button:hover {
+  background: #301277;
+}
+
+.scroll__top {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.3em;
+}
+
 /* Espace P
  *
  * /sass/generic/meyer-reset.scss - Meyer reset
@@ -1049,8 +1075,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7em;
-  margin: .9em 0;
+  font-size: 1.5em;
+  margin: .9em 0 .2em;
 }
 
 h3 {
@@ -1108,6 +1134,15 @@ strong {
   color: #9672F7;
 }
 
+ol > li > a {
+  color: #9672F7;
+  text-decoration: none;
+}
+
+ol > li > a:hover {
+  color: #301277;
+}
+
 /* Espace P
  *
  * /sass/components/comment.scss - styles for comments
@@ -1128,4 +1163,44 @@ strong {
 .comment__date, .comment__town {
   font-size: .8em;
   color: #222;
+}
+
+/* Espace P
+ *
+ * /sass/components/question.scss - styles for questions
+ *
+ * coded by Anne
+ * started at 14/08/2017
+ */
+.question {
+  background: #fff;
+  padding: 2.5em 7%;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.question__title {
+  color: #9672F7;
+  font-size: 1.5em;
+  margin-bottom: .6em;
+}
+
+.question__answer {
+  margin-bottom: 4em;
+}
+
+.question__open, .question__close {
+  display: block;
+  color: #9672F7;
+  font-size: 2.2em;
+  text-align: center;
+  width: 6%;
+  position: absolute;
+  bottom: 1em;
+  left: 47%;
+  display: none;
+}
+
+.question__open {
+  display: none;
 }

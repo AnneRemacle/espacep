@@ -1,0 +1,37 @@
+/* Espace P
+ *
+ * /sass/components/question.scss - styles for questions
+ *
+ * coded by Anne
+ * started at 14/08/2017
+ */
+
+ .question {
+     background: #fff;
+     padding: 2.5em 7%;
+     margin-bottom: 2em;
+     position: relative;
+     &__title {
+        color: $lightColor;
+        font-size: 1.5em;
+        margin-bottom: .6em;
+     }
+     &__answer {
+        margin-bottom: 4em;
+     }
+     &__open, &__close {
+
+         display: block;
+         color: $lightColor;
+         font-size: 2.2em;
+         text-align: center;
+         width: 6%;
+         position: absolute;
+         bottom: 1em;
+         left: 47%;
+         display: none;
+     }
+     &__open {
+         display: none;
+     }
+ }
