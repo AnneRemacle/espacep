@@ -129,10 +129,10 @@
      * @return string Modified form HTML.
      */
     function wpdocs_my_search_form( $form ) {
-        $form = '<form role="search" method="get" id="searchform" class="searchform header__form" action="' . home_url( '/' ) . '" >
-        <label class="screen-reader-text header__form--label" for="s">' . __( 'je recherche une information', 'espacep' ) . '</label>
-        <input type="text" value="' . get_search_query() . '" name="s" id="s" class="header__form--input" placeholder="P.ex: manifeste" />
-        <input type="submit" class="header__form--button" id="searchsubmit" value="'. esc_attr__( 'Rechercher' ) .'" />
+        $form = '<form role="search" method="get" id="searchform" class="searchform form" action="' . home_url( '/' ) . '" >
+        <label class="screen-reader-text form--label" for="s">' . __( 'je recherche une information', 'espacep' ) . '</label>
+        <input type="text" value="' . get_search_query() . '" name="s" id="s" class="form--input" placeholder="P.ex: manifeste" />
+        <input type="submit" class="form--button" id="searchsubmit" value="'. esc_attr__( 'Rechercher' ) .'" />
         </div>
         </form>';
 

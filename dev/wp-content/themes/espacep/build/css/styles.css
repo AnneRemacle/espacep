@@ -289,42 +289,11 @@ html {
   border-bottom: 5px solid #301277;
 }
 
-.header__form {
+.header__search .form {
   width: 18.75%;
   position: absolute;
   right: 3%;
   top: 5em;
-}
-
-.header__form--label {
-  color: #222;
-  text-transform: uppercase;
-  font-size: 0.875em;
-  display: block;
-  margin-bottom: 0.5em;
-}
-
-.header__form--input {
-  height: 3em;
-  width: 100%;
-  display: flex;
-  padding: 0 1em;
-  border: none;
-  background: #F1F1F1;
-  border-radius: 10px;
-}
-
-.header__form--button {
-  text-indent: -9999px;
-  display: flex;
-  font-family: 'FontAwesome';
-  border: none;
-  background: #9672F7 url(../assets/images/search.png) center no-repeat;
-  padding: 0.9em 1.3em;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-radius: 0 10px 10px 0;
 }
 
 /* Espace P
@@ -1320,4 +1289,60 @@ ol > li > a:hover {
   display: block;
   text-align: center;
   word-wrap: break-word;
+}
+
+/* Espace P
+ *
+ * /sass/components/file.scss - styles for a list of donwloadable files
+ *
+ * coded by Anne
+ * started at 15/08/2017
+ */
+.form--label {
+  color: #222;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.form--input {
+  height: 3em;
+  width: 100%;
+  display: flex;
+  padding: 0 1em;
+  border: none;
+  background: #F1F1F1;
+  border-radius: 10px;
+}
+
+.form--button {
+  text-indent: -9999px;
+  display: flex;
+  font-family: 'FontAwesome';
+  border: none;
+  background: #9672F7 url(../assets/images/search.png) center no-repeat;
+  padding: 0.9em 1.3em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+.search__failed {
+  width: 60%;
+  margin: 3em auto;
+}
+
+.search__failed .form--label {
+  display: none;
+}
+
+.search__failed .form--input {
+  background: #fff;
+  font-size: 1.1em;
+}
+
+.search__failed .form--button {
+  font-size: 1.1em;
 }
