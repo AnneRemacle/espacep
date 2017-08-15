@@ -34,6 +34,8 @@
 				</a>
 				<h1 class="sro">Espace P…</h1>
 				<p class="header__main--text">Vers une société prostitution admise</p>
+
+	                <?php get_search_form(); ?>
 			</div>
 			<nav class="header__menu">
 				<h2 class="sro">Navigation principale</h2>
