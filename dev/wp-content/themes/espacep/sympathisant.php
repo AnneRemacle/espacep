@@ -46,20 +46,6 @@ get_header();?>
         <?php endwhile; ?>
         <?php endif; ?>
 
-        <div class="section">
-            <?php if( have_rows('formulaire_passage') ):
-                while ( have_rows('formulaire_passage') ) : the_row();?>
-                <section class="contact">
-                    <h4 class="section__title"><?php the_sub_field('titre'); ?></h4>
-                    <div class="contact__intro">
-                        <?php the_sub_field('intro'); ?>
-                    </div>
-                    <div class="form form-passage"><?php the_sub_field('formulaire_passage'); ?></div>
-                </section>
-            <?php endwhile; ?>
-            <?php endif; ?>
-        </div>
-
         <section class="section">
             <h3 class="section__title"><?php the_field('titre', 'option') ?></h3>
             <ul class="files">
@@ -79,16 +65,6 @@ get_header();?>
             </ul>
 
         </section>
-
-
-
-    <!-- <?php $file = get_field('client_pdf'); ?>
-					<?php if( $file ): ?>
-					<li class="download-pdf">
-
-					</li>
-					<?php endif; ?> -->
-
 
 <?php
     get_footer();
