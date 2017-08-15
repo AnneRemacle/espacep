@@ -64,7 +64,7 @@ get_header();?>
 
         <?php if( have_rows('sections') ):
             while ( have_rows('sections') ) : the_row();?>
-            <section class="section" >
+            <section class="section part" >
                     <h3 class="section__title"><?php the_sub_field('title'); ?></h3>
 
                 <div class="section__numbered--text">
@@ -90,11 +90,11 @@ get_header();?>
         </div>
 
         <section class="section">
-            <h3 class="section__title">Des brochures à télécharger</h3>
+            <h3 class="section__title"><?php the_field('titre', 'option') ?></h3>
             <ul class="files">
-                <?php if( have_rows('brochures') ):
-                    while ( have_rows('brochures') ) : the_row();
-                    $file = get_sub_field('file'); ?>
+                <?php if( have_rows('brochures', 'option') ):
+                    while ( have_rows('brochures', 'option') ) : the_row();
+                    $file = get_sub_field('file', 'option'); ?>
                     <li class="file__single">
                         <a class="file__link" href="<?php echo $file['url']; ?>">
                             <figure class="file__logo">
