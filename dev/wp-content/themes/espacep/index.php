@@ -29,9 +29,9 @@ get_header();?>
 					}
 				?>
 				<p class="news__infos--category colored"><?php echo $post_categories ?></p>
-				<h2 class="article__title" role="heading" aria-level="2"><?php the_title(); ?> </h2>
+				<h2 class="article__title news__title" role="heading" aria-level="2"><?php the_title(); ?> </h2>
 				<p class="news__infos--summary"><?php the_custom_excerpt(); ?>…</p>
-				<a href="<?php the_permalink(); ?>" class="news__infos--link colored">Lire l'article <span class="sro"><?php the_title(); ?> en entier</span></a>
+				<a href="<?php the_permalink(); ?>" class="news__infos--link colored">Lire l'article <span class="hidden"><?php the_title(); ?> en entier</span></a>
 			</div>
 		</article>
 

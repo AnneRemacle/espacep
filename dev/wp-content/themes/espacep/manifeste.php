@@ -71,7 +71,7 @@ get_header(); ?>
                                 'status' => 'approve'
                                     ));?>
                 <?php foreach($comment as $key):?>
-                    <div class="comment section" id="comment-<?php echo $key->comment_ID ;?>">
+                    <div class="comment" id="comment-<?php echo $key->comment_ID ;?>">
                         <p class="comment__author">
                             <?php echo($key->comment_author);?>
                                 <?php $town = get_comment_meta($key->comment_ID, 'town', true);
