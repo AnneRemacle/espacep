@@ -65,13 +65,13 @@ get_header(); ?>
             </div>
 
             <section class="comments section">
-                <h2 class="comments__title section__title">Nous avons déjà récolté <?php echo (count(get_comments(array('post_id'=>get_the_ID())))); ?> signature(s)</h2>
+                <h2 class="comments__title section__title"> <?php echo (count(get_comments(array('post_id'=>get_the_ID())))); ?> personne(s) ont signé le manifeste&nbsp;!</h2>
                 <?php $comment=get_comments(array(
                                 'post_id'=>get_the_ID(),
                                 'status' => 'approve'
                                     ));?>
                 <?php foreach($comment as $key):?>
-                    <div class="comment" id="comment-<?php echo $key->comment_ID ;?>">
+                    <div class="comment section" id="comment-<?php echo $key->comment_ID ;?>">
                         <p class="comment__author">
                             <?php echo($key->comment_author);?>
                                 <?php $town = get_comment_meta($key->comment_ID, 'town', true);

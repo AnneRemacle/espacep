@@ -418,6 +418,10 @@ html {
   z-index: 2;
 }
 
+.comments__title {
+  text-align: center;
+}
+
 /* Espace P
  *
  * /sass/components/news.scss - styles for section news
