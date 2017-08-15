@@ -49,18 +49,13 @@
 		<?php if(is_front_page()): ?>
 			<section class="profiles">
 				<h2 class="sro">Choisissez votre profil</h2>
-				<a href="" class="profiles__single">
-					Je suis <span class="profiles__single--big">travailleur du sexe</span>
-				</a href="">
-				<a href="" class="profiles__single">
-					Je suis <span class="profiles__single--big">étudiant</span>
-				</a href="">
-				<a href="" class="profiles__single">
-					Je suis <span class="profiles__single--big">sympathisant</span>
-				</a href="">
-				<a href="" class="profiles__single">
-					Je suis <span class="profiles__single--big">client</span>
-				</a href="">
+				<?php foreach (b_get_menu_items('profils') as $navItem): ?>
+					<a href="<?php echo $navItem -> url ?> " class="profiles__single">
+						Je suis
+						<span class="profiles__single--big"><?php echo $navItem -> label ?></span>
+					</a>
+				<?php endforeach; ?>
+				<?php wp_reset_query(); ?>
 			</section>
 		<?php endif; ?>
 

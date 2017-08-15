@@ -29,10 +29,12 @@
 	</div>
 	<div class="footer__section">
 		<p class="footer__section--title">Votre profil</p>
-		<a href="" class="footer__section--link">Je suis …</a>
-		<a href="" class="footer__section--link">Je suis …</a>
-		<a href="" class="footer__section--link">Je suis …</a>
-		<a href="" class="footer__section--link">Je suis …</a>
+		<?php foreach (b_get_menu_items('profils') as $navItem): ?>
+			<a href="<?php echo $navItem -> url ?> " class="footer__section--link">
+				Je suis <?php echo $navItem -> label ?>
+			</a>
+		<?php endforeach; ?>
+		<?php wp_reset_query(); ?>
 	</div>
 </footer>
 
