@@ -44,38 +44,12 @@
             'has_archive' => true
         ] );
 
-    register_post_type( 'magazine', [
-            'label' => __('Magazine', 'espacep'),
-            'labels' => [
-                        'singular_name' => __( 'Magazine', 'espacep' ),
-                        'add_new' => __( 'Ajouter un nouveau magazine', 'espacep')
-            ],
-            'description' => __( 'La liste de tous les magazines de Espace P…', 'espacep'),
-            'public' => true,
-            'menu_position' => 5,
-            'menu_icon' => 'dashicons-book',
-            'supports' => [ 'title', 'editor', 'thumbnail' ],
-            'has_archive' => true
-        ] );
-
-    register_post_type( 'partenaires', [
-            'label' => __('Partenaires', 'espacep'),
-            'labels' => [
-                        'singular_name' => __( 'Partenaires', 'espacep' ),
-                        'add_new' => __( 'Ajouter un nouveau partenaire', 'espacep')
-            ],
-            'description' => __( 'La liste de tous les partenaires de Espace P…', 'espacep'),
-            'public' => true,
-            'menu_position' => 5,
-            'menu_icon' => 'dashicons-groups',
-            'supports' => [ 'title', 'editor', 'thumbnail' ],
-            'has_archive' => true
-        ] );
 
     // Defines navigation menus
     register_nav_menu( 'header', __('Menu principal, affiché dans le header.', 'espacep') );
-    register_nav_menu( 'espacep', __('Menu secondaire space p, affiché dans le footer.', 'espacep') );
+    register_nav_menu( 'espacep', __('Menu secondaire espace p, affiché dans le footer.', 'espacep') );
     register_nav_menu( 'antennes', __('Menu secondaire antennes, affiché dans le footer et dans la page contact.', 'espacep') );
+    register_nav_menu( 'profils', __('Menu secondaire profils, affiché dans le footer et sur la page d’accueil.', 'espacep') );
 
     // generate a custom excerpt, used on the homepage
 
