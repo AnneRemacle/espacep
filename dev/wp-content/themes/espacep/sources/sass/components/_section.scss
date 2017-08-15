@@ -9,6 +9,7 @@
 .section {
     padding: 0 14%;
     position: relative;
+    margin-bottom: 5em;
 
     * {
         position: relative;
@@ -106,4 +107,8 @@
     &__title {
         text-align: center;
     }
+}
+
+.tds__hero {
+    margin: 8em 0 5em;
 }

@@ -40,7 +40,7 @@
         outline: none;
         border: 2px solid $lightColor;
     }
-    &__input.wpcf7-text {
+    &__input.wpcf7-text, &__input.wpcf7-select {
         height: 2.7em;
     }
     &__input.wpcf7-textarea {
@@ -50,6 +50,18 @@
         border: none;
         width: 30%;
         font-size: 1.2em;
+    }
+}
+
+.form-passage {
+    .wpcf7 {
+        p:nth-child(-n+5) {
+            display: inline-block;
+            width: 45%;
+        }
+        p:nth-child(-2n+5) {
+            margin-left: 9%;
+        }
     }
 
 }

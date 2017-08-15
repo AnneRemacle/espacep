@@ -1,0 +1,33 @@
+/* Espace P
+ *
+ * /sass/components/file.scss - styles for a list of donwloadable files
+ *
+ * coded by Anne
+ * started at 15/08/2017
+ */
+
+ .file {
+     &__single {
+         display: inline-block;
+         width: 15%;
+         margin-right: 10%;
+         vertical-align: top;
+         margin-bottom: 2em;
+     }
+     &__link {
+
+     }
+     &__logo {
+         width: 100%;
+        margin-bottom: .9em;
+         &--img{
+             width: 100%;
+             height: auto;
+         }
+     }
+     &__title {
+         display: block;
+         text-align: center;
+         word-wrap: break-word;
+     }
+ }

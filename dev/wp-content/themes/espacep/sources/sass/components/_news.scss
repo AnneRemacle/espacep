@@ -51,28 +51,3 @@
     }
 
  }
-
- .article {
-     position: relative;
-     z-index: 2;
-
-     &__figure {
-         display: inline-block;
-         width: 54%;
-         height: 21em;
-         overflow: hidden;
-         vertical-align: top;
-
-         &--image {
-             width: 100%;
-             height: auto;
-         }
-     }
-
-     &__title {
-         font-size: 2em;
-         font-weight: bolder;
-         line-height: 1.5;
-         margin-bottom: .5em;
-     }
- }

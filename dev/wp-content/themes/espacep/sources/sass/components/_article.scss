@@ -1,0 +1,47 @@
+/* Espace P
+ *
+ * /sass/components/article.scss - styles for an article
+ *
+ * coded by Anne
+ * started at 15/08/2017
+ */
+
+ .article {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3em;
+
+    &__figure {
+        display: inline-block;
+        width: 54%;
+        height: 21em;
+        overflow: hidden;
+        vertical-align: top;
+
+        &--image {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__title {
+        font-size: 2em;
+        font-weight: bolder;
+        line-height: 1.5;
+        margin-bottom: .5em;
+        margin-top: 3em;
+
+        &--small {
+            font-size: 1.5em;
+            margin-bottom: .9em;
+        }
+    }
+
+    &__more {
+        color: $lightColor;
+        text-decoration: none;
+        text-align: right;
+        display: block;
+        margin: 1em 10%;
+    }
+}

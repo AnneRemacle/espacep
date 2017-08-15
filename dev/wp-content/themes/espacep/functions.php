@@ -88,7 +88,7 @@
 
     // get_the fait un return
 
-    function the_custom_excerpt( $length = 150 ) {
+    function the_custom_excerpt( $length = 250 ) {
         echo get_the_custom_excerpt( $length );
     }
 
