@@ -20,11 +20,12 @@
 	</div>
 	<div class="footer__section">
 		<p class="footer__section--title">Espace P…</p>
-		<a href="" class="footer__section--link">Guide du client</a>
-		<a href="" class="footer__section--link">Guide du client</a>
-		<a href="" class="footer__section--link">Guide du client</a>
-		<a href="" class="footer__section--link">Guide du client</a>
-		<a href="" class="footer__section--link">Guide du client</a>
+		<?php foreach (b_get_menu_items('espacep') as $navItem): ?>
+			<a href="<?php echo $navItem -> url ?> " class="footer__section--link">
+				<?php echo $navItem -> label ?>
+			</a>
+		<?php endforeach; ?>
+		<?php wp_reset_query(); ?>
 	</div>
 	<div class="footer__section">
 		<p class="footer__section--title">Votre profil</p>
