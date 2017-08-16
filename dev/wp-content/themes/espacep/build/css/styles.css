@@ -622,13 +622,13 @@ html {
 
 .cff-author-img {
   position: absolute;
-  width: 12%;
-  top: 0em;
+  width: 100%;
+  top: -4em;
   left: 0;
 }
 
 .cff-author-img img {
-  width: 100%;
+  width: 5em;
   height: 100%;
 }
 
@@ -676,6 +676,7 @@ html {
   font-family: "Fontawesome";
   display: inline-block;
   transition: all .3s;
+  margin-left: 5px;
 }
 
 .cff-viewpost-facebook:hover {
