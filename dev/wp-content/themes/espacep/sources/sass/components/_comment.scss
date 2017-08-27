@@ -22,3 +22,30 @@
 
      }
  }
+
+ @media screen and (min-width:300px) {
+     .comment {
+         padding: 0 5%;
+         &__author {
+            font-size: 1.1em;
+         }
+     }
+ }
+
+ @media screen and (min-width: 768px) {
+     .comment {
+         padding: 0 14%;
+         &__author {
+            font-size: 1.2em;
+         }
+     }
+ }
+
+ @media screen and (min-width: 2000px) {
+     .comment {
+         padding: 0 20%;
+         &__author {
+            font-size: 1.3em;
+         }
+     }
+ }

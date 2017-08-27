@@ -89,3 +89,104 @@
 .wpcf7-validation-errors {
     margin-top: 2em;
 }
+
+@media screen and (min-width: 300px) {
+    .form {
+        width: 100%;
+
+        &__group.small {
+            display: block;
+            width: 100%;
+        }
+        &__group.small:nth-child(even) {
+            margin-left: 0%;
+        }
+        &__label {
+            font-size: 1.1em;
+        }
+        &__input.wpcf7-text, &__input.wpcf7-select {
+            height: 2.4em;
+        }
+        &__button {
+            width: 80%;
+            font-size: 1.1em;
+        }
+    }
+
+    .form-passage {
+        .wpcf7 {
+            p:nth-child(-n+5) {
+                display: block;
+                width: 100%;
+            }
+            p:nth-child(-2n+5) {
+                margin-left: 0%;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .form {
+        &__button {
+            width: 70%;
+        }
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .form {
+
+        &__group.small {
+            display: inline-block;
+            width: 45%;
+        }
+        &__group.small:nth-child(even) {
+            margin-left: 9%;
+        }
+        &__label {
+            font-size: 1.2em;
+        }
+        &__input.wpcf7-text, &__input.wpcf7-select {
+            height: 2.7em;
+        }
+        &__button {
+            border: none;
+            width: 30%;
+            font-size: 1.2em;
+        }
+    }
+
+    .form-passage {
+        .wpcf7 {
+            p:nth-child(-n+5) {
+                display: inline-block;
+                width: 45%;
+            }
+            p:nth-child(-2n+5) {
+                margin-left: 9%;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 2000px) {
+    .form {
+
+        &__label {
+            font-size: 1.3em;
+        }
+        &__input.wpcf7-text, &__input.wpcf7-select {
+            height: 3em;
+        }
+        &__button {
+            font-size: 1.3em;
+        }
+    }
+
+}

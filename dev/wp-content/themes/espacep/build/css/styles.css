@@ -860,6 +860,10 @@ html {
   .section__numbered--text p {
     font-size: .9em;
   }
+  .section__sign .section__hero--title {
+    top: 0;
+    font-size: 1.3em;
+  }
 }
 
 @media screen and (min-width: 425px) {
@@ -882,6 +886,10 @@ html {
   .section__numbered--title .number {
     font-size: 3.1em;
     margin-right: 2%;
+  }
+  .section__sign .section__hero--title {
+    top: .5em;
+    font-size: 1.3em;
   }
 }
 
@@ -918,6 +926,10 @@ html {
   .section__numbered--text p {
     font-size: 1em;
   }
+  .section__sign .section__hero--title {
+    top: 1em;
+    font-size: 1.6em;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -939,6 +951,10 @@ html {
     font-size: 2.2em;
     top: 2em;
     left: 20%;
+  }
+  .section__sign .section__hero--title {
+    top: 2em;
+    font-size: 2em;
   }
 }
 
@@ -972,6 +988,10 @@ html {
   .section__numbered--title span:nth-child(2) {
     top: 1.5em;
   }
+  .section__sign .section__hero--title {
+    top: 2.6em;
+    font-size: 2.6em;
+  }
 }
 
 @media screen and (min-width: 1800px) {
@@ -980,6 +1000,10 @@ html {
   }
   .section__title {
     font-size: 2.1em;
+  }
+  .section__sign .section__hero--title {
+    top: 2.8em;
+    font-size: 2.8em;
   }
 }
 
@@ -995,6 +1019,9 @@ html {
     font-size: 3em;
     top: 3em;
     left: 22%;
+  }
+  .section__sign .section__hero--title {
+    font-size: 3em;
   }
 }
 
@@ -1923,6 +1950,33 @@ html {
   margin-right: 9%;
 }
 
+@media screen and (min-width: 300px) {
+  .contact.sign {
+    width: 100%;
+    margin: 0 auto;
+    padding: 4em 10%;
+  }
+  .contact.sign .form p {
+    display: block;
+    width: 100%;
+  }
+  .contact.sign .form p:nth-child(even) {
+    margin-right: 0%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact.sign {
+    width: 72%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .contact.sign {
+    width: 60%;
+  }
+}
+
 /* Espace P
  *
  * /sass/components/form.scss - styles for forms
@@ -2017,6 +2071,82 @@ html {
 
 .wpcf7-validation-errors {
   margin-top: 2em;
+}
+
+@media screen and (min-width: 300px) {
+  .form {
+    width: 100%;
+  }
+  .form__group.small {
+    display: block;
+    width: 100%;
+  }
+  .form__group.small:nth-child(even) {
+    margin-left: 0%;
+  }
+  .form__label {
+    font-size: 1.1em;
+  }
+  .form__input.wpcf7-text, .form__input.wpcf7-select {
+    height: 2.4em;
+  }
+  .form__button {
+    width: 80%;
+    font-size: 1.1em;
+  }
+  .form-passage .wpcf7 p:nth-child(-n+5) {
+    display: block;
+    width: 100%;
+  }
+  .form-passage .wpcf7 p:nth-child(-2n+5) {
+    margin-left: 0%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .form__button {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .form__group.small {
+    display: inline-block;
+    width: 45%;
+  }
+  .form__group.small:nth-child(even) {
+    margin-left: 9%;
+  }
+  .form__label {
+    font-size: 1.2em;
+  }
+  .form__input.wpcf7-text, .form__input.wpcf7-select {
+    height: 2.7em;
+  }
+  .form__button {
+    border: none;
+    width: 30%;
+    font-size: 1.2em;
+  }
+  .form-passage .wpcf7 p:nth-child(-n+5) {
+    display: inline-block;
+    width: 45%;
+  }
+  .form-passage .wpcf7 p:nth-child(-2n+5) {
+    margin-left: 9%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .form__label {
+    font-size: 1.3em;
+  }
+  .form__input.wpcf7-text, .form__input.wpcf7-select {
+    height: 3em;
+  }
+  .form__button {
+    font-size: 1.3em;
+  }
 }
 
 .post {
@@ -2184,6 +2314,33 @@ ol > li > a:hover {
 .comment__date, .comment__town {
   font-size: .8em;
   color: #222;
+}
+
+@media screen and (min-width: 300px) {
+  .comment {
+    padding: 0 5%;
+  }
+  .comment__author {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .comment {
+    padding: 0 14%;
+  }
+  .comment__author {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .comment {
+    padding: 0 20%;
+  }
+  .comment__author {
+    font-size: 1.3em;
+  }
 }
 
 /* Espace P
