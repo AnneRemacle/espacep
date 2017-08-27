@@ -11,6 +11,7 @@
      padding: 11.25em 25% 0;
      height: 34em;
      background: url('../assets/images/audrey.jpg') center no-repeat;
+     background-size: cover;
      color: #fff;
      text-align: center;
 
@@ -23,5 +24,103 @@
      &__link {
          font-size: 2em;
          text-decoration: none;
+     }
+ }
+
+ @media screen and (min-width: 300px) {
+     .imaged {
+         padding: 2em 5% 0;
+         height: 18em;
+
+         &__title {
+             font-size: 1.5em;
+             margin-bottom: 1.5em;
+             line-height: 1.5;
+         }
+
+         &__link {
+             font-size: 1.3em;
+         }
+     }
+ }
+
+ @media screen and (min-width: 768px) {
+     .imaged {
+         padding: 4em 15% 0;
+         height: 19em;
+
+         &__title {
+             font-size: 1.6em;
+             font-weight: lighter;
+             margin-bottom: 1.6em;
+         }
+
+         &__link {
+             font-size: 1.4em;
+         }
+     }
+ }
+
+ @media screen and (min-width: 1024px) {
+     .imaged {
+         padding: 4em 20% 0;
+         height: 21em;
+
+         &__title {
+             font-size: 1.8em;
+             font-weight: lighter;
+             margin-bottom: 1.7em;
+         }
+
+         &__link {
+             font-size: 1.5em;
+         }
+     }
+ }
+
+ @media screen and (min-width: 1440px) {
+     .imaged {
+         padding: 8em 25% 0;
+         height: 34em;
+
+         &__title {
+             font-size: 2.3em;
+             margin-bottom: 2em;
+         }
+
+         &__link {
+             font-size: 2em;
+         }
+     }
+ }
+
+ @media screen and (min-width: 2000px) {
+     .imaged {
+         padding: 7em 27% 0;
+         height: 34em;
+
+         &__title {
+             font-size: 2.5em;
+             margin-bottom: 2em;
+         }
+
+         &__link {
+             font-size: 2.1em;
+         }
+     }
+ }
+ @media screen and (min-width: 2400px) {
+     .imaged {
+         padding: 6em 27% 0;
+         height: 36em;
+
+         &__title {
+             font-size: 3em;
+             margin-bottom: 2em;
+         }
+
+         &__link {
+             font-size: 2.5em;
+         }
      }
  }
