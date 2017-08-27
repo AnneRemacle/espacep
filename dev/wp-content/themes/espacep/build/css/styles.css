@@ -2145,6 +2145,24 @@ ol > li > a:hover {
   color: #301277;
 }
 
+@media screen and (min-width: 300px) {
+  blockquote {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  blockquote {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  blockquote {
+    width: 60%;
+  }
+}
+
 /* Espace P
  *
  * /sass/components/comment.scss - styles for comments
