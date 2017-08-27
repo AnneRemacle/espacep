@@ -252,7 +252,7 @@ html {
 
 .header__logo {
   width: 9.9%;
-  height: 14.3em;
+  height: 10em;
   display: inline-block;
   padding-top: 1em;
   vertical-align: middle;
@@ -294,6 +294,299 @@ html {
   position: absolute;
   right: 3%;
   top: 5em;
+}
+
+@media screen and (min-width: 320px) {
+  .header {
+    height: 12em;
+  }
+  .header__disclaimer {
+    height: 3.5em;
+  }
+  .header__disclaimer--text {
+    font-size: .6em;
+    padding-top: 0em;
+    margin-left: 6%;
+  }
+  .header__disclaimer--link {
+    font-size: .6em;
+    margin-top: -.8em;
+    width: 25%;
+    margin: 0 37.5%;
+    text-align: center;
+  }
+  .header__disclaimer--close {
+    line-height: 1em;
+    font-size: 1em;
+    position: absolute;
+    top: .5em;
+    right: 2%;
+    margin-right: 0;
+  }
+  .header__main {
+    height: 6.6em;
+  }
+  .header__main--text {
+    font-size: 1em;
+    padding-top: 2em;
+    margin-right: 0;
+    width: 60%;
+    display: inline-block;
+    margin-left: 10%;
+  }
+  .header__logo {
+    margin-left: 12%;
+    width: 15%;
+    height: 5em;
+  }
+  .header__menu {
+    height: 2em;
+    padding: 0 2%;
+  }
+  .header__menu--link {
+    font-size: .6em;
+  }
+  .header__search .form {
+    position: relative;
+    top: 4em;
+    width: 90%;
+    left: 5%;
+  }
+  .header__search .form--label {
+    color: #fff;
+    font-size: .8em;
+    width: 100%;
+  }
+  .header__search .form--button {
+    padding: 0.95em 1.3em;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .header {
+    height: 12em;
+  }
+  .header__disclaimer {
+    height: 2em;
+  }
+  .header__disclaimer--text {
+    margin-left: 4%;
+  }
+  .header__disclaimer--link {
+    margin-top: -.8em;
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .header__disclaimer--close {
+    line-height: 1em;
+    font-size: 1em;
+    margin-right: 2%;
+    margin-top: -.2em;
+  }
+  .header__main {
+    height: 7.5em;
+  }
+  .header__main--text {
+    padding-top: 2em;
+    margin-right: 0;
+  }
+  .header__logo {
+    width: 12%;
+  }
+  .header__menu {
+    height: 2.5em;
+  }
+  .header__menu--link {
+    font-size: .7em;
+  }
+  .header__search .form {
+    top: 6em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 17em;
+  }
+  .header__disclaimer {
+    height: 3em;
+  }
+  .header__disclaimer--text {
+    font-size: 1em;
+    margin-left: 10%;
+  }
+  .header__disclaimer--link {
+    font-size: 1em;
+    margin-top: -0.7em;
+  }
+  .header__disclaimer--close {
+    line-height: 1.2em;
+    font-size: 1.2em;
+    margin-right: 5%;
+  }
+  .header__main {
+    height: 11em;
+  }
+  .header__main--text {
+    font-size: 1.5em;
+    padding-top: 3.2em;
+  }
+  .header__logo {
+    margin-left: 10%;
+  }
+  .header__menu {
+    height: 3.5em;
+    padding: 0 7%;
+  }
+  .header__menu--link {
+    font-size: 1em;
+  }
+  .header__search .form {
+    position: absolute;
+    width: 40%;
+    top: 3.7em;
+    left: 55%;
+  }
+  .header__search .form--label {
+    color: #222;
+    font-size: .9em;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    height: 20em;
+  }
+  .header__disclaimer {
+    height: 3.5em;
+  }
+  .header__disclaimer--text {
+    margin-left: 22%;
+  }
+  .header__disclaimer--link {
+    font-size: 1em;
+    margin-top: 0em;
+  }
+  .header__disclaimer--close {
+    line-height: 1.5em;
+    font-size: 1.5em;
+  }
+  .header__main {
+    height: 13em;
+  }
+  .header__main--text {
+    font-size: 2em;
+    padding-top: 3em;
+    margin-right: 0%;
+  }
+  .header__menu {
+    height: 3.5em;
+  }
+  .header__menu--link {
+    font-size: 1.1em;
+  }
+  .header__search .form {
+    width: 30%;
+    top: 4.5em;
+    left: 65%;
+  }
+  .header__search .form--label {
+    font-size: 1em;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header {
+    height: 22.93em;
+  }
+  .header__disclaimer {
+    height: 4.375em;
+    padding: 0.7em 0;
+  }
+  .header__disclaimer--text {
+    font-size: 1.25em;
+    padding-top: .3em;
+    margin-right: 3%;
+    margin-left: 24.14%;
+  }
+  .header__disclaimer--link {
+    font-size: 1.25em;
+    margin-top: .3em;
+  }
+  .header__disclaimer--close {
+    line-height: 1.7em;
+    font-size: 2em;
+  }
+  .header__main {
+    height: 14.3em;
+  }
+  .header__main--text {
+    font-size: 2.81em;
+    font-weight: bolder;
+    margin-right: 10%;
+    padding-top: 1em;
+  }
+  .header__logo {
+    width: 9.9%;
+    margin-left: 13.8%;
+    margin-right: 3%;
+  }
+  .header__menu {
+    height: 4.3em;
+    padding: 0 13.88%;
+  }
+  .header__menu--link {
+    font-size: 1.2em;
+  }
+  .header__search .form {
+    top: 6em;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .header__logo {
+    width: 8%;
+  }
+  .header__main--text {
+    padding-top: .5em;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .header {
+    height: 24.93em;
+  }
+  .header__disclaimer {
+    height: 5em;
+  }
+  .header__disclaimer--text {
+    margin-left: 30%;
+    font-size: 1.4em;
+  }
+  .header__disclaimer--link {
+    font-size: 1.4em;
+  }
+  .header__logo {
+    width: 7%;
+  }
+  .header__main {
+    height: 16.3em;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  .header {
+    height: 25.93em;
+  }
+  .header__disclaimer--text {
+    margin-left: 35%;
+  }
+  .header__main {
+    height: 17.3em;
+  }
 }
 
 /* Espace P
