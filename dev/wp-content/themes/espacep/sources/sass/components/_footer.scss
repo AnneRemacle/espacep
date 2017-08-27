@@ -30,3 +30,52 @@
         }
     }
 }
+
+@media screen and (min-width: 300px) {
+    .footer {
+        display: block;
+        width: 100%;
+        &__section {
+            display: block;
+            width: 90%;
+            margin-bottom: 2em;
+            margin-right: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .footer {
+        padding: 5em 5%;
+        &__section {
+            display: inline-block;
+            vertical-align: top;
+            width: 45%;
+            padding: 0 5%;
+        }
+        &__section:nth-child(odd) {
+            margin-right: 6%;
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .footer {
+        padding: 5em 14%;
+        display: table;
+        width: 100%;
+        &__section {
+            display: table-cell;
+            width: 33%;
+            padding: 0 5%;
+        }
+    }
+}
+
+@media screen and (min-width: 1800px) {
+
+    .footer {
+        padding: 5em 25%;
+    }
+}
