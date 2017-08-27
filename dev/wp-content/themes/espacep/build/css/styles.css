@@ -845,6 +845,21 @@ html {
     top: 1em;
     left: 5%;
   }
+  .section__numbered--title {
+    font-size: 1em;
+    height: 5.5em;
+  }
+  .section__numbered--title .number {
+    font-size: 3em;
+    margin-right: 3%;
+  }
+  .section__numbered--title span:nth-child(2) {
+    position: relative;
+    top: 1em;
+  }
+  .section__numbered--text p {
+    font-size: .9em;
+  }
 }
 
 @media screen and (min-width: 425px) {
@@ -859,6 +874,14 @@ html {
     font-size: 1.6em;
     top: 1em;
     left: 10%;
+  }
+  .section__numbered--title {
+    font-size: 1.2em;
+    height: 5em;
+  }
+  .section__numbered--title .number {
+    font-size: 3.1em;
+    margin-right: 2%;
   }
 }
 
@@ -884,6 +907,16 @@ html {
     font-size: 1.9em;
     top: 1em;
     left: 15%;
+  }
+  .section__numbered--title {
+    font-size: 1.6em;
+    height: 4.5em;
+  }
+  .section__numbered--title .number {
+    font-size: 3.3em;
+  }
+  .section__numbered--text p {
+    font-size: 1em;
   }
 }
 
@@ -929,6 +962,16 @@ html {
     top: 3em;
     left: 22%;
   }
+  .section__numbered--title {
+    font-size: 1.7em;
+    height: 6em;
+  }
+  .section__numbered--title .number {
+    font-size: 4em;
+  }
+  .section__numbered--title span:nth-child(2) {
+    top: 1.5em;
+  }
 }
 
 @media screen and (min-width: 1800px) {
@@ -941,6 +984,9 @@ html {
 }
 
 @media screen and (min-width: 2000px) {
+  .section {
+    padding: 5em 25% 5em;
+  }
   .section__hero {
     height: 33em;
   }

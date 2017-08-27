@@ -151,6 +151,26 @@
                 left: 5%;
             }
         }
+        &__numbered {
+            &--title {
+                font-size: 1em;
+                height: 5.5em;
+
+                .number {
+                    font-size: 3em;
+                    margin-right: 3%;
+                }
+                span:nth-child(2) {
+                    position: relative;
+                    top: 1em;
+                }
+            }
+            &--text {
+                p {
+                    font-size: .9em;
+                }
+            }
+        }
 
     }
 
@@ -167,6 +187,17 @@
                 font-size: 1.6em;
                 top: 1em;
                 left: 10%;
+            }
+        }
+        &__numbered {
+            &--title {
+                font-size: 1.2em;
+                height: 5em;
+
+                .number {
+                    font-size: 3.1em;
+                    margin-right: 2%;
+                }
             }
         }
     }
@@ -196,6 +227,21 @@
                 font-size: 1.9em;
                 top: 1em;
                 left: 15%;
+            }
+        }
+        &__numbered {
+            &--title {
+                font-size: 1.6em;
+                height: 4.5em;
+
+                .number {
+                    font-size: 3.3em;
+                }
+            }
+            &--text {
+                p {
+                    font-size: 1em;
+                }
             }
         }
     }
@@ -249,6 +295,19 @@
                 left: 22%;
             }
         }
+        &__numbered {
+            &--title {
+                font-size: 1.7em;
+                height: 6em;
+
+                .number {
+                    font-size: 4em;
+                }
+                span:nth-child(2) {
+                    top: 1.5em;
+                }
+            }
+        }
     }
 
 }
@@ -265,6 +324,7 @@
 
 @media screen and (min-width:2000px) {
     .section {
+        padding: 5em 25% 5em;
         &__hero {
             height: 33em;
 
