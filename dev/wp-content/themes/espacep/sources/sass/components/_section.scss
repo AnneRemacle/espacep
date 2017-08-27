@@ -122,3 +122,9 @@
 .part {
     margin: 7em 0;
 }
+
+@media screen and (min-width: 1800px) {
+    .section {
+        padding: 5em 18% 5em;
+    }
+}

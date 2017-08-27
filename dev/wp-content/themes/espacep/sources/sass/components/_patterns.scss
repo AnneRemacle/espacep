@@ -40,3 +40,102 @@
         right: 0;
     }
 }
+
+@media screen and (min-width:300px) {
+    .grey-pattern, .white-pattern {
+        &:before, &:after {
+            content:"";
+            width: 30%;
+        }
+        &:before {
+            top: 2em;
+        }
+    }
+
+    .grey-pattern {
+        &:after {
+            bottom: 2em;
+        }
+    }
+    .white-pattern {
+        &:after {
+            top: 30em;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .grey-pattern, .white-pattern {
+        &:before, &:after {
+            content:"";
+            width: 18%;
+            height: 12em;
+        }
+        &:before {
+            top: 2.5em;
+        }
+    }
+
+    .grey-pattern {
+        &:after {
+            bottom: 2.5em;
+        }
+    }
+    .white-pattern {
+        &:after {
+            top: 30em;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (min-width:2000px) {
+    .grey-pattern, .white-pattern {
+        &:before, &:after {
+            content:"";
+            width: 17%;
+            height: 13em;
+        }
+        &:before {
+            top: 2.5em;
+        }
+    }
+
+    .grey-pattern {
+        &:after {
+            bottom: 2.5em;
+        }
+    }
+    .white-pattern {
+        &:after {
+            top: 30em;
+            right: 0;
+        }
+    }
+}
+
+@media screen and (min-width:2560px) {
+    .grey-pattern, .white-pattern {
+        &:before, &:after {
+            content:"";
+            width: 15%;
+            height: 14.5em;
+        }
+        &:before {
+            top: 3em;
+        }
+    }
+
+    .grey-pattern {
+        &:after {
+            bottom: 3em;
+        }
+    }
+    .white-pattern {
+        &:after {
+            top: 30em;
+            right: 0;
+        }
+    }
+}

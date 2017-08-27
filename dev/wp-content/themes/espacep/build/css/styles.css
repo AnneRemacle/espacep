@@ -820,6 +820,12 @@ html {
   margin: 7em 0;
 }
 
+@media screen and (min-width: 1800px) {
+  .section {
+    padding: 5em 18% 5em;
+  }
+}
+
 /* Espace P
  *
  * /sass/components/news.scss - styles for section news
@@ -875,8 +881,108 @@ html {
   transform: translateX(10px);
 }
 
+.news .article {
+  margin-bottom: 0;
+}
+
 .news__title.article__title {
   margin-top: 0;
+}
+
+@media screen and (min-width: 300px) {
+  .news {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  .news__infos {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+  .news__infos--category {
+    font-size: 1.2em;
+  }
+  .news__infos--summary {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .news {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+  .news__infos--category {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .news {
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+  .news__infos {
+    display: inline-block;
+    width: 46%;
+    vertical-align: top;
+    margin-left: 3.5%;
+  }
+  .news__infos--summary {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .news {
+    padding-top: 7.81em;
+    padding-bottom: 7.81em;
+  }
+  .news__infos {
+    width: 42%;
+  }
+  .news__infos--category {
+    font-size: 1.5em;
+  }
+  .news__infos--summary {
+    font-size: 1.125em;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .news {
+    padding-top: 8.2em;
+    padding-bottom: 8.2em;
+  }
+  .news__infos {
+    width: 46%;
+  }
+  .news__infos--category {
+    font-size: 1.6em;
+  }
+  .news__infos--summary {
+    font-size: 1.3em;
+  }
+  .news__infos--link {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .news {
+    padding-top: 8.2em;
+    padding-bottom: 8.2em;
+  }
+  .news__infos {
+    width: 51%;
+  }
+  .news__infos--category {
+    font-size: 1.7em;
+  }
+  .news__infos--summary {
+    font-size: 1.4em;
+  }
 }
 
 /* Espace P
@@ -917,6 +1023,77 @@ html {
 .white-pattern:after {
   top: 30em;
   right: 0;
+}
+
+@media screen and (min-width: 300px) {
+  .grey-pattern:before, .grey-pattern:after, .white-pattern:before, .white-pattern:after {
+    content: "";
+    width: 30%;
+  }
+  .grey-pattern:before, .white-pattern:before {
+    top: 2em;
+  }
+  .grey-pattern:after {
+    bottom: 2em;
+  }
+  .white-pattern:after {
+    top: 30em;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grey-pattern:before, .grey-pattern:after, .white-pattern:before, .white-pattern:after {
+    content: "";
+    width: 18%;
+    height: 12em;
+  }
+  .grey-pattern:before, .white-pattern:before {
+    top: 2.5em;
+  }
+  .grey-pattern:after {
+    bottom: 2.5em;
+  }
+  .white-pattern:after {
+    top: 30em;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .grey-pattern:before, .grey-pattern:after, .white-pattern:before, .white-pattern:after {
+    content: "";
+    width: 17%;
+    height: 13em;
+  }
+  .grey-pattern:before, .white-pattern:before {
+    top: 2.5em;
+  }
+  .grey-pattern:after {
+    bottom: 2.5em;
+  }
+  .white-pattern:after {
+    top: 30em;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .grey-pattern:before, .grey-pattern:after, .white-pattern:before, .white-pattern:after {
+    content: "";
+    width: 15%;
+    height: 14.5em;
+  }
+  .grey-pattern:before, .white-pattern:before {
+    top: 3em;
+  }
+  .grey-pattern:after {
+    bottom: 3em;
+  }
+  .white-pattern:after {
+    top: 30em;
+    right: 0;
+  }
 }
 
 /* Espace P
@@ -1635,7 +1812,7 @@ ol > li > a:hover {
 .article__figure {
   display: inline-block;
   width: 54%;
-  height: 21em;
+  max-height: 21em;
   overflow: hidden;
   vertical-align: top;
 }
@@ -1664,6 +1841,88 @@ ol > li > a:hover {
   text-align: right;
   display: block;
   margin: 1em 10%;
+}
+
+@media screen and (min-width: 300px) {
+  .article__figure {
+    display: block;
+    width: 100%;
+    max-height: 10em;
+    margin-bottom: 2em;
+  }
+  .article__title {
+    font-size: 1.4em;
+  }
+  .article__title--small {
+    font-size: 1em;
+    margin-bottom: .9em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .article__figure {
+    max-height: 15em;
+  }
+  .article__title {
+    font-size: 1.6em;
+  }
+  .article__title--small {
+    font-size: 1.1em;
+    margin-bottom: .9em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .article__figure {
+    display: inline-block;
+    width: 48%;
+    max-height: 21em;
+  }
+  .article__title {
+    font-size: 1.6em;
+    margin-top: 3em;
+  }
+  .article__title--small {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .article__figure {
+    width: 54%;
+    max-height: 21em;
+  }
+  .article__title {
+    font-size: 2em;
+  }
+  .article__title--small {
+    font-size: 1.5em;
+    margin-bottom: .9em;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .article__figure {
+    width: 50%;
+    max-height: 23em;
+  }
+  .article__title {
+    font-size: 2.3em;
+  }
+  .article__title--small {
+    font-size: 1.5em;
+    margin-bottom: .9em;
+  }
+}
+
+@media screen and (min-width: 2400px) {
+  .article__figure {
+    width: 45%;
+    max-height: 25em;
+  }
+  .article__title {
+    font-size: 2.4em;
+  }
 }
 
 /* Espace P
