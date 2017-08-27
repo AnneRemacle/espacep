@@ -53,6 +53,7 @@
      &-post {
          &-text {
             margin-bottom: 2em;
+            word-wrap: break-word;
          }
      }
      &-text {
@@ -104,3 +105,114 @@
  .fb_iframe_widget {
    width: 100%;
  }
+
+ .cff-text * {
+     word-wrap: break-word;
+ }
+
+@media screen and (min-width: 300px) {
+    #cff {
+        width: 100%;
+    }
+     .cff {
+         &-author {
+             margin-bottom: 3em;
+
+             &-img {
+                 border: 1px solid transparent;
+
+             }
+             &-text {
+                 margin-left: 35%;
+             }
+         }
+         &-item {
+             width: 100%;
+         }
+
+     }
+
+}
+
+@media screen and (min-width: 768px) {
+    #cff {
+        width: 90%;
+    }
+     .cff {
+         &-author {
+             margin-bottom: 3em;
+
+             &-text {
+                 margin-left: 20%;
+             }
+         }
+
+     }
+}
+
+@media screen and (min-width: 1024px) {
+    #cff {
+        width: 80%;
+    }
+     .cff {
+         &-author {
+             margin-bottom: 3.5em;
+
+             &-text {
+                 margin-left: 18%;
+             }
+         }
+
+     }
+}
+
+@media screen and (min-width: 1440px) {
+    #cff {
+        width: 70%;
+    }
+     .cff {
+         &-author {
+             margin-bottom: 4em;
+
+             &-text {
+                 margin-left: 16%;
+             }
+         }
+
+     }
+}
+
+@media screen and (min-width: 2000px) {
+     .cff {
+         &-author {
+             margin-bottom: 6em;
+
+             &-img {
+                 top: -5em;
+                 img {
+                   width: 7em;
+                 }
+             }
+             &-text {
+                 margin-left: 14%;
+
+                 .cff-date {
+                     font-size: 1em;
+                 }
+             }
+             &-date {
+                 font-size: 1.5em;
+             }
+
+         }
+         &-post {
+             &-text {
+                font-size: 1.2em;
+             }
+             &-links {
+                 font-size: 1.2em;
+             }
+         }
+
+     }
+}

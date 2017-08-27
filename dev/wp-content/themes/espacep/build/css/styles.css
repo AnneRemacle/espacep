@@ -700,7 +700,6 @@ html {
  * started at 05/08/2017
  */
 .section {
-  padding: 5em 14% 5em;
   position: relative;
 }
 
@@ -820,9 +819,73 @@ html {
   margin: 7em 0;
 }
 
+@media screen and (min-width: 300px) {
+  .section.last {
+    margin: 0em 0;
+  }
+  .section {
+    padding: 2em 5% 2em;
+  }
+  .section__title {
+    font-size: 1.3em;
+  }
+  .section__text {
+    line-height: 1.5;
+    margin-bottom: 2.5em;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .section {
+    padding: 2em 8% 2em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 2.5em 10% 2.5em;
+  }
+  .section__title {
+    font-size: 1.4em;
+  }
+  .section__text {
+    line-height: 1.5;
+    margin-bottom: 2.5em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 2.5em 12% 2.5em;
+  }
+  .section__title {
+    font-size: 1.6em;
+  }
+  .section__text {
+    line-height: 1.5;
+    margin-bottom: 2.5em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    padding: 5em 14% 5em;
+  }
+  .section__title {
+    font-size: 2em;
+  }
+  .section__text {
+    line-height: 1.5;
+    margin-bottom: 2.5em;
+  }
+}
+
 @media screen and (min-width: 1800px) {
   .section {
     padding: 5em 18% 5em;
+  }
+  .section__title {
+    font-size: 2.1em;
   }
 }
 
@@ -1327,6 +1390,87 @@ html {
 
 .cff-text * {
   word-wrap: break-word;
+}
+
+@media screen and (min-width: 300px) {
+  #cff {
+    width: 100%;
+  }
+  .cff-author {
+    margin-bottom: 3em;
+  }
+  .cff-author-img {
+    border: 1px solid transparent;
+  }
+  .cff-author-text {
+    margin-left: 35%;
+  }
+  .cff-item {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #cff {
+    width: 90%;
+  }
+  .cff-author {
+    margin-bottom: 3em;
+  }
+  .cff-author-text {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #cff {
+    width: 80%;
+  }
+  .cff-author {
+    margin-bottom: 3.5em;
+  }
+  .cff-author-text {
+    margin-left: 18%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #cff {
+    width: 70%;
+  }
+  .cff-author {
+    margin-bottom: 4em;
+  }
+  .cff-author-text {
+    margin-left: 16%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .cff-author {
+    margin-bottom: 6em;
+  }
+  .cff-author-img {
+    top: -5em;
+  }
+  .cff-author-img img {
+    width: 7em;
+  }
+  .cff-author-text {
+    margin-left: 14%;
+  }
+  .cff-author-text .cff-date {
+    font-size: 1em;
+  }
+  .cff-author-date {
+    font-size: 1.5em;
+  }
+  .cff-post-text {
+    font-size: 1.2em;
+  }
+  .cff-post-links {
+    font-size: 1.2em;
+  }
 }
 
 /* Espace P
