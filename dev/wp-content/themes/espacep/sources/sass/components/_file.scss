@@ -9,7 +9,6 @@
  .file {
      &__single {
          display: inline-block;
-         width: 15%;
          margin-right: 10%;
          vertical-align: top;
          margin-bottom: 2em;
@@ -29,5 +28,42 @@
          display: block;
          text-align: center;
          word-wrap: break-word;
+     }
+ }
+
+ @media screen and (min-width: 300px) {
+     .file {
+         &__single {
+             width: 39%;
+             margin-right: 10%;
+         }
+     }
+ }
+
+
+ @media screen and (min-width: 768px) {
+     .file {
+         &__single {
+             width: 28%;
+             margin-right: 5%;
+         }
+     }
+ }
+
+ @media screen and (min-width: 1024px) {
+     .file {
+         &__single {
+             width: 20%;
+             margin-right: 5%;
+         }
+     }
+ }
+
+ @media screen and (min-width: 1440px) {
+     .file {
+         &__single {
+             width: 15%;
+             margin-right: 8%;
+         }
      }
  }
