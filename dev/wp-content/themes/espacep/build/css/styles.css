@@ -1257,7 +1257,7 @@ html {
 @media screen and (min-width: 300px) {
   .grey-pattern:before, .grey-pattern:after, .white-pattern:before, .white-pattern:after {
     content: "";
-    width: 30%;
+    width: 26%;
   }
   .grey-pattern:before, .white-pattern:before {
     top: 2em;
@@ -2263,7 +2263,7 @@ html {
   }
 }
 
-.post {
+.article {
   line-height: 1.6;
 }
 
@@ -2345,7 +2345,7 @@ h6 {
   margin: .6em 0;
 }
 
-.post p {
+.article p {
   margin-bottom: 1em;
 }
 
@@ -2358,7 +2358,7 @@ ol, ul {
   margin-left: 5%;
 }
 
-.post ul {
+.article ul {
   list-style-type: circle;
 }
 
@@ -2370,7 +2370,7 @@ li {
   margin-bottom: .5em;
 }
 
-.post > img {
+.article > img {
   display: block;
   margin: 1em auto;
 }
@@ -2387,6 +2387,10 @@ ol > li > a {
 
 ol > li > a:hover {
   color: #301277;
+}
+
+img {
+  margin: 1.5em 0;
 }
 
 @media screen and (min-width: 300px) {
