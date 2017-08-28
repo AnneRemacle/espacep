@@ -12,5 +12,10 @@ get_header(); ?>
 		</div>
 	</article>
 
+	<div class="navigation">
+		<?php previous_post_link('%link', 'Précédent', FALSE) ?>
+		 |
+		 <?php next_post_link('%link', 'Suivant', FALSE)?>
+	</div>
 
 <?php get_footer(); ?>

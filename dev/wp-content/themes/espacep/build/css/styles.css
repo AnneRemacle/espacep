@@ -2746,3 +2746,16 @@ img {
 .search__failed .form--button {
   font-size: 1.1em;
 }
+
+/* Espace P
+ *
+ * /sass/components/navigation.scss - styles for navigation between articles
+ *
+ * coded by Anne
+ * started at 28/08/2017
+ */
+.navigation {
+  width: 50%;
+  margin: 2em auto;
+  text-align: center;
+}
