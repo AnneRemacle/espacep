@@ -76,6 +76,7 @@
   right: 5%;
   background: #9672F7;
   transition: background-color .3s ease;
+  z-index: 5;
 }
 
 .scroll__button:hover {
@@ -625,6 +626,9 @@ html {
   font-size: 1.4em;
   text-align: center;
   padding: 0;
+  word-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
 }
 
 .profiles__single:hover {
@@ -836,13 +840,13 @@ html {
   }
   .section__hero--title {
     width: 90%;
-    font-size: 1.5em;
+    font-size: 1.3em;
     top: 1em;
     left: 5%;
   }
   .section__numbered--title {
-    font-size: 1em;
-    height: 5.5em;
+    font-size: .9em;
+    height: 6em;
   }
   .section__numbered--title .number {
     font-size: 3em;
@@ -874,7 +878,6 @@ html {
   .section__hero--title {
     width: 80%;
     font-size: 1.6em;
-    top: 1em;
     left: 10%;
   }
   .section__numbered--title {
@@ -932,7 +935,7 @@ html {
     font-size: 1.6em;
   }
   .part {
-    margin: 5em 0;
+    margin: 0;
   }
   .section.magazine {
     padding: 2.5em 10%;
@@ -2537,6 +2540,9 @@ ol > li > a:hover {
 }
 
 @media screen and (min-width: 300px) {
+  .article {
+    margin-bottom: 2em;
+  }
   .article__figure {
     display: block;
     width: 100%;
@@ -2547,7 +2553,7 @@ ol > li > a:hover {
     font-size: 1.4em;
   }
   .article__title--small {
-    font-size: 1em;
+    font-size: 1.2em;
     margin-bottom: .9em;
   }
 }

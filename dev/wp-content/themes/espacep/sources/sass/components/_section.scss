@@ -142,15 +142,15 @@
 
             &--title {
                 width: 90%;
-                font-size: 1.5em;
+                font-size: 1.3em;
                 top: 1em;
                 left: 5%;
             }
         }
         &__numbered {
             &--title {
-                font-size: 1em;
-                height: 5.5em;
+                font-size: .9em;
+                height: 6em;
 
                 .number {
                     font-size: 3em;
@@ -192,7 +192,6 @@
             &--title {
                 width: 80%;
                 font-size: 1.6em;
-                top: 1em;
                 left: 10%;
             }
         }
@@ -273,7 +272,7 @@
         }
     }
     .part {
-        margin: 5em 0;
+        margin: 0;
     }
 
     .section.magazine {

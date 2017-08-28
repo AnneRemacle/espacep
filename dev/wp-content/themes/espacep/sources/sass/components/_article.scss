@@ -48,7 +48,7 @@
 
 @media screen and(min-width:300px) {
     .article {
-
+        margin-bottom: 2em;
        &__figure {
            display: block;
            width: 100%;
@@ -60,7 +60,7 @@
            font-size: 1.4em;
 
            &--small {
-               font-size: 1em;
+               font-size: 1.2em;
                margin-bottom: .9em;
            }
        }

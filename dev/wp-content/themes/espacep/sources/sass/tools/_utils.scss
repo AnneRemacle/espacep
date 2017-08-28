@@ -55,6 +55,7 @@
         right: 5%;
         background: $lightColor;
         transition: background-color .3s ease;
+        z-index: 5;
     }
     &__button:hover {
         background: $darkColor;
