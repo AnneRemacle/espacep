@@ -23,7 +23,6 @@
     }
     &__input, &__area {
         width: 100%;
-        margin-bottom: 2.6em;
         margin-top: 1em;
         border: none;
         background: #F1F1F1;
@@ -104,6 +103,9 @@
         &__label {
             font-size: 1.1em;
         }
+        &__input, &__area {
+            margin-bottom: 1.5em;
+        }
         &__input.wpcf7-text, &__input.wpcf7-select {
             height: 2.4em;
         }
@@ -132,6 +134,9 @@
     .form {
         &__button {
             width: 70%;
+        }
+        &__input {
+            margin-bottom: 2.6em;
         }
     }
 

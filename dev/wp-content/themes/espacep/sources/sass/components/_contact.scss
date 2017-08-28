@@ -8,7 +8,6 @@
 
  .contact {
      background: #fff;
-     padding: 4em 15%;
 
      &__intro {
         line-height: 1.5;
@@ -61,10 +60,17 @@
         }
 
     }
+
+    .contact {
+        padding: 4em 5%;
+    }
 }
 @media screen and (min-width:768px) {
     .contact.sign {
         width: 72%;
+    }
+    .contact {
+        padding: 4em 15%;
     }
 }
 
