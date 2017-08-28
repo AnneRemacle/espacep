@@ -20,6 +20,7 @@
               crossorigin="anonymous">
         </script>
 		<script src="<?php echo get_template_directory_uri() . '/build/script/script.js';?>"></script>
+		<script src="<?php echo get_template_directory_uri() . '/build/script/scroll-button.js';?>"></script>
 	</head>
 	<body>
 		<header class="header">
