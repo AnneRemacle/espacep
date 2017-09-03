@@ -9,8 +9,10 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<section class="section white-pattern">
+		<h2 class="section__title">
+			<?php the_title(); ?>
+		</h2>
 
 		<?php
 		// Start the loop.
@@ -19,16 +21,11 @@ get_header(); ?>
 			// Include the page content template.
 			get_template_part( 'content', 'page' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
 
 		// End the loop.
 		endwhile;
 		?>
+	</section>
 
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
 
 <?php get_footer(); ?>
